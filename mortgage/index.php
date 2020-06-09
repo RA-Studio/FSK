@@ -67,15 +67,10 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 						</div>
 						<div class="filter__field filter-field" data-name="age">
 							<div class="filter-field__label">
-                                 Срок, лет
+								 Срок
 							</div>
 							<div class="ui-quantity ui-quantity--years" data-step="1">
-                                <button class="ui-quantity__btn ui-quantity__minus" data-event="mortgageFilter">
-                                    <img width="10" src="/local/templates/fsk/img/icons/ic-minus.svg" height="2" class="svg" alt="Минус"></button>
-                                <input class="years" type="text" value="10">
-                                <button class="ui-quantity__btn ui-quantity__plus" data-event="mortgageFilter">
-                                    <img width="10" src="/local/templates/fsk/img/icons/ic-plus.svg" height="10" class="svg" alt="Плюс">
-                                </button>
+ <button class="ui-quantity__btn ui-quantity__minus" data-event="mortgageFilter"><img width="10" src="/local/templates/fsk/img/icons/ic-minus.svg" height="2" class="svg" alt="Минус"></button> <input class="years" type="text" value="10 лет"> <button class="ui-quantity__btn ui-quantity__plus" data-event="mortgageFilter"><img width="10" src="/local/templates/fsk/img/icons/ic-plus.svg" height="10" class="svg" alt="Плюс"></button>
 							</div>
 						</div>
 						<div class="filter__field filter-field-result">
@@ -203,9 +198,9 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		</div>
 	</div>
 	 <!-- /.container--> <!-- form--> <?$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	"mainForm", 
-	array(
+	"slam:easyform",
+	"mainForm",
+	Array(
 		"CATEGORY_CUR_PAGE_CLASS" => "general-itemInput",
 		"CATEGORY_CUR_PAGE_TITLE" => "Страница обращения:",
 		"CATEGORY_CUR_PAGE_TYPE" => "hidden",
@@ -225,22 +220,14 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"CLEAR_FORM" => "N",
 		"COMPONENT_TEMPLATE" => "mainForm",
 		"CREATE_SEND_MAIL" => "",
-		"DISPLAY_FIELDS" => array(
-			0 => "TITLE",
-			1 => "PHONE",
-			2 => "CUR_PAGE",
-			3 => "USER_ID",
-			4 => "",
-		),
+		"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"",),
 		"EMAIL_BCC" => "",
 		"EMAIL_FILE" => "N",
 		"EMAIL_TO" => "",
 		"ENABLE_SEND_MAIL" => "Y",
 		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
-		"EVENT_MESSAGE_ID" => array(
-			0 => "49",
-		),
-		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE,USER_ID",
+		"EVENT_MESSAGE_ID" => array(0=>"49",),
+		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"FORM_ID" => "FORM3",
 		"FORM_NAME" => "Нужна консультация специалиста?",
@@ -250,9 +237,7 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"HIDE_FIELD_NAME" => "Y",
 		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
 		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
-		"REQUIRED_FIELDS" => array(
-			0 => "PHONE",
-		),
+		"REQUIRED_FIELDS" => array(0=>"PHONE",1=>"",),
 		"SEND_AJAX" => "Y",
 		"SHOW_MODAL" => "N",
 		"USE_BOOTSRAP_CSS" => "N",
@@ -263,13 +248,8 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"USE_JQUERY" => "N",
 		"USE_MODULE_VARNING" => "N",
 		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "success_FORM3",
-		"CATEGORY_USER_ID_TITLE" => "USER_ID",
-		"CATEGORY_USER_ID_TYPE" => "hidden",
-		"CATEGORY_USER_ID_CLASS" => "general-itemInput",
-		"CATEGORY_USER_ID_VALUE" => $_SERVER["REMOTE_ADDR"]
-	),
-	false
+		"_CALLBACKS" => "success_FORM3"
+	)
 );?> <!-- /.form-->
 	<div class="container" id="voen">
 		<div class="content">

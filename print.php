@@ -149,67 +149,26 @@ if($_GET['ID']) {
                         <h2 class="h1 title">О проекте</h2>
                         <?=$userProps['UF_PROJECT_NAME']['~VALUE']['TEXT'];?>
                     </div>
-                    <?
-                    $roomName = "Лот";
-                    switch($arResult['PROPERTIES']['rooms']) {
-                        case "0":
-                            $roomName = "Квартира студия";
-                        break;
-                        case "1":
-                            if($arResult['PROPERTIES']['category'] == "commercial") {
-                                $roomName = "Лот";
-                            } else {
-                                $roomName = "Однокомнатная квартира";
-                            }
-                            
-                        break;
-                        case "2":
-                            $roomName = "Двухкомнатная квартира";
-                        break;
-                        case "3":
-                            $roomName = "Трехкомнатная квартира";
-                        break;
-                    }
-
-                    ?>
                     <div class="content-margin">
-                        <?//?>
-                        <h2 class="h1 title"><?=$roomName?></h2><!-- Лот -->
+                        <h2 class="h1 title">Однокомнатная квартира</h2>
                         <div class="f-row print-row">
                             <div class="cols col-1-3">
                                 <ul class="card-data__list">
-                                    <?if($arResult['PROPERTIES']['area']):?>
-                                        <li><span>Общая площадь</span><span><?=$arResult['PROPERTIES']['area']?> м<sup>2</sup></span></li>
-                                    <?endif?>
-                                    <?if($arResult['PROPERTIES']['livingspace']):?>
-                                        <li><span>Жилая площадь</span><span><?=$arResult['PROPERTIES']['livingspace']?> м<sup>2</sup></span></li>
-                                    <?endif?>
-                                    <?if($arResult['PROPERTIES']['kitchenspace']):?>
-                                        <li><span>Площадь кухни</span><span><?=$arResult['PROPERTIES']['kitchenspace']?> м<sup>2</sup></span></li>
-                                    <?endif?>
-                                    <?if($arResult['PROPERTIES']['floor']):?>
-                                        <li><span>Этаж / этажей</span><span><?=$arResult['PROPERTIES']['floor']?>/<?=$arResult['PROPERTIES']['floorstotal']?></span></li>
-                                    <?endif?>
+                                    <li><span>Общая площадь</span><span><?=$arResult['PROPERTIES']['area']?> м<sup>2</sup></span></li>
+                                    <li><span>Жилая площадь</span><span><?=$arResult['PROPERTIES']['livingspace']?> м<sup>2</sup></span></li>
+                                    <li><span>Площадь кухни</span><span><?=$arResult['PROPERTIES']['kitchenspace']?> м<sup>2</sup></span></li>
+                                    <li><span>Этаж / этажей</span><span><?=$arResult['PROPERTIES']['floor']?>/<?=$arResult['PROPERTIES']['floorstotal']?></span></li>
                                 </ul>
                             </div>
                             <div class="cols col-1-3">
                                 <ul class="card-data__list">
                                     <!--li><span>Корпус</span><span>3.1</span></li>
                                     <li><span>Секция</span><span>2</span></li-->
-                                    <?if($arResult['PROPERTIES']['renovation']):?>
-                                        <li><span>Отделка</span><span><?=$arResult['PROPERTIES']['renovation']?></span></li>
-                                    <?endif?>
+                                    <li><span>Отделка</span><span><?=$arResult['PROPERTIES']['renovation']?></span></li>
                                 </ul>
                             </div>
                             <div class="cols col-1-3 print-col">
-                                <?if($arResult['PROPERTIES']['price']):?>
-                                    <p class="print-info">Цена: <span class="dashed-border"><?=$arResult['PROPERTIES']['price']?></span></p>
-                                <?endif;?>
-                                <?if($arResult['PROPERTIES']['price100']):?>
-                                    <p class="print-info accent-color">Цена по акции: <span class="dashed-border"><?=$arResult['PROPERTIES']['price100']?></span></p>
-                                <?else:?>
-                                    <p class="print-info accent-color">Цена по акции: <span class="dashed-border">по запросу</span></p>
-                                <?endif;?>
+                                <p class="print-info accent-color">Цена по акции: <span class="dashed-border">по запросу</span></p>
                                 <?if($arResult['PROPERTIES']['lotnumber']):?>
                                 <p class="print-info sub-color">ID квартиры: <span><?=$arResult['PROPERTIES']['lotnumber']?></span></p>
                                 <?endif?>
@@ -230,7 +189,6 @@ if($_GET['ID']) {
                                         <div class="print-img print-img-<?=$key+1?>"><img style="max-width: 240px; max-height: 215px;" class="img" src="<?=CFile::GetPath($img);?>" alt="alt"></div>
                                     <?
                                 }
-                                if ($key === 2) break;
                             endforeach;
                             if($open) {
                                 echo("</div>");

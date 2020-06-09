@@ -6,9 +6,9 @@ $APPLICATION->SetTitle("Title");
 
 
 <?$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	".default", 
-	array(
+	"slam:easyform",
+	"",
+	Array(
 		"CATEGORY_EMAIL_PLACEHOLDER" => "",
 		"CATEGORY_EMAIL_TITLE" => "Ваш E-mail",
 		"CATEGORY_EMAIL_TYPE" => "email",
@@ -33,23 +33,14 @@ $APPLICATION->SetTitle("Title");
 		"CATEGORY_TITLE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
 		"CATEGORY_TITLE_VALUE" => "",
 		"CREATE_SEND_MAIL" => "",
-		"DISPLAY_FIELDS" => array(
-			0 => "TITLE",
-			1 => "EMAIL",
-			2 => "PHONE",
-			3 => "MESSAGE",
-			4 => "USER_IP",
-			5 => "",
-		),
+		"DISPLAY_FIELDS" => array("TITLE","EMAIL","PHONE","MESSAGE",""),
 		"EMAIL_BCC" => "",
 		"EMAIL_FILE" => "N",
 		"EMAIL_TO" => "",
 		"ENABLE_SEND_MAIL" => "Y",
 		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
-		"EVENT_MESSAGE_ID" => array(
-			0 => "60",
-		),
-		"FIELDS_ORDER" => "TITLE,EMAIL,PHONE,MESSAGE,USER_IP",
+		"EVENT_MESSAGE_ID" => array(),
+		"FIELDS_ORDER" => "TITLE,EMAIL,PHONE,MESSAGE",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"FORM_ID" => "FORM5",
 		"FORM_NAME" => "Форма обратной связи 7",
@@ -61,10 +52,7 @@ $APPLICATION->SetTitle("Title");
 		"INCLUDE_BOOTSRAP_JS" => "Y",
 		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
 		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
-		"REQUIRED_FIELDS" => array(
-			0 => "EMAIL",
-			1 => "PHONE",
-		),
+		"REQUIRED_FIELDS" => array("EMAIL"),
 		"SEND_AJAX" => "Y",
 		"SHOW_MODAL" => "N",
 		"TITLE_SHOW_MODAL" => "Спасибо!",
@@ -76,27 +64,14 @@ $APPLICATION->SetTitle("Title");
 		"USE_JQUERY" => "N",
 		"USE_MODULE_VARNING" => "Y",
 		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "",
-		"COMPONENT_TEMPLATE" => ".default",
-		"CLEAR_FORM" => "N",
-		"EMAIL_SEND_FROM" => "N",
-		"CATEGORY_TITLE_CLASS" => "general-itemInput",
-		"CATEGORY_EMAIL_CLASS" => "general-itemInput",
-		"CATEGORY_PHONE_CLASS" => "general-itemInput",
-		"CATEGORY_MESSAGE_CLASS" => "general-itemInput",
-		"CATEGORY_USER_IP_TITLE" => "USER_IP",
-		"CATEGORY_USER_IP_TYPE" => "hidden",
-		"CATEGORY_USER_IP_CLASS" => "general-itemInput",
-		"CATEGORY_USER_IP_VALUE" => $_SERVER["REMOTE_ADDR"],
-		"CATEGORY_PHONE_VALIDATION_MESSAGE" => "Обязательное поле"
-	),
-	false
+		"_CALLBACKS" => ""
+	)
 );?>
 
 
 
-<?
-/*global   $USER ;
+<?/*
+global   $USER ;
 
 $rsUser = CUser::GetByID(7);
 $arUser = $rsUser->Fetch();

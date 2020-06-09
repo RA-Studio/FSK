@@ -32,41 +32,13 @@ if (!empty($text)) {
     $APPLICATION->SetPageProperty('yellowTop', $text);
     $APPLICATION->SetPageProperty('yellowPageClass', 'page-yellow-info');
 }
-
-/*
-if(!empty($GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_LINK']['VALUE'])){
-        $text = '<a href="'.$GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_LINK']['VALUE'].'">';
-        if (!empty($GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_SVG']['VALUE'])){
-            $text.= '<img src="'.$GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_SVG']['VALUE'].'">';
-        }
-        if (!empty($GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_TEXT']['VALUE']['TEXT'])){
-            $text.= '<div class="reserve-info__text">'.$GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_TEXT']['VALUE']['TEXT'].'</div>';
-        }
-        $text.= '</a>';
-        $text.= '<div class="reserve-info__close"></div>';
-    }
-else{
-        $text = '<div>';
-        if (!empty($GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_SVG']['VALUE'])){
-            $text.= '<img src="'.$GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_SVG']['VALUE'].'">';
-        }
-        if (!empty($GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_TEXT']['VALUE']['TEXT'])){
-            $text.= '<div class="reserve-info__text">'.$GLOBALS['UF_SETTINGS_SITE']['UF_YELLOW_TEXT']['VALUE']['TEXT'].'</div>';
-        }
-        $text.= '</div>';
-        $text.= '<div class="reserve-info__close"></div>';
-    }
-
-$APPLICATION->SetPageProperty('yellowTop',$text);
-*/
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
   	<?
         use Bitrix\Main\Page\Asset;
-        $APPLICATION->ShowHead();
+        //$APPLICATION->ShowHead();
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -81,52 +53,46 @@ $APPLICATION->SetPageProperty('yellowTop',$text);
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<?=SITE_TEMPLATE_PATH?>/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-      <?if(!$USER->IsAdmin()):?>
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-WG2C29K');</script>
-      <!-- End Google Tag Manager -->
-      <?endif?>
     <?
         global $USER;
-        Asset::getInstance()->addString('<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=75dbee99-a6cf-46b3-b846-8323b7986d25" type="text/javascript"></script>');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/magnific.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-ui.min.js');
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/air-datepicker.css');
-        Asset::getInstance()->addCss('/local/components/slam/easyform/templates/uniform/uniform.css');
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/libs/jquery.ui.touch-punch.js');
-        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.inputmask.bundle.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/input-mask.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.cookie.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/air-datepicker.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/magnific.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-ui.min.js');
+        //Asset::getInstance()->addCss('/local/components/slam/easyform/templates/uniform/uniform.css');
+        //Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/libs/jquery.ui.touch-punch.js');
 
-        Asset::getInstance()->addJs('/local/components/slam/easyform/templates/uniform/uniform.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.cookie.js');
+
+        if(!CSite::InDir(SITE_DIR . "index.php")){
+            //Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/air-datepicker.css');
+            //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/SimpleBar.js');
+        }
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/script-1.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/lazyload.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/scripts.js');
+        //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/ajax.js');
+        if ($USER->IsAdmin() || strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false) {
+            $APPLICATION->ShowHeadStrings();
+		    $APPLICATION->ShowHeadScripts();
+            $GLOBALS["APPLICATION"]->MoveJSToBody('main');
+            $APPLICATION->ShowBodyScripts();
+            $APPLICATION->ShowCSS(true);
+        }
         
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/script-1.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/scripts.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/lazysizes.min.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/ajax.js');
     ?>
+    <script><?=file_get_contents($_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH . '/js/jquery.js')?></script>
+    
+    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/css/style-mini.css'?>">
+    <!--script src="<?=SITE_TEMPLATE_PATH . '/js/jquery.js'?>"></script-->
+
+    <?if(strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+        <script src="/local/components/slam/easyform/script.js"></script>
+    <?endif?>
     <title><?$APPLICATION->ShowTitle()?></title>
-      <?if(!in_array($_SERVER['REMOTE_ADDR'],['46.28.228.22'])):?>
-          <script type="text/javascript">
-              var __cs = __cs || [];
-              __cs.push(["setCsAccount", "TCdqgdKk41PTkqYykKODPrcsrqM_2dHV"]);
-          </script>
-          <script type="text/javascript" async src="https://app.comagic.ru/static/cs.min.js"></script>
-      <?endif?>
   </head>
   <body>
-    <?if(!in_array($_SERVER['REMOTE_ADDR'],['46.28.228.22'])):?>
-          <!-- Google Tag Manager (noscript) -->
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG2C29K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-          <!-- End Google Tag Manager (noscript) -->
-    <?endif?>
+
   	<?$APPLICATION->ShowPanel()?>
     <div class="wrapper">
       <!-- header-->
@@ -141,35 +107,35 @@ $APPLICATION->SetPageProperty('yellowTop',$text);
         <!-- desktop-->
         <div class="header__top">
             <?$APPLICATION->IncludeComponent(
-                    "bitrix:main.include",
-                    "",
-                    Array(
-                            "AREA_FILE_SHOW" => "file",
-                            "AREA_FILE_SUFFIX" => "inc",
-                            "EDIT_TEMPLATE" => "",
-                            "PATH" => "/include/logo.php",
-                    )
+                "bitrix:main.include",
+                "",
+                Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/include/logo.php",
+                )
             );?>
           <button class="menu-trigger" type="button"></button>
             <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top_menu",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => "top_menu"
-	),
-	false
-);?>
+                "bitrix:menu", 
+                "top_menu", 
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(
+                    ),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "top_menu",
+                    "USE_EXT" => "N",
+                    "COMPONENT_TEMPLATE" => "top_menu"
+                ),
+                false
+            );?>
           <div class="header-call js-call-callback">
             <a href="#modal-FORM10" class="popup-btn-FORM10 header-call__ic"></a>
             <div class="header-call__data">

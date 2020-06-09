@@ -51,6 +51,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="be709802-0328-4a54-b716-0562a46de2ce" name="FSK_Dev">
+        <fileTransfer rootFolder="/var/www/fsknw_spb/public_html" accessType="SFTP" host="45.80.68.114" port="22" sshConfigId="4e00708c-0e77-4e67-b7b2-5b32421b7b48" sshConfig="FSK_Master">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
