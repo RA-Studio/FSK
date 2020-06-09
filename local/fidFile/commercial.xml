@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realty-feed xmlns="http://webmaster.yandex.ru/schemas/feed/realty/2010-06" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<generation-date xmlns="FSK_siteIntegration">2019-09-19T13:09:36</generation-date>
+	<offer xmlns="FSK_siteIntegration" internal-id="38960">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>17146987</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>17871565</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>24</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331439</yandex-house-id>
+		<building-state>hand-over</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2018</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0ce1559e-c349-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228ddb-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК "UP-квартал "Комендантский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - более 1400 квартир. Все корпуса уже сданы, идет передача ключей. Также потенциал спроса соседнего ЖК "Граффити" и других. Уже сейчас в этом районе существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большими панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4 метра.
+
+Рядом с комплексом есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>130.6</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>131.9</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>38960</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>13</electric-capacity>
+		<window-type>Обычные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43387">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>10439550</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>10989000</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2020</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5f282965-f9be-11e7-8382-0cc47a0cfc55</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228deb-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>99.9</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>43387</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>9</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43402">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>12388000</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>13040000</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>24</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331453</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/49b81c3c-7455-11e8-b496-001e67eddad1</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de2-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК "UP-квартал "Комендантский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - более 1400 квартир. Все корпуса уже сданы, идет передача ключей. Также потенциал спроса соседнего ЖК "Граффити" и других. Уже сейчас в этом районе существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большими панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4 метра.
+
+Рядом с комплексом есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>130.4</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>43402</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>12</electric-capacity>
+		<window-type>Обычные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43403">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>12834500</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>13510000</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>24</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331453</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/49b81c3d-7455-11e8-b496-001e67eddad1</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de3-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК "UP-квартал "Комендантский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - более 1400 квартир. Все корпуса уже сданы, идет передача ключей. Также потенциал спроса соседнего ЖК "Граффити" и других. Уже сейчас в этом районе существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большими панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4 метра.
+
+Рядом с комплексом есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>135.1</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>43403</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>13</electric-capacity>
+		<window-type>Обычные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43404">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>12378500</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>13030000</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>24</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331453</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/49b81c3e-7455-11e8-b496-001e67eddad1</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de3-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК "UP-квартал "Комендантский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - более 1400 квартир. Все корпуса уже сданы, идет передача ключей. Также потенциал спроса соседнего ЖК "Граффити" и других. Уже сейчас в этом районе существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большими панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4 метра.
+
+Рядом с комплексом есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>130.3</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>43404</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>12</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43658">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>16020092</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>16863255</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2020</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/7b423509-01e6-11e9-89c2-0cc47a0cfc55</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dea-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>118.63</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>43658</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>11</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43659">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>10401930</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>10949400</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2020</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/7b42350a-01e6-11e9-89c2-0cc47a0cfc55</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dea-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>99.54</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>43659</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>9</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45301">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>8647898</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>9103050</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b2-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>55.17</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45301</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>5</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45302">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>14412450</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>15171000</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b3-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>101.14</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45302</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>10</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45303">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>13313300</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>14014000</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b4-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>100.1</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45303</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>10</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45304">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>14286860</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>15038800</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b5-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского".
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также запроектирован встроенный детский сад.</description>
+		<area>
+			<value>107.42</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45304</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>0</electric-capacity>
+		<window-type/>
+		<window-view/>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45305">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>15001070</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>15790600</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b7-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df3-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>112.79</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45305</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>11</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45306">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>9413360</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>9908800</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b8-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df3-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>61.93</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45306</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>6</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45307">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>7651680</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>8054400</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b9-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df3-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>50.34</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45307</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>5</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45308">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>18396560</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>19364800</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997ba-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df3-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам с видами на 3 стороны, в том числе и на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>138.32</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45308</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>13</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45309">
+		<type>продажа</type>
+		<category>commercial</category>
+		<creation-date>2019-08-19T01:09:36</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>7647833</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>8050350</value>
+			<currency>RUR</currency>
+		</price>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>http://up.spb.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/168997b6-674e-11e9-bbc2-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<description>Располагается на первом этаже ЖК комфорт-класса UP-квартал "Московский". Помещение свободного назначения под любой формат бизнеса - от салона красоты до сетевого магазина. Новые коммуникации, отвечающие всем требованиям для современных коммерческих помещений.
+
+Высокодоходная аудитория самого комплекса - 622 квартиры. Еще более 1040 квартир будет заселены к 2020 году. Рядом находятся сданные дома других жилых комплексов. Уже сейчас в Шушарах существует острая необходимость в росте числа объектов инфраструктуры и нереализованный спрос на товары и услуги.
+
+У помещения есть индивидуальный вход. Естественное освещение обеспечивается благодаря  большим панорамным окнам с видами на 2 стороны, в том числе и на улицу. Высокие потолки - 4-4,2 метра.
+
+Во дворе есть места для парковки автомобилей персонала.</description>
+		<area>
+			<value>48.79</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<building-type>монолит</building-type>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<commercial-type>free purpose</commercial-type>
+		<commercial-building-type>detached building</commercial-building-type>
+		<lot-number>45309</lot-number>
+		<quality>отличное</quality>
+		<entrance-type>separate</entrance-type>
+		<ventilation>true</ventilation>
+		<fire-alarm>true</fire-alarm>
+		<water-supply>true</water-supply>
+		<sewerage-supply>true</sewerage-supply>
+		<electricity-supply>true</electricity-supply>
+		<heating-supply>true</heating-supply>
+		<electric-capacity>4</electric-capacity>
+		<window-type>Витринные</window-type>
+		<window-view>На улицу</window-view>
+	</offer>
+</realty-feed>

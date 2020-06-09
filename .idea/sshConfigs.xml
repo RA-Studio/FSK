@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="87.236.22.219" id="0ff8b65d-ae22-430d-ad1f-8d36e87cecab" port="22" customName="FSK_Dev" nameFormat="CUSTOM" username="root" />
+      <sshConfig authType="PASSWORD" host="89.111.133.0" id="e16d0929-116f-41cd-b78c-a7509a3457d4" port="22" customName="FSK_VDS" nameFormat="CUSTOM" username="root" />
+      <sshConfig authType="PASSWORD" host="45.80.68.114" id="4e00708c-0e77-4e67-b7b2-5b32421b7b48" port="22" customName="FSK_Master" nameFormat="CUSTOM" username="root" />
+    </configs>
+  </component>
+</project>

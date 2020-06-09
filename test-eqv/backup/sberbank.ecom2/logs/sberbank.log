@@ -1,0 +1,336 @@
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-10 12:56:55
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://www.fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-10 12:59:56
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://www.fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-10 13:03:50
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://www.fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-10 13:09:13
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://www.fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-14 16:52:11
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 2_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=2&PAYMENT_ID=2
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-14 16:56:24
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 2_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=2&PAYMENT_ID=2
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-14 17:19:55
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 2_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=2&PAYMENT_ID=2
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-14 17:23:28
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 2_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=2&PAYMENT_ID=2
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-15 14:06:14
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-15 18:41:16
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-15 18:48:36
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 1_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=1&PAYMENT_ID=1
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+
+ERROR REGISTER
+----------------------------
+DATE: 2020-04-16 09:23:17
+URL https://3dsec.sberbank.ru/payment/rest/
+METHOD getOrderStatusExtended.do
+DATA: 
+Array
+(
+    [orderNumber] => 2_0
+    [amount] => 0
+    [userName] => fsknw-api
+    [password] => fsknw
+    [description] => 
+    [returnUrl] => https://fsknw.ru:443/sberbank/result.php?PAYMENT=SBERBANK&ORDER_ID=2&PAYMENT_ID=2
+    [CMS] => Bitrix 20.0.650
+    [language] => ru
+    [jsonParams] => {"CMS":"Bitrix 20.0.650", "Module-Version": "1.0.4"}
+)
+
+RESPONSE: 
+Array
+(
+    [errorCode] => 999
+    [errorMessage] => Server not available
+)
+
+
+

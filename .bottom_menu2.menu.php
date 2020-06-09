@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"ГК ФСК сегодня", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Награды", 
+		"/about/#awards", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии", 
+		"/vacancy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Документы", 
+		"/docs/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Тендеры", 
+		"http://tender.fsknw.ru/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

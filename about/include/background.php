@@ -1,0 +1,1 @@
+<img width="1200" src="/local/templates/fsk/img/Golden_logo_fsk.jpg" height="400">
