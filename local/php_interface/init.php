@@ -17,7 +17,7 @@ function testAgent()
 
 function reserveCheck()
 {
-    $orders = \RaStudio\Table\OrderTable::getOrderList(array("UF_STATUS"=>1, "<UF_DATA_CREATED"=>(time()-(20*60)) ));
+    $orders = \RaStudio\Table\OrderTable::getOrderList(array("UF_STATUS"=>1, "<UF_DATA_CREATED"=>time()-(20 * 60)));
     foreach ($orders as $order){
         \RaStudio\Table\OrderTable::update($order['ID'], array('ID'=>$order['ID'],'UF_STATUS'=>0));
         \RaStudio\Table\OrderTable::sendError($order['ID']);
@@ -27,7 +27,7 @@ function reserveCheck()
 /**/
 function reserveCancel()
 {
-    $orders = \RaStudio\Table\OrderTable::getOrderList(array("UF_STATUS"=>2, "<UF_DATA_CREATED"=>(time()-(2*7*24*60*60)) ));//2 week
+    $orders = \RaStudio\Table\OrderTable::getOrderList(array("UF_STATUS"=>2, "<UF_DATA_CREATED"=>time()-(2 *7*24*60* 60)));//2 week
     foreach ($orders as $order){
         $PRODUCT_ID = $order['UF_PRODUCT'];
         if (CModule::IncludeModule("iblock")) {
@@ -67,4 +67,5 @@ function setSettings($name, $iblock, $elementID){
         $GLOBALS['UF_SETTINGS_'.$name] =  $UF_SETTING_SITE;
     };
 }
+
 ?>

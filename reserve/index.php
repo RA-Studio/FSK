@@ -67,7 +67,7 @@ if (isset($_POST['id']) && isset($_POST['iblock'])) {
     $_SESSION['RESERVE'] = ['ID' => $_POST['id'], 'IBLOCK' => $_POST['iblock']];
 }
 $successful = false;
-if ( isset($_GET['PAYMENT'] ) && $_GET['PAYMENT']=='SBERBANK' && CModule::IncludeModule('iblock')){
+if (isset($_GET['PAYMENT']) && $_GET['PAYMENT']=='SBERBANK' && CModule::IncludeModule('iblock')){
     $successful = true;
     $_SESSION['RESERVE'] = array();
     OrderTable::update($_GET['ORDER_ID'], array('ID'=>$_GET['ORDER_ID'],'UF_STATUS'=>2));

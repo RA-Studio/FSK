@@ -1,15 +1,56 @@
 
 <title>phone</title>
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?> <?use Bitrix\Main\Page\Asset;?> <!-- footer--> <footer class="footer">
-<?global $USER;?>
-       <?/* if (!$USER->IsAdmin()) {?>
+	
+	<link rel="stylesheet" href="/local/components/slam/easyform/templates/uniform/uniform.css">
+	<?
+    if(!CSite::InDir(SITE_DIR . "index.php")){
+        ?>
+        <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/css/air-datepicker-mini.css'?>">
+        <?
+    }
+    ?>
+    <script src="<?=SITE_TEMPLATE_PATH . '/js/magnific.js'?>"></script>
+	
+	<?if(strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+    	<!--script src="<?=SITE_TEMPLATE_PATH . '/js/jquery-ui.min.js'?>"></script-->
+	<?endif?>
+    <script src="<?=SITE_TEMPLATE_PATH . '/libs/jquery.ui.touch-punch.js'?>"></script>
+    <script src="<?=SITE_TEMPLATE_PATH . '/js/jquery.cookie.js'?>"></script>
+    <?
+    if(!CSite::InDir(SITE_DIR . "index.php") && !CSite::InDir('/vacancy/') && !CSite::InDir('/docs/') && !CSite::InDir('/clients/')){
+        ?><script src="<?=SITE_TEMPLATE_PATH . '/js/SimpleBar.js'?>"></script><?
+    }
+    ?>
+	<script src="<?=SITE_TEMPLATE_PATH . '/js/lazyload.js'?>"></script>
+	<?if(
+		!CSite::InDir('/contacts/') && !CSite::InDir('/vacancy/') && !CSite::InDir('/docs/') && !CSite::InDir('/clients/')
+	):?>
+		<script src="<?=SITE_TEMPLATE_PATH . '/js/slider.js'?>"></script>
+    	<script src="<?=SITE_TEMPLATE_PATH . '/js/script-1.js'?>"></script>
+		<script src="<?=SITE_TEMPLATE_PATH . '/js/ApartmentControll.js'?>"></script>
+	<?endif?>
+	<script src="<?=SITE_TEMPLATE_PATH . '/js/scripts5.js'?>"></script>
+	<script src="<?=SITE_TEMPLATE_PATH . '/js/ajax.js'?>"></script>
+
+	<?if(strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+		<!--script class="g-recaptcha-script" src="https://www.google.com/recaptcha/api.js" async defer></script-->
+	<?endif?>
+	
+	<?
+
+
+	?>
+	
+<?global $USER;
+        if (!$USER->IsAdmin()) {?>
 <div class="corona">
 	<div class="corona-wrap">
 		<div class="corona-popup">
 			<div class="corona-popup__close">
 			</div>
 			<div class="corona-popup__img">
- <img src="/local/templates/fsk/img/Pop-up_fsk_1.jpg">
+ <img class="lazyload" data-src="/local/templates/fsk/img/Pop-up_fsk_1.jpg">
 			</div>
 			<div class="corona-popup-info">
 				 ГК ФСК – одна из крупнейших и наиболее надежных строительных компаний России, включенная в перечень системообразующих организаций, и реализующая более 20 проектов в Петербурге, Москве и других регионах. В это непростое время мы желаем вам и вашим близким здоровья и терпения. И предлагаем не откладывать важные планы! <br>
@@ -43,7 +84,7 @@
 		</div>
 	</div>
 </div>
- <?}*/?>
+ <?}?>
 <div class="container">
 	 <!-- desktop-->
 	<div class="sub-menu">
@@ -250,9 +291,9 @@
 </div>
  </footer>
 <?$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	"popupForm", 
-	array(
+	"slam:easyform",
+	"popupForm",
+	Array(
 		"CAPTCHA_TITLE" => "",
 		"CATEGORY_CUR_PAGE_CLASS" => "general-itemInput",
 		"CATEGORY_CUR_PAGE_TITLE" => "CUR_PAGE",
@@ -278,23 +319,14 @@
 		"COMPONENT_TEMPLATE" => "popupForm",
 		"CREATE_SEND_MAIL" => "",
 		"CUSTOM_FORM" => "",
-		"DISPLAY_FIELDS" => array(
-			0 => "TITLE",
-			1 => "PHONE",
-			2 => "CUR_PAGE",
-			3 => "OBJECT",
-			4 => "USER_IP",
-			5 => "",
-		),
+		"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"OBJECT",4=>"",),
 		"EMAIL_BCC" => "",
 		"EMAIL_FILE" => "N",
 		"EMAIL_TO" => "",
 		"ENABLE_SEND_MAIL" => "Y",
 		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
-		"EVENT_MESSAGE_ID" => array(
-			0 => "53",
-		),
-		"FIELDS_ORDER" => "PHONE,TITLE,CUR_PAGE,OBJECT,USER_IP",
+		"EVENT_MESSAGE_ID" => array(0=>"53",),
+		"FIELDS_ORDER" => "PHONE,TITLE,CUR_PAGE,OBJECT",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"FORM_ID" => "callback",
 		"FORM_NAME" => "Бронирование онлайн со скидкой 1%",
@@ -304,9 +336,7 @@
 		"HIDE_FIELD_NAME" => "Y",
 		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
 		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
-		"REQUIRED_FIELDS" => array(
-			0 => "PHONE",
-		),
+		"REQUIRED_FIELDS" => array(0=>"PHONE",),
 		"SEND_AJAX" => "Y",
 		"SHOW_MODAL" => "N",
 		"USE_BOOTSRAP_CSS" => "N",
@@ -317,95 +347,71 @@
 		"USE_JQUERY" => "N",
 		"USE_MODULE_VARNING" => "N",
 		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "success_callback",
-		"CATEGORY_USER_IP_TITLE" => "USER_IP",
-		"CATEGORY_USER_IP_TYPE" => "hidden",
-		"CATEGORY_USER_IP_CLASS" => "general-itemInput",
-		"CATEGORY_USER_IP_VALUE" => $_SERVER["REMOTE_ADDR"]
-	),
-	false
+		"_CALLBACKS" => "success_callback"
+	)
 );?> <?
 if($USER->IsAdmin()) {
 
 	$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	"popupFormCallBack", 
-	array(
-		"CATEGORY_CUR_PAGE_CLASS" => "general-itemInput",
-		"CATEGORY_CUR_PAGE_TITLE" => "CUR_PAGE",
-		"CATEGORY_CUR_PAGE_TYPE" => "hidden",
-		"CATEGORY_CUR_PAGE_VALUE" => (@($_SERVER["HTTPS"]!="on")?"http://".$_SERVER["SERVER_NAME"]:"https://".$_SERVER["SERVER_NAME"]).($_SERVER["SERVER_PORT"]!=80?":".$_SERVER["SERVER_PORT"]:"").$_SERVER["REQUEST_URI"],
-		"CATEGORY_OBJECT_CLASS" => "general-itemInput",
-		"CATEGORY_OBJECT_TITLE" => "OBJECT",
-		"CATEGORY_OBJECT_TYPE" => "hidden",
-		"CATEGORY_OBJECT_VALUE" => "",
-		"CATEGORY_PHONE_CLASS" => "col-1-3",
-		"CATEGORY_PHONE_INPUTMASK" => "N",
-		"CATEGORY_PHONE_INPUTMASK_TEMP" => "+7 (999) 999-9999",
-		"CATEGORY_PHONE_PLACEHOLDER" => "Номер телефона",
-		"CATEGORY_PHONE_TITLE" => "Номер телефона",
-		"CATEGORY_PHONE_TYPE" => "tel",
-		"CATEGORY_PHONE_VALUE" => "",
-		"CATEGORY_TITLE_CLASS" => "col-1-3",
-		"CATEGORY_TITLE_PLACEHOLDER" => "ФИО",
-		"CATEGORY_TITLE_TITLE" => "Ваше имя",
-		"CATEGORY_TITLE_TYPE" => "text",
-		"CATEGORY_TITLE_VALUE" => "",
-		"CLEAR_FORM" => "N",
-		"COMPONENT_TEMPLATE" => "popupFormCallBack",
-		"CREATE_SEND_MAIL" => "",
-		"DISPLAY_FIELDS" => array(
-			0 => "TITLE",
-			1 => "PHONE",
-			2 => "CUR_PAGE",
-			3 => "OBJECT",
-			4 => "USER_IP",
-			5 => "",
-		),
-		"EMAIL_BCC" => "",
-		"EMAIL_FILE" => "N",
-		"EMAIL_TO" => "",
-		"ENABLE_SEND_MAIL" => "Y",
-		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
-		"EVENT_MESSAGE_ID" => array(
-			0 => "51",
-		),
-		"FIELDS_ORDER" => "PHONE,TITLE,CUR_PAGE,OBJECT,USER_IP",
-		"FORM_AUTOCOMPLETE" => "Y",
-		"FORM_ID" => "FORM10",
-		"FORM_NAME" => "Заказ обратного звонка",
-		"FORM_SUBMIT_VALUE" => "Отправить",
-		"FORM_SUBMIT_VARNING" => "Отправляя форму, вы подтверждаете своё согласие на <a href=\"/privacy-policy/\" target=\"_blank\">обработку персональных данных.</a> Бронирование является предварительным, для подтверждения с вами свяжется менеджер. Не оферта.",
-		"HIDE_ASTERISK" => "Y",
-		"HIDE_FIELD_NAME" => "Y",
-		"HIDE_FORMVALIDATION_TEXT" => "Y",
-		"INCLUDE_BOOTSRAP_JS" => "Y",
-		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
-		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
-		"REQUIRED_FIELDS" => array(
-			0 => "TITLE",
-			1 => "PHONE",
-		),
-		"SEND_AJAX" => "Y",
-		"SHOW_MODAL" => "N",
-		"USE_BOOTSRAP_CSS" => "N",
-		"USE_BOOTSRAP_JS" => "N",
-		"USE_CAPTCHA" => "Y",
-		"USE_FORMVALIDATION_JS" => "N",
-		"USE_IBLOCK_WRITE" => "N",
-		"USE_JQUERY" => "N",
-		"USE_MODULE_VARNING" => "N",
-		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "success_FORM10",
-		"CUSTOM_FORM" => "",
-		"CAPTCHA_TITLE" => "",
-		"CATEGORY_USER_IP_TITLE" => "USER_IP",
-		"CATEGORY_USER_IP_TYPE" => "hidden",
-		"CATEGORY_USER_IP_CLASS" => "general-itemInput",
-		"CATEGORY_USER_IP_VALUE" => $_SERVER["REMOTE_ADDR"]
-	),
-	false
-);
+		"slam:easyform",
+		"popupFormCallBack",
+		Array(
+			"CATEGORY_CUR_PAGE_CLASS" => "general-itemInput",
+			"CATEGORY_CUR_PAGE_TITLE" => "CUR_PAGE",
+			"CATEGORY_CUR_PAGE_TYPE" => "hidden",
+			"CATEGORY_CUR_PAGE_VALUE" => (@($_SERVER["HTTPS"]!="on")?"http://".$_SERVER["SERVER_NAME"]:"https://".$_SERVER["SERVER_NAME"]).($_SERVER["SERVER_PORT"]!=80?":".$_SERVER["SERVER_PORT"]:"").$_SERVER["REQUEST_URI"],
+			"CATEGORY_OBJECT_CLASS" => "general-itemInput",
+			"CATEGORY_OBJECT_TITLE" => "OBJECT",
+			"CATEGORY_OBJECT_TYPE" => "hidden",
+			"CATEGORY_OBJECT_VALUE" => "",
+			"CATEGORY_PHONE_CLASS" => "col-1-3",
+			"CATEGORY_PHONE_INPUTMASK" => "N",
+			"CATEGORY_PHONE_INPUTMASK_TEMP" => "+7 (999) 999-9999",
+			"CATEGORY_PHONE_PLACEHOLDER" => "Номер телефона",
+			"CATEGORY_PHONE_TITLE" => "Номер телефона",
+			"CATEGORY_PHONE_TYPE" => "tel",
+			"CATEGORY_PHONE_VALUE" => "",
+			"CATEGORY_TITLE_CLASS" => "col-1-3",
+			"CATEGORY_TITLE_PLACEHOLDER" => "ФИО",
+			"CATEGORY_TITLE_TITLE" => "Ваше имя",
+			"CATEGORY_TITLE_TYPE" => "text",
+			"CATEGORY_TITLE_VALUE" => "",
+			"CLEAR_FORM" => "N",
+			"COMPONENT_TEMPLATE" => "popupFormCallBack",
+			"CREATE_SEND_MAIL" => "",
+			"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"OBJECT",4=>"",),
+			"EMAIL_BCC" => "",
+			"EMAIL_FILE" => "N",
+			"EMAIL_TO" => "",
+			"ENABLE_SEND_MAIL" => "Y",
+			"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
+			"EVENT_MESSAGE_ID" => array(0=>"51",),
+			"FIELDS_ORDER" => "PHONE,TITLE,CUR_PAGE,OBJECT",
+			"FORM_AUTOCOMPLETE" => "Y",
+			"FORM_ID" => "FORM10",
+			"FORM_NAME" => "Заказ обратного звонка",
+			"FORM_SUBMIT_VALUE" => "Отправить",
+			"FORM_SUBMIT_VARNING" => "Отправляя форму, вы подтверждаете своё согласие на <a href=\"/privacy-policy/\" target=\"_blank\">обработку персональных данных.</a> Бронирование является предварительным, для подтверждения с вами свяжется менеджер. Не оферта.",
+			"HIDE_ASTERISK" => "Y",
+			"HIDE_FIELD_NAME" => "Y",
+			"HIDE_FORMVALIDATION_TEXT" => "Y",
+			"INCLUDE_BOOTSRAP_JS" => "Y",
+			"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
+			"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
+			"REQUIRED_FIELDS" => array(0=>"PHONE",),
+			"SEND_AJAX" => "Y",
+			"SHOW_MODAL" => "N",
+			"USE_BOOTSRAP_CSS" => "N",
+			"USE_BOOTSRAP_JS" => "N",
+			"USE_CAPTCHA" => "Y",
+			"USE_FORMVALIDATION_JS" => "N",
+			"USE_IBLOCK_WRITE" => "N",
+			"USE_JQUERY" => "N",
+			"USE_MODULE_VARNING" => "N",
+			"WIDTH_FORM" => "500px",
+			"_CALLBACKS" => "success_FORM10"
+		)
+	);
 } else {
 	$APPLICATION->IncludeComponent(
 		"slam:easyform",
@@ -431,14 +437,10 @@ if($USER->IsAdmin()) {
 			"CATEGORY_TITLE_TITLE" => "Ваше имя",
 			"CATEGORY_TITLE_TYPE" => "text",
 			"CATEGORY_TITLE_VALUE" => "",
-            "CATEGORY_USER_IP_TITLE" => "USER_IP",
-            "CATEGORY_USER_IP_TYPE" => "hidden",
-            "CATEGORY_USER_IP_CLASS" => "general-itemInput",
-            "CATEGORY_USER_IP_VALUE" => $_SERVER["REMOTE_ADDR"],
 			"CLEAR_FORM" => "N",
 			"COMPONENT_TEMPLATE" => "popupFormCallBack",
 			"CREATE_SEND_MAIL" => "",
-			"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"OBJECT",4=>"USER_IP",),
+			"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"OBJECT",4=>"",),
 			"EMAIL_BCC" => "",
 			"EMAIL_FILE" => "N",
 			"EMAIL_TO" => "",
@@ -475,9 +477,9 @@ if($USER->IsAdmin()) {
 
 
 ?> <?$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	"popupFormCalculation", 
-	array(
+	"slam:easyform",
+	"popupFormCalculation",
+	Array(
 		"CATEGORY_CUR_PAGE_CLASS" => "general-itemInput",
 		"CATEGORY_CUR_PAGE_TITLE" => "CUR_PAGE",
 		"CATEGORY_CUR_PAGE_TYPE" => "hidden",
@@ -499,25 +501,16 @@ if($USER->IsAdmin()) {
 		"CATEGORY_TITLE_TYPE" => "text",
 		"CATEGORY_TITLE_VALUE" => "",
 		"CLEAR_FORM" => "N",
-		"COMPONENT_TEMPLATE" => "popupFormCalculation",
+		"COMPONENT_TEMPLATE" => "popupFormCallBack",
 		"CREATE_SEND_MAIL" => "",
-		"DISPLAY_FIELDS" => array(
-			0 => "TITLE",
-			1 => "PHONE",
-			2 => "CUR_PAGE",
-			3 => "OBJECT",
-			4 => "USER_IP",
-			5 => "",
-		),
+		"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"OBJECT",4=>"",),
 		"EMAIL_BCC" => "",
 		"EMAIL_FILE" => "N",
 		"EMAIL_TO" => "",
 		"ENABLE_SEND_MAIL" => "Y",
 		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
-		"EVENT_MESSAGE_ID" => array(
-			0 => "55",
-		),
-		"FIELDS_ORDER" => "PHONE,TITLE,CUR_PAGE,OBJECT,USER_IP",
+		"EVENT_MESSAGE_ID" => array(0=>"55",),
+		"FIELDS_ORDER" => "PHONE,TITLE,CUR_PAGE,OBJECT",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"FORM_ID" => "FORM11",
 		"FORM_NAME" => "Получить расчет дохода",
@@ -527,9 +520,7 @@ if($USER->IsAdmin()) {
 		"HIDE_FIELD_NAME" => "Y",
 		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
 		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
-		"REQUIRED_FIELDS" => array(
-			0 => "PHONE",
-		),
+		"REQUIRED_FIELDS" => array(0=>"PHONE",),
 		"SEND_AJAX" => "Y",
 		"SHOW_MODAL" => "N",
 		"USE_BOOTSRAP_CSS" => "N",
@@ -540,15 +531,8 @@ if($USER->IsAdmin()) {
 		"USE_JQUERY" => "N",
 		"USE_MODULE_VARNING" => "N",
 		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "success_FORM11",
-		"CATEGORY_USER_IP_TITLE" => "USER_IP",
-		"CATEGORY_USER_IP_TYPE" => "hidden",
-		"CATEGORY_USER_IP_CLASS" => "general-itemInput",
-		"CATEGORY_USER_IP_VALUE" => $_SERVER["REMOTE_ADDR"],
-		"CUSTOM_FORM" => "",
-		"CAPTCHA_TITLE" => ""
-	),
-	false
+		"_CALLBACKS" => "success_FORM11"
+	)
 );?> <!-- Модальная форма обратного звонка--> <?/*     <div class="modal modal-callback mfp-hide" id="modal-callback">
         <div class="modal-callback__inner">
           <div class="modal-callback__img" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/img-callback-girl.jpg')"></div>

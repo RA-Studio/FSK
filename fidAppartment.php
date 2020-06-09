@@ -2,14 +2,8 @@
 $_SERVER['DOCUMENT_ROOT'] = realpath( dirname(__FILE__) );
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 
-
-$options = getopt("", array("LOAD_IMG::"));
-
-if($options['LOAD_IMG'] == "Y") {
-    ignore_user_abort(true);
-    set_time_limit(0);
-}
-
+//ignore_user_abort(true);
+//set_time_limit(0);
 
 define('NO_KEEP_STATISTIC', true);
 define('NOT_CHECK_PERMISSIONS', true);
@@ -19,18 +13,11 @@ define('CHK_EVENT', true);
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 
 
-
 $message = "Проверка крона";
 $message = wordwrap($message, 70, "\r\n");
 mail('ikapustin@ra-studio.ru', 'CRON', $message);
 
-if($options['LOAD_IMG'] == "Y") {
-    RaStudio\Api\LoggerAdapter::add("Начало выгрузки большого фида");
-    $_GET['LOAD_IMG'] = "Y";
-} else {
-    RaStudio\Api\LoggerAdapter::add("Начало выгрузки");
-}
-
+RaStudio\Api\LoggerAdapter::add("Начало выгрузки");
 
 
 $arResult = [];
@@ -183,7 +170,7 @@ class fidAppartmentParse {
                         "CODE" => $codeSection,
                         "NAME" => $value['building-name'],
                         "XML_ID" => $buildingID,
-                        //"DESCRIPTION" => $value['description'],
+                        "DESCRIPTION" => $value['description'],
                     );
                     $this->statistic['ADDSECTION']++;
                     $ID = $this->sectionController->Add($arFields);
@@ -269,7 +256,7 @@ class fidAppartmentParse {
 
                             $field = explode("|", $imgKey)[1];
 
-                            if($_GET["LOAD_IMG"] == "Y" && false) {
+                            if($_GET["LOAD_IMG"] == "Y") {
                                 $ch = curl_init();
                                 curl_setopt($ch, CURLOPT_POST, 0);
                                 curl_setopt($ch, CURLOPT_PORT , 443);

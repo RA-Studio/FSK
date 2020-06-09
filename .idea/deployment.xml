@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="FSK_VDS" stopOnFirstError="true" overwriteAll="false" preserveTimestamps="false" createEmptyFolders="true" notifyRemoteChanges="true" showExcludedInSync="true" showAutoUploadSettingsWarning="false">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="FSK_Master" stopOnFirstError="true" overwriteAll="false" preserveTimestamps="false" createEmptyFolders="true" notifyRemoteChanges="true" showExcludedInSync="true" showAutoUploadSettingsWarning="false">
     <serverData>
       <paths name="FSK_DEV">
         <serverdata>
@@ -620,6 +620,17 @@
             <excludedPath path="/bitrix/components/bitrix/voting.vote.edit" />
             <excludedPath path="/bitrix/components/slam" />
             <excludedPath path="/bitrix" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FSK_Dev">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/bitrix" />
+            <excludedPath path="/upload" />
           </excludedPaths>
         </serverdata>
       </paths>
