@@ -365,9 +365,9 @@
                             <div class="graf-value graf-value-2">3 042 000</div>
                             <div class="graf-value graf-value-3">3 159 000</div>
                             <div class="graf-value graf-value-4">3 276 000</div>
-                            <div class="graf-percent graf-percent-1">+40%</div>
+                            <div class="graf-percent graf-percent-1">+30%</div>
                             <div class="graf-percent graf-percent-2">+35%</div>
-                            <div class="graf-percent graf-percent-3">+30%</div>
+                            <div class="graf-percent graf-percent-3">+40%</div>
                         </div>
                     </div>
                     

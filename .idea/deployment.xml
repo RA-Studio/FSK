@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="FSK_Master" stopOnFirstError="true" overwriteAll="false" preserveTimestamps="false" createEmptyFolders="true" notifyRemoteChanges="true" showNewOnSourceInSync="false" showExcludedInSync="true" showAutoUploadSettingsWarning="false">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="FSK_Master" stopOnFirstError="true" overwriteAll="false" preserveTimestamps="false" createEmptyFolders="true" notifyRemoteChanges="true" showExcludedInSync="true" showAutoUploadSettingsWarning="false">
     <serverData>
       <paths name="FSK_DEV">
         <serverdata>
@@ -623,14 +623,28 @@
           </excludedPaths>
         </serverdata>
       </paths>
+      <paths name="FSK_Dev">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/bitrix" />
+            <excludedPath path="/upload" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
       <paths name="FSK_Master">
         <serverdata>
           <mappings>
             <mapping deploy="/var/www/fsknw/public_html/" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
+            <excludedPath path="/upload" />
+            <excludedPath path="/old" />
+            <excludedPath path="/docs/bitrix" />
+            <excludedPath path="/docs/upload" />
             <excludedPath path="/var/www/fsknw/public_html/bitrix" />
-            <excludedPath path="/var/www/fsknw/public_html/imgload" />
             <excludedPath path="/var/www/fsknw/public_html/upload" />
           </excludedPaths>
         </serverdata>
@@ -661,7 +675,14 @@
           </excludedPaths>
         </serverdata>
       </paths>
-      <paths name="UP">
+      <paths name="test">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="test1">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

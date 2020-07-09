@@ -95,7 +95,7 @@
                     <div class="modal modal-callback mfp-hide" id="modal-videobuild">
                         <div class="modal-callback__inner">
                             <button class="close-btn mfp-close" type="button"></button>
-                            <iframe width="560" height="315" src="<?=current($dateArr[$years[0]])['VIDEO']?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
                         </div>
                     </div>
 
@@ -186,7 +186,7 @@
                 <?}?>
             </div>
         </div>
-    
+    </div>
 <?php endif; ?>
 <?if($_REQUEST['AJAX_LOAD'] == 'progressGallery'):?>
     <?die()?>
@@ -250,20 +250,6 @@
                     //window.controller.initData().buildStep();
 
                     initGallery();
-                    $('.custom-popup__video').magnificPopup({
-                        items: {
-                            src: '#modal-videobuild',
-                            type: 'inline'
-                        },
-                        callbacks: {
-                            open: function() {
-                                $('body').addClass('mfp-card');
-                            },
-                            close: function() {
-                                $('body').removeClass('mfp-card');
-                            }
-                        }
-                    });
                 }
                 request.open('GET', `${window.location.pathname}?AJAX_LOAD=progressGallery`);
                 setTimeout(() => {

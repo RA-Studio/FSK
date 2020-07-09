@@ -128,10 +128,8 @@
                                         Онлайн трансляция
                                     </a>
                                 <?*/?>
-                                    <?if($userProps['UF_JK_STATUS']['VALUE'] === 'Да'):
-                                        $last = array_pop(array_keys( $progressGallery));
-                                        ?>
-                                        <a href="#modal-videobuild" data-src="<?=$progressGallery[$last]['userProps']['UF_VIDEO']['VALUE']?>" class="custom-popup__video gallery-newbuild" <?=$progressGallery[$last]['userProps']['UF_VIDEO']['VALUE'] ? "" : "style='display:none;'"?>>
+                                    <?if($userProps['UF_JK_STATUS']['VALUE'] === 'Да'):?>
+                                        <a href="#modal-videobuild" data-src="" class="custom-popup__video gallery-newbuild">
                                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21C16.5228 21 21 16.5228 21 11Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M14.3818 11L9.69999 7.78122V14.2187L14.3818 11ZM15.7349 11C15.7349 11.3127 15.5904 11.6253 15.3014 11.824L10.0665 15.423C9.40302 15.8792 8.49999 15.4041 8.49999 14.599V7.40101C8.49999 6.59583 9.40302 6.12081 10.0665 6.57697L15.3014 10.1759C15.5904 10.3746 15.7349 10.6873 15.7349 11Z" fill="white"/>
@@ -193,20 +191,6 @@
                     div.innerHTML = requestGallery.responseText;
                     scriptsGallery.parentNode.replaceChild(div, scriptsGallery);
                     initUfGallery();
-                    $('.custom-popup__video').magnificPopup({
-                        items: {
-                            src: '#modal-videobuild',
-                            type: 'inline'
-                        },
-                        callbacks: {
-                            open: function() {
-                                $('body').addClass('mfp-card');
-                            },
-                            close: function() {
-                                $('body').removeClass('mfp-card');
-                            }
-                        }
-                    });
                 }
                 requestGallery.open('GET', `${window.location.pathname}?AJAX_LOAD=UF_GALLERY`);
                 setTimeout(() => {
