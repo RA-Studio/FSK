@@ -139,6 +139,8 @@ class AjaxFilter {
             $temp['PROPERTIES']['livingspace']['VALUE'] = $property['livingspace']['VALUE'];
             $temp['PROPERTIES']['kitchenspace']['VALUE'] = $property['kitchenspace']['VALUE'];
             $temp['PROPERTIES']['floorstotal']['VALUE'] = $property['floorstotal']['VALUE'];
+            $temp['PROPERTIES']['buildingsection']['VALUE'] = $property['buildingsection']['VALUE'];
+            $temp['PROPERTIES']['section']['VALUE'] = $property['section']['VALUE'];
             $temp['PROPERTIES']['builtyear']['VALUE'] = $property['builtyear']['VALUE'];
             $temp['PROPERTIES']['renovation']['VALUE'] = $property['renovation']['VALUE'];
             $temp['PROPERTIES']['buildingphase']['VALUE'] = $property['buildingphase']['VALUE'];

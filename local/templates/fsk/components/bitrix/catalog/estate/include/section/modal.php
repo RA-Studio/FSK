@@ -70,8 +70,7 @@
             <div class="card__col-3">
                 <div class="card__info">
                     <div class="interactive-btns">
-                        <?/*<a class="interactive-btn interactive-download" href="#" title="Скачать" download></a>*/?>
-                        <a class="interactive-btn interactive-download" href="print.html" target="_blank" title="Скачать"></a>
+                        <a class="interactive-btn interactive-download" href="#" title="Скачать" download></a>
                         <a class="interactive-btn interactive-print" href="print.html" target="_blank" title="Распечатать"></a>
                         <div class="interactive-btn interactive-favorite" data-role="favorite" data-id="">
                             <img class="svg lazyload" data-src="<?=SITE_TEMPLATE_PATH?>/img/icons/ic-star.svg" alt="Добавить в закладки">

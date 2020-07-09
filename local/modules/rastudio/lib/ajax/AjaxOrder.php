@@ -48,7 +48,6 @@ class AjaxOrder {
             'PROPERTY_PRICE',
         );
 
-
         $arFilter = Array("IBLOCK_ID"=>$postList['iblock'], "ACTIVE"=>"Y", "ID" => $postList['product']);
         $res = \CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
         $arElement = [];
@@ -105,14 +104,15 @@ class AjaxOrder {
             "PRICE"=>$postList['price'],
             "ARTICLE"=>$arElement['CODE'],
             "ORDER_ID"=>$orderId,
-
+            "BASKET"=>json_encode($arElement),
         );
-        Event::send(array(
+        /*Event::send(array(
             "EVENT_NAME" => "EVENT_SEND_MESSAGE",
             "LID" => "s1",
             "C_FIELDS" => $arEventFields,
-        ));
-
+        ));*/
+        $_SESSION['RESERVE_SENT'] = '';
+        $_SESSION['RESERVE_SEND_TIME']=time();
 
 /*
         $textDone = '

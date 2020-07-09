@@ -842,7 +842,7 @@ class ApartmentControll {
                 });
             },
             setImgPopupBlock(plan,index, mini){
-
+            	if(index == 1) console.log(plan,index, mini, setImgPopupBlock);
                 let poppupForm = $(`#card-example`);
                 let planBlockNew = $(poppupForm).find(`.card__col-2 .card__img`).eq(index);
                 if(index == -1) {

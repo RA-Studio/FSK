@@ -456,8 +456,8 @@ sort($filterData['builtyear']);
     */?>
 		<!-- form-->
     <?$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	"mainForm", 
+	"slam:easyform",
+	"mainForm",
 	array(
 		"COMPONENT_TEMPLATE" => "mainForm",
 		"FORM_ID" => "FORM3",
@@ -467,13 +467,13 @@ sort($filterData['builtyear']);
 			0 => "TITLE",
 			1 => "PHONE",
 			2 => "CUR_PAGE",
-			3 => "USER_IP",
-			4 => "",
+			3 => "",
 		),
 		"REQUIRED_FIELDS" => array(
 			0 => "PHONE",
+			1 => "",
 		),
-		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE,USER_IP",
+		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE",
 		"CLEAR_FORM" => "N",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"HIDE_FIELD_NAME" => "Y",
@@ -516,11 +516,7 @@ sort($filterData['builtyear']);
 		"CATEGORY_CUR_PAGE_TITLE" => "Страница обращения:",
 		"CATEGORY_CUR_PAGE_TYPE" => "hidden",
 		"CATEGORY_CUR_PAGE_CLASS" => "",
-		"CATEGORY_CUR_PAGE_VALUE" => (@($_SERVER["HTTPS"]!="on")?"http://".$_SERVER["SERVER_NAME"]:"https://".$_SERVER["SERVER_NAME"]).($_SERVER["SERVER_PORT"]!=80?":".$_SERVER["SERVER_PORT"]:"").$_SERVER["REQUEST_URI"],
-		"CATEGORY_USER_IP_TITLE" => "USER_IP",
-		"CATEGORY_USER_IP_TYPE" => "hidden",
-		"CATEGORY_USER_IP_CLASS" => "general-itemInput",
-		"CATEGORY_USER_IP_VALUE" => $_SERVER["REMOTE_ADDR"]
+		"CATEGORY_CUR_PAGE_VALUE" => (@($_SERVER["HTTPS"]!="on")?"http://".$_SERVER["SERVER_NAME"]:"https://".$_SERVER["SERVER_NAME"]).($_SERVER["SERVER_PORT"]!=80?":".$_SERVER["SERVER_PORT"]:"").$_SERVER["REQUEST_URI"]
 	),
 	false
 );?>

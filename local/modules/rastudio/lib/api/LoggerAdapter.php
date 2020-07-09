@@ -13,13 +13,13 @@ class LoggerAdapter
         $ch = curl_init();
 
         $options = [
-            CURLOPT_URL => 'https://hooks.slack.com/services/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',
+            CURLOPT_URL => 'https://hooks.slack.com/services/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',
             CURLOPT_POST => true,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTPHEADER => array('Content-type: application/json'),
             CURLOPT_POSTFIELDS => $postString
         ];
-        
+
         $options[CURLOPT_SSL_VERIFYHOST] = false;
         if (defined('CURLOPT_SAFE_UPLOAD')) {
             $options[CURLOPT_SAFE_UPLOAD] = true;

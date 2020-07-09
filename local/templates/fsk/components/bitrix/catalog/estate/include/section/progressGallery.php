@@ -1,4 +1,7 @@
 
+<?if($_REQUEST['AJAX_LOAD'] == 'progressGallery'):?>
+    <?$GLOBALS['APPLICATION']->RestartBuffer();?>
+<?endif;?>
 <?php if ($progressGallery) : ?>
     <div class="gallery project-build section-margin scrollspy-item" id="p-8">
         <script>
@@ -54,9 +57,6 @@
                     krsort($dateArr);
                     $years = array_keys($dateArr); // получаем массив лет
                     $last = array_pop(array_keys( $progressGallery));
-                    echo "<pre style='display: none'>";
-                        print_r($dateArr);
-                    echo "</pre>";
                     foreach ($dateArr as $year => $val) {
                         ksort($dateArr[$year]); // сортируем месяцы по возрастанию
                         $dateArr[$year] = array_reverse($dateArr[$year]);
@@ -117,33 +117,54 @@
                     </a>
                 <?}?>
             </div>
-            <?
-            echo "<pre style='display: none'>";
-                print_r($progressGallery[$last]);
-            echo "</pre>";
-            ?>
             <div data-entity="container-1">
                 <div class="gallery-slider-xl" id="gallery-2">
                     <?$date = $progressGallery[$last]['standartProps']['ACTIVE_FROM'] ? $progressGallery[$last]['standartProps']['ACTIVE_FROM'] : $progressGallery[$last]['standartProps']['TIMESTAMP_X'];?>
-                    <?php foreach($progressGallery[$last]['userProps']['UF_GALLERY']['VALUE'] as $galleryItem) :?>
+                    <?if($_REQUEST['AJAX_LOAD'] == 'progressGallery'):?>
+                        <?php foreach($progressGallery[$last]['userProps']['UF_GALLERY']['VALUE'] as $galleryItem) :?>
+                            <div class="slide">
+                                <?
+                                    $width = 1300;
+                                    $height = 700;
+                                ?>
+                                <?$img = \CFile::ResizeImageGet($galleryItem, array('width'=>$width, 'height'=>700), BX_RESIZE_IMAGE_PROPORTIONAL, true)['src']?>
+                                <img class="img lazyload" data-lazy="<?=$img?>" alt="alt">
+                                <button class="ui-btn zoom-link" href="<?=$img?>" data-fancybox="gallery2">
+                                    <img class="svg lazyload" data-src="<?=SITE_TEMPLATE_PATH?>/img/icons/ic-zoom.svg" width="15" height="15" alt="zoom">
+                                </button>
+                                <div class="publish-date">Опубликовано: <?=FormatDate("d.m.Y",MakeTimeStamp($date))?><?=$progressGallery[$last]['userProps']['UF_RESPONSIBLE_NAME']['VALUE']?' - '.$progressGallery[$last]['userProps']['UF_RESPONSIBLE_NAME']['VALUE']:''?></div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?else:?>
                         <div class="slide">
-                            <?$img = \CFile::ResizeImageGet($galleryItem, array('width'=>1300, 'height'=>700), BX_RESIZE_IMAGE_PROPORTIONAL, true)['src']?>
-                            <img class="img lazyload" data-src="<?=$img?>" alt="alt">
-                            <button class="ui-btn zoom-link" href="<?=$img?>" data-fancybox="gallery2">
-                                <img class="svg lazyload" data-src="<?=SITE_TEMPLATE_PATH?>/img/icons/ic-zoom.svg" width="15" height="15" alt="zoom">
-                            </button>
-                            <div class="publish-date">Опубликовано: <?=FormatDate("d.m.Y",MakeTimeStamp($date))?><?=$progressGallery[$last]['userProps']['UF_RESPONSIBLE_NAME']['VALUE']?' - '.$progressGallery[$last]['userProps']['UF_RESPONSIBLE_NAME']['VALUE']:''?></div>
+                            <div style="display: flex;align-items: center;justify-content: center;" class="img">
+                                <div class="pl">
+                                    <div class="pl__ball"></div>
+                                    <div class="pl__ball pl__ball--2"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    <?php endforeach; ?>
+                        <!--div class="slide"><img class="img lazyload" data-lazy="/local/templates/fsk/img/logo-banner.jpg" alt="alt"></div--> 
+                    <?endif?>
                 </div>
                 <!-- /.gallery-slider-xl-->
                 <div class="gallery-slider-sm" id="gallery-2-thumbs">
-                    <?php foreach($progressGallery[$last]['userProps']['UF_GALLERY']['VALUE'] as $galleryItem) : ?>
-                        <div class="slide">
-                            <?$img = \CFile::ResizeImageGet($galleryItem, array('width'=>146, 'height'=> 94), BX_RESIZE_IMAGE_PROPORTIONAL, true)['src']?>
-                            <img class="img lazyload" data-src="<?=$img?>" alt="alt">
-                        </div>
-                    <?php endforeach; ?>
+                    <?if($_REQUEST['AJAX_LOAD'] == 'progressGallery'):?>
+                        <?foreach($progressGallery[$last]['userProps']['UF_GALLERY']['VALUE'] as $galleryItem) : ?>
+                            <div class="slide">
+                                <?
+                                    $width = 146;
+                                    $height = 94;
+                                ?>
+                                
+                                <?$img = \CFile::ResizeImageGet($galleryItem, array('width'=>$width, 'height'=> $height), BX_RESIZE_IMAGE_PROPORTIONAL, true)['src']?>
+                                <img class="img lazyload" data-lazy="<?=$img?>" alt="alt">
+                            </div>
+                        <?endforeach?>
+                    <?else:?>
+                        <!--div class="slide"><img class="img lazyload" data-lazy="/local/templates/fsk/img/logo-banner.jpg" alt="alt"></div--> 
+                    <?endif?>
                 </div>
             </div>
             <!-- /.gallery-slider-sm-->
@@ -165,5 +186,89 @@
                 <?}?>
             </div>
         </div>
-    </div>
+    
 <?php endif; ?>
+<?if($_REQUEST['AJAX_LOAD'] == 'progressGallery'):?>
+    <?die()?>
+<?endif;?>
+        <?if(strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+        <script id = "progressGallery" data-skip-moving="true">
+            document.addEventListener('DOMContentLoaded', (event) => {
+
+                const initGallery = () => {
+                    var sliderPrevBtn = '<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
+                    sliderNextBtn = '<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>';
+
+                    $('#gallery-2').slick({
+                        infinite: false,
+                        speed: 800,
+                        fade: true,
+                        focusOnSelect: false,
+                        asNavFor: '#gallery-2-thumbs',
+                        prevArrow: sliderPrevBtn,
+                        nextArrow: sliderNextBtn,
+                        lazyLoad: 'ondemand',
+                        responsive: [ { breakpoint: 767, settings: { arrows: false } } ]
+                    });
+
+                    $('#gallery-2-thumbs').slick({
+                        infinite: false,
+                        slidesToShow: 8,
+                        arrows: false,
+                        speed: 800,
+                        focusOnSelect: true,
+                        asNavFor: '#gallery-2',
+                        lazyLoad: 'ondemand',
+                        responsive: [ { breakpoint: 1199, settings: { slidesToShow: 6 } }, { breakpoint: 767, settings: { slidesToShow: 4, } } ]
+                    });
+
+                    $("select.ui-select").each(function() {
+                        var classes = $(this).attr("class"),
+                            id      = $(this).attr("id"),
+                            name    = $(this).attr("name");
+                        var template =  '<div class="' + classes + '">';
+                        template += '<div class="ui-select__trigger">' + $(this).data("placeholder") + '</div>';
+                        template += `<div class="ui-select__options" data-link="${name}">`;
+                        template += '<div class="ui-select__simplebar" data-simplebar data-simplebar-auto-hide="false">';
+                        $(this).find("option").each(function() {
+                            template += '<span data-type="'+ $(this).data('type') +'" data-year="'+ $(this).data('year') +'" class="ui-select__option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                        });
+                        template += '</div></div></div>';
+                        $(this).addClass('ui-select__select');
+                        $(this).after(template);
+                    });
+                };
+
+                var request = new XMLHttpRequest();
+                var scripts = document.getElementById( "progressGallery" );
+                request.onload = function() {
+                    document.getElementById( "p-8" ).remove();
+
+                    var div = document.createElement('div');
+                    div.innerHTML = request.responseText;
+                    scripts.parentNode.replaceChild(div, scripts);
+                    //window.controller.initData().buildStep();
+
+                    initGallery();
+                    $('.custom-popup__video').magnificPopup({
+                        items: {
+                            src: '#modal-videobuild',
+                            type: 'inline'
+                        },
+                        callbacks: {
+                            open: function() {
+                                $('body').addClass('mfp-card');
+                            },
+                            close: function() {
+                                $('body').removeClass('mfp-card');
+                            }
+                        }
+                    });
+                }
+                request.open('GET', `${window.location.pathname}?AJAX_LOAD=progressGallery`);
+                setTimeout(() => {
+                    request.send();
+                }, 10000);
+            });
+        </script>
+        <?endif;?>

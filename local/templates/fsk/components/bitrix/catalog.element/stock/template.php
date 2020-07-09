@@ -40,8 +40,8 @@ $detail = !empty($arResult['PROPERTIES']['UF_DETAIL_PICTURE']['VALUE'])?$arResul
                 <div class="p-labels__title"><?=Loc::getMessage('CT_BCE_CATALOG_DESCRIPTION_TAG')?></div>
             <?endif?>
             <?
-            foreach ($arResult['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE'] as $tag){
-                ?><span class="p-label"><?=$tag?></span><?
+            foreach ($arResult['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE'] as $key=>$tag){
+                ?><a href="<?=$arResult['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE_XML_ID'][$key]?>" class="p-label"><?=$tag?></a><?
             }
         ?></div><?
     }

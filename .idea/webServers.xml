@@ -31,20 +31,13 @@
         </fileTransfer>
       </webServer>
       <webServer id="0e315ece-c525-464a-9c2c-ca6df88df59b" name="FSK_DEV" url="http://ftp.lider14504.nichost.ru">
-        <fileTransfer host="ftp.lider14504.nichost.ru" port="21">
+        <fileTransfer rootFolder="/var/www/fsknw_spb/public_html" accessType="SFTP" host="45.80.68.114" port="22" sshConfigId="4e00708c-0e77-4e67-b7b2-5b32421b7b48" sshConfig="FSK_Master">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="b0458854-9fa2-45ef-a337-83a82d247307" name="test" url="http://ftp.lider14504.nichost.ru">
-        <fileTransfer host="ftp.lider14504.nichost.ru" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="75ffd0cd-39d0-4f24-89b8-ecbb34c4c6bb" name="test1" url="http://ftp.lider14504.nichost.ru">
+      <webServer id="f37152ee-893d-4f46-bbe8-8719d5cd0009" name="UP" url="http://ftp.lider14504.nichost.ru">
         <fileTransfer host="ftp.lider14504.nichost.ru" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

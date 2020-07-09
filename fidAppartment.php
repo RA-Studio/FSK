@@ -8,6 +8,7 @@ $options = getopt("", array("LOAD_IMG::"));
 if($options['LOAD_IMG'] == "Y") {
     ignore_user_abort(true);
     set_time_limit(0);
+    $_GET['LOAD_IMG'] = "Y";
 }
 
 
@@ -20,16 +21,16 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
 
 
-$message = "Проверка крона";
-$message = wordwrap($message, 70, "\r\n");
-mail('ikapustin@ra-studio.ru', 'CRON', $message);
+//$message = "Проверка крона";
+//$message = wordwrap($message, 70, "\r\n");
+//mail('ikapustin@ra-studio.ru', 'CRON', $message);
 
-if($options['LOAD_IMG'] == "Y") {
-    RaStudio\Api\LoggerAdapter::add("Начало выгрузки большого фида");
-    $_GET['LOAD_IMG'] = "Y";
-} else {
-    RaStudio\Api\LoggerAdapter::add("Начало выгрузки");
-}
+//if($options['LOAD_IMG'] == "Y") {
+//    RaStudio\Api\LoggerAdapter::add("Начало выгрузки большого фида");
+//    $_GET['LOAD_IMG'] = "Y";
+//} else {
+//    RaStudio\Api\LoggerAdapter::add("Начало выгрузки");
+//}
 
 
 
@@ -250,7 +251,8 @@ class fidAppartmentParse {
                     $key = preg_replace( "/[^a-zA-ZА-Яа-я0-9\s]/", '', $key );
                     if(is_array($value)) {
                         //echo($imgKey);
-                        if($value['value']){
+                        if(!$value['value']) $value['value'] = '';
+                        if($value['value'] || $value['value'] === ''){
 
                             if($key == "price" || $key == "price100") {
 
@@ -269,7 +271,7 @@ class fidAppartmentParse {
 
                             $field = explode("|", $imgKey)[1];
 
-                            if($_GET["LOAD_IMG"] == "Y" && false) {
+                            if($_GET["LOAD_IMG"] == "Y") {
                                 $ch = curl_init();
                                 curl_setopt($ch, CURLOPT_POST, 0);
                                 curl_setopt($ch, CURLOPT_PORT , 443);
@@ -300,34 +302,38 @@ class fidAppartmentParse {
                 } else {
                     $name = $this->getRoomNameByCount($apartment['rooms'],$area);
                 }
+                if($apartment['category'] != "garage") {
 
-                if($ID) {
-                    if($ACTIVE == "N")  $this->statistic['ACTIVATEELEMENT']++;
-                    $this->elementController->Update($ID, array(
-                        'ACTIVE' => 'Y',
-                        "NAME" => $name)
-                    );
-                    $this->statistic['UPDATAELEMENT']++;
-                    $this->allElementInSite[$apartment['internal-id']]["UPDATE"] = "Y";
-                    CIBlockElement::SetPropertyValuesEx($ID, $this->iblockID, $property);
-                } else {
-                    $arLoadProductArray = Array(
-                        "MODIFIED_BY"    => $USER->GetID(),
-                        "IBLOCK_SECTION_ID" => $addSection,
-                        "IBLOCK_ID"      => $this->iblockID,
-                        "PROPERTY_VALUES"=> $property,
-                        "NAME"           => $name,
-                        "ACTIVE"         => "Y",
-                        "CODE"           => $apartment['internal-id'],
-                        "XML_ID"         => $apartment['internal-id'],
-                    );
-                    if($PRODUCT_ID = $this->elementController->Add($arLoadProductArray)) {
-                        $this->statistic['ADDELEMENT']++;
-                        echo "New ID: ".$PRODUCT_ID;
+                    if($ID) {
+                        if($ACTIVE == "N")  $this->statistic['ACTIVATEELEMENT']++;
+                        $this->elementController->Update($ID, array(
+                                'ACTIVE' => 'Y',
+                                "NAME" => $name)
+                        );
+                        $this->statistic['UPDATAELEMENT']++;
+                        $this->allElementInSite[$apartment['internal-id']]["UPDATE"] = "Y";
+                        CIBlockElement::SetPropertyValuesEx($ID, $this->iblockID, $property);
                     } else {
-                        $this->statistic['ERROR'] .= $this->elementController->LAST_ERROR."<br>";
+                        $arLoadProductArray = Array(
+                            "MODIFIED_BY"    => $USER->GetID(),
+                            "IBLOCK_SECTION_ID" => $addSection,
+                            "IBLOCK_ID"      => $this->iblockID,
+                            "PROPERTY_VALUES"=> $property,
+                            "NAME"           => $name,
+                            "ACTIVE"         => "Y",
+                            "CODE"           => $apartment['internal-id'],
+                            "XML_ID"         => $apartment['internal-id'],
+                        );
+                        if($PRODUCT_ID = $this->elementController->Add($arLoadProductArray)) {
+                            $this->statistic['ADDELEMENT']++;
+                            echo "New ID: ".$PRODUCT_ID;
+                        } else {
+                            $this->statistic['ERROR'] .= $this->elementController->LAST_ERROR."<br>";
+                        }
                     }
+
                 }
+
             }
         }
         $this->deactivationNotIncludeElement();
@@ -343,25 +349,20 @@ class fidAppartmentParse {
         }
     }
     public function mailSend($data) {
-        $to = 'ikapustin@ra-studio.ru, rnet2005@gmail.com, ran@ra-studio.ru'; // обратите внимание на запятую
-        
+
+
         if($_GET["LOAD_IMG"] == "Y") {
+            $to = 'ikapustin@ra-studio.ru, rnet2005@gmail.com, ran@ra-studio.ru'; // обратите внимание на запятую
             $to .= ", y.zavislyak@fsknw.ru";
+            $subject = 'Данные об окончании обновлении фида';
+            $message = $data;
+            $headers[]  = 'MIME-Version: 1.0';
+            $headers[]  = 'Content-type: text/html; charset=UTF-8';
+            $headers[] = 'From: FSK_fid_Data <fsknw@example.com>';
+            mail($to, $subject, $message, implode("\r\n", $headers));
         }
 
-        $subject = 'Данные об окончании обновлении фида';
-        $message = $data;
-        // Для отправки HTML-письма должен быть установлен заголовок Content-type
-        $headers[]  = 'MIME-Version: 1.0';
-        $headers[]  = 'Content-type: text/html; charset=UTF-8';
 
-        // Дополнительные заголовки
-        //$headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
-        $headers[] = 'From: FSK_fid_Data <fsknw@example.com>';
-        //$headers[] = 'Cc: fsknw@example.com';
-        //$headers[] = 'Bcc: fsknw@example.com';
-        // Отправляем
-        mail($to, $subject, $message, implode("\r\n", $headers));
     }
     public function printStatistic() {
         $type = $this->type;
@@ -374,18 +375,18 @@ class fidAppartmentParse {
         $deletesection = $this->statistic['DELETESECTION'];
         $error         = $this->statistic['ERROR'];
         $bigFid = $_GET['LOAD_IMG'];
-        RaStudio\Api\LoggerAdapter::add("```Информация по обновлению $type```<br>
-            *Обновлено элементов* `$updateelement` <br>
-            *Обновлено секций* `$updatesection`<br>
-            *Активированные элементы* `$activateelement`<br>
-            *Добавно элементов* `$addelement`<br>
-            *Добавно ЖК* `$addsection`<br>
-            *Удалено элементов* `$deleteelement`<br>
-            *Удалено ЖК* `$deletesection`<br>
-            *Ошибки*: `$error`
-            *Большой фид*: `$bigFid`
-            "
-        );
+//        RaStudio\Api\LoggerAdapter::add("```Информация по обновлению $type```<br>
+//            *Обновлено элементов* `$updateelement` <br>
+//            *Обновлено секций* `$updatesection`<br>
+//            *Активированные элементы* `$activateelement`<br>
+//            *Добавно элементов* `$addelement`<br>
+//            *Добавно ЖК* `$addsection`<br>
+//            *Удалено элементов* `$deleteelement`<br>
+//            *Удалено ЖК* `$deletesection`<br>
+//            *Ошибки*: `$error`
+//            *Большой фид*: `$bigFid`
+//            "
+//        );
 
         self::mailSend("```Информация по обновлению $type```<br>
         *Обновлено элементов* `$updateelement` <br>

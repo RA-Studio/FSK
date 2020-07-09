@@ -20,7 +20,9 @@ $this->setFrameMode(true);
     $preview = !empty($arItem['PROPERTIES']['UF_PHOTO']['VALUE'])?$arItem['PROPERTIES']['UF_PHOTO']['VALUE']:$arItem['DETAIL_PICTURE']['ID']	?>
     <div class="slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
         <a href="<?=$arItem['PROPERTIES']['UF_SLIDER_URL']['VALUE'];?>">
-                <img class="img" src="<?=CFile::GetPath($preview)?>" alt="<?=$arItem['NAME']?>">
+            <?$img = \CFile::ResizeImageGet($preview, array('width'=>3, 'height'=>1), BX_RESIZE_IMAGE_EXACT, true)['src']?>
+            <?$imgL = \CFile::ResizeImageGet($preview, array('width'=>1200, 'height'=>500), BX_RESIZE_IMAGE_EXACT, true)['src']?>
+            <img class="img" data-loda-img="<?=$imgL?>" src="<?=$img?>" alt="<?=$arItem['NAME']?>">
         </a>
     </div>
 <?endforeach;?>

@@ -99,6 +99,19 @@ if (CModule::IncludeModule('highloadblock')) {
     }
 }
 ?>
+<?php
+$progressGallery = []; // массив с галереей хода строительства этого ЖК
+CModule::IncludeModule('iblock');
+$arSelect = Array("ID", "IBLOCK_ID", "NAME", "PROPERTY_*");
+$arFilter = Array("IBLOCK_ID"=>6, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y", "SECTION_ID"=>$SectionInfo['ID']);
+
+if($_REQUEST["date"]) {
+    $arFilter['UF_GALLERY_MONTH'] = $_REQUEST["date"];
+}
+
+$res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>999), $arSelect);
+
+?>
 <?php echo '<pre style="display:none">',print_r($SectionInfo,1),'</pre>'; ?>
     <div class="page page-project">
         <div class="p-hero project-hero" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/card-img.jpg')">
@@ -750,19 +763,7 @@ if (CModule::IncludeModule('highloadblock')) {
                 </div>
             </div>
         </div>
-        <?php
-        $progressGallery = []; // массив с галереей хода строительства этого ЖК
-        CModule::IncludeModule('iblock');
-        $arSelect = Array("ID", "IBLOCK_ID", "NAME", "PROPERTY_*");
-        $arFilter = Array("IBLOCK_ID"=>6, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y", "SECTION_ID"=>$SectionInfo['ID']);
 
-        if($_REQUEST["date"]) {
-            $arFilter['UF_GALLERY_MONTH'] = $_REQUEST["date"];
-        }
-
-        $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>999), $arSelect);
-
-        ?>
         <?php if($res->arResult): $i = 0;?>
             <?php while($ob = $res->GetNextElement()): $progressGallery[$i]['standartProps'] = $ob->GetFields(); $progressGallery[$i]['userProps'] = $ob->GetProperties(); $i++;?>
             <?php endwhile;?>

@@ -20,7 +20,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 		"BIG_DATA_RCM_TYPE" => "personal",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
+		"CACHE_TIME" => "0",
 		"CACHE_TYPE" => "N",
 		"COMMON_ADD_TO_BASKET_ACTION" => "ADD",
 		"COMMON_SHOW_CLOSE_POPUP" => "N",

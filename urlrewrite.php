@@ -32,7 +32,7 @@ $arUrlRewrite=array (
     'PATH' => '/discounts/index.php',
     'SORT' => 100,
   ),
-  8 => 
+  11 => 
   array (
     'CONDITION' => '#^/newbuild/#',
     'RULE' => '',
