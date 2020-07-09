@@ -53,6 +53,15 @@ if (!empty($text)) {
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<?=SITE_TEMPLATE_PATH?>/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <?if(!$USER->IsAdmin() && strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WG2C29K');</script>
+        <!-- End Google Tag Manager -->
+    <?endif?>
     <?
         global $USER;
         //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.js');
@@ -81,6 +90,7 @@ if (!empty($text)) {
         }
         
     ?>
+
     <script><?=file_get_contents($_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH . '/js/jquery.js')?></script>
     
     <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/css/style-mini.css'?>">
@@ -90,9 +100,20 @@ if (!empty($text)) {
         <script src="/local/components/slam/easyform/script.js"></script>
     <?endif?>
     <title><?$APPLICATION->ShowTitle()?></title>
+      <?if(!in_array($_SERVER['REMOTE_ADDR'],['46.28.228.22']) && strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+          <script type="text/javascript">
+              var __cs = __cs || [];
+              __cs.push(["setCsAccount", "TCdqgdKk41PTkqYykKODPrcsrqM_2dHV"]);
+          </script>
+          <script type="text/javascript" async src="https://app.comagic.ru/static/cs.min.js"></script>
+      <?endif?>
   </head>
   <body>
-
+  <?if(!in_array($_SERVER['REMOTE_ADDR'],['46.28.228.22']) && strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG2C29K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+  <?endif?>
   	<?$APPLICATION->ShowPanel()?>
     <div class="wrapper">
       <!-- header-->
@@ -117,27 +138,37 @@ if (!empty($text)) {
                 )
             );?>
           <button class="menu-trigger" type="button"></button>
+            <ul class="main-menu">
             <?$APPLICATION->IncludeComponent(
-                "bitrix:menu", 
-                "top_menu", 
-                array(
-                    "ALLOW_MULTI_SELECT" => "N",
-                    "CHILD_MENU_TYPE" => "left",
-                    "DELAY" => "N",
-                    "MAX_LEVEL" => "1",
-                    "MENU_CACHE_GET_VARS" => array(
-                    ),
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_TYPE" => "N",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "ROOT_MENU_TYPE" => "top_menu",
-                    "USE_EXT" => "N",
-                    "COMPONENT_TEMPLATE" => "top_menu"
-                ),
-                false
-            );?>
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top_menu",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "top_menu"
+	),
+	false
+);?>
+                <li>
+                    <a class="link-favourite" href="/favourite/">
+                        <span class="dashed-underline">Избранное</span>
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="22.712" height="21.673" viewBox="0 0 22.712 21.673"><path d="M10.606,0l3.277,6.64,7.329,1.071-5.3,5.165,1.252,7.3-6.555-3.447L4.052,20.173l1.252-7.3L0,7.711,7.329,6.64,10.606,0Z" transform="translate(0.75 0.75)" fill="none" stroke="#e94200" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></svg>
+                    </a>
+                </li>
+            </ul>
           <div class="header-call js-call-callback">
-            <a href="#modal-FORM10" class="popup-btn-FORM10 header-call__ic"></a>
+            <a href="#modal-FORM10" class="popup-btn-FORM10 header-call__ic">
+            	<svg xmlns="http://www.w3.org/2000/svg" width="14.547" height="24.331" viewBox="0 0 14.547 24.331"><g transform="translate(-8967.75 1214.75)"><path d="M0,.5H13.047" transform="translate(8968.5 -1195.909)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><path d="M0,1.25H3.262" transform="translate(8973.393 -1211.988)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><rect width="13.047" height="22.831" rx="2" transform="translate(8968.5 -1214)" stroke-width="1.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg>
+            </a>
             <div class="header-call__data">
                 <span>
                     <?$APPLICATION->IncludeComponent(
@@ -178,21 +209,24 @@ if (!empty($text)) {
 
         </div>
         <div class="toggle-menu">
-            <?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu_mobile", Array(
-                "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-                    "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-                    "DELAY" => "N",	// Откладывать выполнение шаблона меню
-                    "MAX_LEVEL" => "1",	// Уровень вложенности меню
-                    "MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
-                        0 => "",
-                    ),
-                    "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-                    "MENU_CACHE_TYPE" => "N",	// Тип кеширования
-                    "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-                    "ROOT_MENU_TYPE" => "top_menu_mobile",	// Тип меню для первого уровня
-                    "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-                ),
-                false
-            );?>
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu_mobile", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top_menu_mobile",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "top_menu_mobile"
+	),
+	false
+);?>
         </div>
       </header>

@@ -45,7 +45,7 @@ $(document).ready(function () {
 var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
 
 /********************** Убирая фокус с текстовых инпутов без data-required подсвечиваем бордер, если заполнено. Убираем подсветку, если пусто *************/
-$(document).on('blur', 'input:not(input[data-type="tel"]):not(input[data-type="email"]), textarea', function(){
+$(document).on('blur', 'form:not(.filter) input:not(input[data-type="tel"]):not(input[data-type="email"]), textarea', function(){
   
     if( $(this).val() != '' ){
         $(this).addClass('input-border');
@@ -57,7 +57,7 @@ $(document).on('blur', 'input:not(input[data-type="tel"]):not(input[data-type="e
    
 });
 
-$(document).on('blur', 'input, textarea', function(){
+$(document).on('blur', 'form:not(.filter) input, textarea', function(){
   if($(this).val() != ''){
     $(this).parent().find('label:not(.general-itemInput__check)').addClass('general-itemInput__label_top');
   } else {
@@ -120,11 +120,50 @@ $(document).on('blur', 'input[data-type="tel"], input[data-type="email"]', funct
 /******************* Функция валидации ******************/
 $(document).on('click', 'button[type="submit"]', function(e){
   e.preventDefault();
-  if(!raValidation($(this).closest('form'))){
+
+  const form = $(this).closest('form');
+
+  if(!raValidation(form)){
     return false;
   } else {
-    $(this).closest('form').submit();
+    var requiredFields = [];
+    var data = form.serializeArray();
 
+    form.find('[data-required=""]').each((index, elem) => {
+      requiredFields.push($(elem).attr('name'));
+    })
+
+    $.ajax({
+      type: 'POST',
+      url: '/local/templates/fsk/php/validation.php',
+      dataType: 'json',
+      data: {
+        data: data,
+        required: requiredFields
+      },
+      success: function success(data) {
+        if (data.type === 'required') {
+          if (data.success) {
+            console.log(data.success, data.type);
+            form.submit();
+          } else {
+            data.fields.map(elem => {
+              $(`[name="${elem}"]`).addClass('input-err');
+            })
+          }
+        } else {
+          if (data.success) {
+            console.log(data.success, data.type);
+            form.submit();
+          } else {
+            $('[name="FIELDS[PHONE]"]').addClass('input-err');
+          }
+        }
+      },
+      error: function error(jqXHR, exception) {
+        console.log(exception);
+      }
+    });
   }
 });
 /* Эта функция вставляется в обработчик события клика по submit в таком виде:  

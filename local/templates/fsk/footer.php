@@ -1,7 +1,7 @@
 
 <title>phone</title>
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?> <?use Bitrix\Main\Page\Asset;?> <!-- footer--> <footer class="footer">
-	
+
 	<link rel="stylesheet" href="/local/components/slam/easyform/templates/uniform/uniform.css">
 	<?
     if(!CSite::InDir(SITE_DIR . "index.php")){
@@ -11,14 +11,14 @@
     }
     ?>
     <script src="<?=SITE_TEMPLATE_PATH . '/js/magnific.js'?>"></script>
-	
+
 	<?if(strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
     	<!--script src="<?=SITE_TEMPLATE_PATH . '/js/jquery-ui.min.js'?>"></script-->
 	<?endif?>
     <script src="<?=SITE_TEMPLATE_PATH . '/libs/jquery.ui.touch-punch.js'?>"></script>
     <script src="<?=SITE_TEMPLATE_PATH . '/js/jquery.cookie.js'?>"></script>
     <?
-    if(!CSite::InDir(SITE_DIR . "index.php") && !CSite::InDir('/vacancy/') && !CSite::InDir('/docs/') && !CSite::InDir('/clients/')){
+    if(!CSite::InDir(SITE_DIR . "index.php") && !CSite::InDir('/vacancy/') && !CSite::InDir('/clients/')){
         ?><script src="<?=SITE_TEMPLATE_PATH . '/js/SimpleBar.js'?>"></script><?
     }
     ?>
@@ -28,20 +28,21 @@
 	):?>
 		<script src="<?=SITE_TEMPLATE_PATH . '/js/slider.js'?>"></script>
     	<script src="<?=SITE_TEMPLATE_PATH . '/js/script-1.js'?>"></script>
-		<script src="<?=SITE_TEMPLATE_PATH . '/js/ApartmentControll.js'?>"></script>
+		<script src="<?=SITE_TEMPLATE_PATH . '/js/ApartmentControl3.js'?>"></script>
+
 	<?endif?>
-	<script src="<?=SITE_TEMPLATE_PATH . '/js/scripts5.js'?>"></script>
+	<script src="<?=SITE_TEMPLATE_PATH . '/js/scripts7.js'?>"></script>
 	<script src="<?=SITE_TEMPLATE_PATH . '/js/ajax.js'?>"></script>
 
 	<?if(strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
 		<!--script class="g-recaptcha-script" src="https://www.google.com/recaptcha/api.js" async defer></script-->
 	<?endif?>
-	
+
 	<?
 
 
 	?>
-	
+
 <?global $USER;
         if (!$USER->IsAdmin()) {?>
 <div class="corona">
@@ -94,21 +95,23 @@
 					 Новостройки
 				</div>
 				 <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"bottom_menu",
-	Array(
+	"bitrix:menu", 
+	"bottom_menu", 
+	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"COMPONENT_TEMPLATE" => "bottom_menu",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(),
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "bottom_menu1",
 		"USE_EXT" => "N"
-	)
+	),
+	false
 );?>
 			</div>
 			<div class="cols col-1-4">
@@ -116,20 +119,23 @@
 					 О застройщике
 				</div>
 				 <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"bottom_menu",
-	Array(
+	"bitrix:menu", 
+	"bottom_menu", 
+	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(0=>"",),
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "bottom_menu2",
-		"USE_EXT" => "N"
-	)
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom_menu"
+	),
+	false
 );?>
 			</div>
 			<div class="cols col-1-4">
@@ -137,20 +143,23 @@
 					 Оплата
 				</div>
 				 <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"bottom_menu",
-	Array(
+	"bitrix:menu", 
+	"bottom_menu", 
+	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(0=>"",),
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "bottom_menu3",
-		"USE_EXT" => "N"
-	)
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom_menu"
+	),
+	false
 );?>
 			</div>
 			<div class="cols col-1-4">
@@ -158,40 +167,45 @@
 					 Покупателям
 				</div>
 				 <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"bottom_menu2",
-	Array(
+	"bitrix:menu", 
+	"bottom_menu2", 
+	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(0=>"",),
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "bottom_menu4",
-		"USE_EXT" => "N"
-	)
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom_menu2"
+	),
+	false
 );?> <a class="confidence-link" href="/privacy-policy/">Политика конфиденциальности</a>
 			</div>
 		</div>
 	</div>
 	 <!-- mobile--> <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"bottom_menu_mobile",
-	Array(
+	"bitrix:menu", 
+	"bottom_menu_mobile", 
+	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"COMPONENT_TEMPLATE" => "bottom_menu_mobile",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(),
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "bottom_menu_mobile",
 		"USE_EXT" => "N"
-	)
+	),
+	false
 );?> <?/*
           <div class="footer__line">
             <div class="contact-links">
@@ -542,7 +556,7 @@ if($USER->IsAdmin()) {
             <div class="modal-callback__form">
               <form action="#">
 			    <input class="input" type="tel" name="tel" placeholder="+7 (___) ___-__-__" reqiured>
-                <input class="input" type="text" name="name" placeholder="ФИО" reqiured>                
+                <input class="input" type="text" name="name" placeholder="ФИО" reqiured>
                 <div class="text-center">
                   <button class="btn btn--cta" type="submit"> <img class="svg btn__ic ic-tel" src="<?=SITE_TEMPLATE_PATH?>/img/icons/ic-tel.svg" alt="phone" width="12" height="20">Позвоните мне</button>
                 </div>
@@ -672,5 +686,6 @@ if($USER->IsAdmin()) {
 		</div>
 	</div>
 </div>
+<script type="text/javascript" async src="//smartcallback.ru/api/SmartCallBack.js?t=Fr9lXI3PcKIGGYKZlcyj" charset="utf-8"></script>
       <!-- /.footer-->
     <!-- /.wrapper-->

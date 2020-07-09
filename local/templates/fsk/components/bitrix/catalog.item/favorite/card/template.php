@@ -42,7 +42,11 @@ $globalSetting = RaStudio\Ajax\AjaxFilter::globalSetting();
     <div class="favourite-item__padding">
         <div class="favourite-item__header">
             <div class="h3 text-bold">
-                <?=$item['NAME']?>
+                <?if($item['PROPERTIES']['apartments']['VALUE']=='true'){?>
+                    Лот <?=explode(', ',$item['NAME'])[1]?> м<sup>2</sup>
+                <?}else{?>
+                    <?=$item['NAME']?>
+                <?}?>
             </div>
             <div class="interactive-btn interactive-favorite favourited" data-id="<?=$item['ID']?>" data-role="favorite" style="cursor: pointer">
                 <img alt="Добавить в закладки" src="/local/templates/fsk/img/icons/ic-star.svg" class="svg">
@@ -95,10 +99,16 @@ $globalSetting = RaStudio\Ajax\AjaxFilter::globalSetting();
             </div>
         </div>
     </div>
+
     <div class="favourite-item__footer">
-        <button class="btn btn--cta js-call-callback" >
+        <a href="/reserve/" data-type="reserveBtn" data-id="<?=$item['ID']?>" data-iblock="<?=$item['IBLOCK_ID']?>" class=" btn btn--cta " type="button" style="display: inline-flex;">
             <img width="19" alt="phone" src="/local/templates/fsk/img/icons/ic-bag.svg" height="24" class="svg btn__ic">Забронировать
+        </a>
+        <?/*
+        <button class="btn btn--cta js-call-callback" >
+
         </button>
+*/?>
     </div>
 </div>
 

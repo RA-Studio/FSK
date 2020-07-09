@@ -1,6 +1,10 @@
 User-Agent: *
-Disallow: /
-Host: http://fsknw.spb.ru/
+Allow: /bitrix/components/
+Allow: /bitrix/cache/
+Allow: /bitrix/js/
+Allow: /bitrix/templates/
+Allow: /bitrix/panel/
+Host: https://fsknw.ru/
 Disallow: */index.php
 Disallow: /bitrix/
 Disallow: /*show_include_exec_time=

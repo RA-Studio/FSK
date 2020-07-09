@@ -63,7 +63,7 @@ if (isset($_POST['id']) && isset($_POST['iblock'])) {
     $_SESSION['RESERVE'] = ['ID' => $_POST['id'], 'IBLOCK' => $_POST['iblock']];
 }
 $successful = false;
-if (isset($_GET['PAYMENT']) && $_GET['PAYMENT']=='SBERBANK' && CModule::IncludeModule('iblock')){
+if ( isset($_GET['PAYMENT'] ) && $_GET['PAYMENT']=='SBERBANK' && CModule::IncludeModule('iblock')){
     $successful = true;
     //if ($_SESSION['RESERVE_SEND_TIME']<=(time()-(20*60))){
 

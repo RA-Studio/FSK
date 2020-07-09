@@ -17,7 +17,7 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 );?>
 		<h1 class="title title-margin"><?=$APPLICATION->ShowTitle(false)?></h1>
 		<p>
- <img width="100%" alt="Ipo_head.png" src="https://fsknw.ru/upload/medialibrary/d1b/d1b4446a8449720b627878759082c82a.jpg" title="Ipo_head.png" align="middle"><br>
+ <img width="100%" alt="Ipo_head.png" src="https://fsknw.ru/upload/iblock/61f/61fa104f137503f9d83bf68c7db6cb98.jpg" title="Ipo_head.png" align="middle"><br>
 		</p>
 		<p>
 			 Покупка недвижимости от ГК «ФСК» с использованием ипотечного кредита – это удобно, быстро и выгодно. Ипотечный консультант подберет программы, подходящие именно вам, заполнит все необходимые анкеты, проведет переговоры с сотрудниками банков и будет сопровождать вас на всех этапах сделки. Для наших клиентов действуют специальные выгодные условия кредитования.
@@ -42,7 +42,7 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 			<div class="ipo-adv__img">
  <img width="44" alt="alt" src="/local/templates/fsk/img/ipo/ic-percentage.svg" height="44" class="img">
 			</div>
- <span class="ipo-adv__txt">Процентная ставка <span class="nowrap">от 0.5%</span></span> </li>
+ <span class="ipo-adv__txt">Процентная ставка <span class="nowrap">от 0.01%</span></span> </li>
 		</ul>
 		 <!-- /.ipo-adv-->
 		<div class="ipo">
@@ -67,10 +67,10 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 						</div>
 						<div class="filter__field filter-field" data-name="age">
 							<div class="filter-field__label">
-								 Срок
+								 Срок, лет
 							</div>
 							<div class="ui-quantity ui-quantity--years" data-step="1">
- <button class="ui-quantity__btn ui-quantity__minus" data-event="mortgageFilter"><img width="10" src="/local/templates/fsk/img/icons/ic-minus.svg" height="2" class="svg" alt="Минус"></button> <input class="years" type="text" value="10 лет"> <button class="ui-quantity__btn ui-quantity__plus" data-event="mortgageFilter"><img width="10" src="/local/templates/fsk/img/icons/ic-plus.svg" height="10" class="svg" alt="Плюс"></button>
+ <button class="ui-quantity__btn ui-quantity__minus" data-event="mortgageFilter"> <img width="10" src="/local/templates/fsk/img/icons/ic-minus.svg" height="2" class="svg" alt="Минус"></button> <input class="years" type="text" value="10"> <button class="ui-quantity__btn ui-quantity__plus" data-event="mortgageFilter"> <img width="10" src="/local/templates/fsk/img/icons/ic-plus.svg" height="10" class="svg" alt="Плюс"> </button>
 							</div>
 						</div>
 						<div class="filter__field filter-field-result">
@@ -217,17 +217,21 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"CATEGORY_TITLE_TITLE" => "Имя клиента:",
 		"CATEGORY_TITLE_TYPE" => "text",
 		"CATEGORY_TITLE_VALUE" => "",
+		"CATEGORY_USER_ID_CLASS" => "general-itemInput",
+		"CATEGORY_USER_ID_TITLE" => "USER_ID",
+		"CATEGORY_USER_ID_TYPE" => "hidden",
+		"CATEGORY_USER_ID_VALUE" => $_SERVER["REMOTE_ADDR"],
 		"CLEAR_FORM" => "N",
 		"COMPONENT_TEMPLATE" => "mainForm",
 		"CREATE_SEND_MAIL" => "",
-		"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"",),
+		"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"CUR_PAGE",3=>"USER_ID",4=>"",),
 		"EMAIL_BCC" => "",
 		"EMAIL_FILE" => "N",
 		"EMAIL_TO" => "",
 		"ENABLE_SEND_MAIL" => "Y",
 		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
 		"EVENT_MESSAGE_ID" => array(0=>"49",),
-		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE",
+		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE,USER_ID",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"FORM_ID" => "FORM3",
 		"FORM_NAME" => "Нужна консультация специалиста?",
@@ -237,7 +241,7 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"HIDE_FIELD_NAME" => "Y",
 		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
 		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
-		"REQUIRED_FIELDS" => array(0=>"PHONE",1=>"",),
+		"REQUIRED_FIELDS" => array(0=>"PHONE",),
 		"SEND_AJAX" => "Y",
 		"SHOW_MODAL" => "N",
 		"USE_BOOTSRAP_CSS" => "N",
