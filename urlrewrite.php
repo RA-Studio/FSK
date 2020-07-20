@@ -40,6 +40,14 @@ $arUrlRewrite=array (
     'PATH' => '/newbuild/index.php',
     'SORT' => 100,
   ),
+  12 => 
+  array (
+    'CONDITION' => '#^/parking/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/parking/index.php',
+    'SORT' => 100,
+  ),
   1 => 
   array (
     'CONDITION' => '#^/rest/#',

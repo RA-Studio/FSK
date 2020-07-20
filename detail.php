@@ -1,4 +1,9 @@
 <?require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');?>
+<?
+if($_REQUEST['NUMBER']) {
+    $_REQUEST['ID'] = RaStudio\Cart::getIDByNum($_REQUEST['NUMBER']);
+}
+?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:catalog.element",
     "detail-apartment",

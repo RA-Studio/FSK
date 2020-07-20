@@ -206,7 +206,8 @@
 		"USE_EXT" => "N"
 	),
 	false
-);?> <?/*
+);?>
+    <?/*
           <div class="footer__line">
             <div class="contact-links">
                 <a class="contact-link" href="tel:

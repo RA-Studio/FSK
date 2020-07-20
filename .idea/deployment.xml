@@ -646,6 +646,8 @@
             <excludedPath path="/docs/upload" />
             <excludedPath path="/var/www/fsknw/public_html/bitrix" />
             <excludedPath path="/var/www/fsknw/public_html/upload" />
+            <excludedPath path="/var/www/fsknw/public_html/imgload" />
+            <excludedPath path="/var/www/fsknw/public_html/index_files" />
           </excludedPaths>
         </serverdata>
       </paths>
@@ -675,14 +677,7 @@
           </excludedPaths>
         </serverdata>
       </paths>
-      <paths name="test">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="test1">
+      <paths name="UP">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

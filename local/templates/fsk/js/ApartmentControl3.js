@@ -26,8 +26,8 @@ class ApartmentControll {
                 list: false,
             },
             controllerBtn: {
-                sliderPrevBtn:'<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
-                sliderNextBtn:'<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>'
+                sliderPrevBtn: '<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
+                sliderNextBtn: '<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>'
             },
             mapIndexPage: {
                 object: false,
@@ -47,15 +47,20 @@ class ApartmentControll {
         this.modeLoad = false;
         this.pathPage = document.location.pathname;
 
-        if(this.pathPage.indexOf(`commercial`) != -1) {
+        if (this.pathPage.indexOf(`commercial`) != -1) {
             this.modeLoad = "commercial"
-        } else if (this.pathPage.indexOf(`newbuild`) != -1 || this.pathPage == "/") {
+        }else if(  this.pathPage.indexOf(`parking`) != -1){
+            this.modeLoad = "parking"
+        }else if (this.pathPage.indexOf(`newbuild`) != -1 || this.pathPage == "/") {
             this.modeLoad = "flat";
         }
 
-        if(this.modeLoad == "commercial") {
+        if(this.modeLoad == "parking") {
+            this.dataObject.templates.buildSectionUrl = "/parking/";
+        }else if(this.modeLoad == "commercial") {
             this.dataObject.templates.buildSectionUrl = "/commercial/";
         }
+
 
         if( $(window).width() > 1200 ) {
             if( $('#results-screen').length ) {
@@ -282,8 +287,6 @@ class ApartmentControll {
                     if(parseInt(inputFirstVal) < 100000){
                         inputFirstVal = 100000;
                     }
-
-                    console.log(inputFirstVal);
 
                     if (typeof inputFirstVal === "string" || inputFirstVal instanceof String) {
                         inputFirstVal = parseInt(sosedInputCreditVal) - 100000;
@@ -532,25 +535,20 @@ class ApartmentControll {
                         jsonSend[element['name']] = element['value'];
                     }
                 }
-
                 if(_this.modeLoad === false) {
                     return false;
                 }
-
                 jsonSend[`PROPERTY_category`] = _this.modeLoad;
-
                 _this.dataObject.lastQuery.build = jsonSend;
-
                 _this.getDataAjax(jsonSend, "Filter.InBuildFilterCountElement").then((request) => {
+
                     $(prelouder).hide();
                     let result = request.result;
                     if(request.isSuccess && result.items) {
                         _this.initData().map(result);
                         _this.setData().printBuildLine(result);
-                        // console.log(_this.pathPage);
-                        if(_this.pathPage == `/commercial/`) {
+                        if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/`) {
                             if(!_this.dataObject.firstOut.load && result !== false) {
-                                // console.log(`InBuildFilter`);
                                 _this.getDataAjax(jsonSend, "Filter.InBuildFilter").then((request) => {
                                     $(prelouder).hide();
                                     let result = request.result;
@@ -560,7 +558,6 @@ class ApartmentControll {
                                         $(`#p-6 .results .results-empty`).hide();
                                         _this.setData().printApartmentLine(result);
                                     } else {
-
                                         $(`#p-6 .results .results__row.results__header`).hide();
                                         $(`#p-6 .results .results__body`).hide();
                                         $(`#p-6 .results .results-empty`).show();
@@ -623,7 +620,6 @@ class ApartmentControll {
                     let queryLocal = localStorage.getItem('buildQuery');
                     if (queryLocal) {
                         queryLocal = JSON.parse(queryLocal);
-                        console.log(queryLocal);
                         for (let itemF in queryLocal) {
                             let y = queryLocal[itemF];
 
@@ -776,7 +772,6 @@ class ApartmentControll {
                 });
             },
             setImgPopupBlock(plan,index, mini, first = false){
-
                 let poppupForm = $(`#card-example`);
                 let planBlockNew = $(poppupForm).find(`.card__col-2 .card__img`).eq(index);
                 if(index == -1) {
@@ -900,7 +895,6 @@ class ApartmentControll {
                 }
 
                 if(first) {
-                    //console.log(str, 'moreIpoteka', 'str');
                     $(`.ipo-table`).html(str);
                 } else {
                     $(`.ipo-table`).append(str);
@@ -920,6 +914,7 @@ class ApartmentControll {
                     for (let section of sections) {
                         let item = items[i];
 						countTypeApartment += section.resultFilterApartment.length;
+
                         stringOut += _this.templates().outBuildLineOne(section,item);
                         stringOutTwo += _this.templates().outBuildLineTwo(section,item);
                         i++;
@@ -948,17 +943,17 @@ class ApartmentControll {
                     _this.dataObject.firstOut.load = false;
 
                     if(result !== false) _this.dataObject.firstOut.list = result;
-                    if(_this.pathPage == `/newbuild/` || _this.pathPage == `/commercial/` || _this.pathPage == `/`) {
+                    if(_this.pathPage == `/newbuild/` || _this.pathPage == `/commercial/` || _this.pathPage == `/parking/` || _this.pathPage == `/`) {
                         $(`.quarter-list.view-1`).html(stringOut);
                         $(`.quarter-list.view-2 .f-row`).html(``);
                     }
-                    if(_this.pathPage == `/commercial/`) {
+                    if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/`) {
                         $(`.results.results--nofloors`).hide();
                         $(`.container.section-margin`).show();
                     }
                 } else {
 
-                    if(_this.pathPage == `/commercial/`) {
+                    if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/`) {
                         $(`.results.results--nofloors`).show();
                         $(`.quarter-list.view-1`).html(``);
                         $(`.container.section-margin`).hide();
@@ -1184,7 +1179,6 @@ class ApartmentControll {
                         reserve[i].style.display = "none";
                     }
                 }
-               // console.log(element.PROPERTIES.UF_STATUS.VALUE);
                 var reserve = document.querySelectorAll('[data-type="reserveBtn"]');
                 for (i = 0; i < reserve.length; ++i) {
                     reserve[i].dataset.id =element.ID;
@@ -1277,7 +1271,6 @@ class ApartmentControll {
 
                 $.getJSON('/favourite/data.json', function(data) {
                     if(data != undefined && data != null) {
-                        //console.log(data[element.ID]);
                         if(data[element.ID] != undefined ) {
                             $(`[data-role="favorite"][data-id="${element.ID}"]`).addClass(`active`);
                             return true;
@@ -1297,7 +1290,6 @@ class ApartmentControll {
             printMortgageData(tr){
                 let field = $(tr).closest('.filter__field').data('name');
                 let value = parseInt($(tr).val());
-                // console.log(value);
                 _this.dataObject.mortgage.option[field] = value;
 
 
@@ -1441,8 +1433,8 @@ class ApartmentControll {
         }
     }
     getDataAjax(data = {}, act = "", callbackFun) {
+        console.log(act);
         return new Promise((resolve, reject) => {
-            // console.log(act)
             let request = $.ajax({
                 context: this,
                 url: `/ajax/?act=${act}`,
@@ -1453,6 +1445,7 @@ class ApartmentControll {
                 data: data,
             });
             request.done((response) => {
+                console.log(response.result);
                 resolve(response);
             });
             request.fail(( jqXHR, textStatus ) => {
@@ -1512,7 +1505,6 @@ class ApartmentControll {
                 return stringOut;
             },
             outBuildLineOne (section,item) {
-                // console.log(section)
                 let stringOut = ``;
                 stringOut += `<div class="quarter">`;
                 if (section['UF_PHOTO'] === null || section['UF_PHOTO']===''){}else{
@@ -1585,11 +1577,21 @@ class ApartmentControll {
                             let nameStingEnd = '';
                             if(_this.modeLoad == "commercial") {
                                 nameStingEnd = "Помещения";
-                            } else if (item.apartment) {
+                            }else if (_this.modeLoad == "parking") {
+                                nameStingEnd = "Машиноместо";
+                            }else if (item.apartment) {
                                 nameStingEnd = "Апартаменты";
                             } else {
                                 nameStingEnd = "Квартиры";
                             }
+
+                            let postfix = '';
+                            if (_this.modeLoad == "parking"){
+                                postfix = "тыс/р.";
+                            }else{
+                                postfix = "млн/р.";
+                            }
+
                             if(section['minPriceArray'][0]=== '0' && section['minPriceArray'][1]=== '0'){
                                 stringOut += `
                                 <div class="p-key p-key--blue">
@@ -1601,7 +1603,7 @@ class ApartmentControll {
                                 stringOut += `
                                 <div class="p-key p-key--blue">
                                     <div class="p-key__ic"> </div>
-                                    <div class="p-key__txt">${nameStingEnd} от <b>${section['minPriceArray'][0]},${section['minPriceArray'][1][0]} </b>млн/р.</div>
+                                    <div class="p-key__txt">${nameStingEnd} от <b>${section['minPriceArray'][0]},${section['minPriceArray'][1][0]} </b>${postfix}</div>
                                 </div>
                             `;
                             }
@@ -1631,7 +1633,6 @@ class ApartmentControll {
                 return stringOut;
             },
             outBuildLineTwo (section,item) {
-                console.log(section['']);
                 if(section['resultBuildPrice'] == null) return '';
                 let stringOut = ``;
                 stringOut += `<div class="cols col-1-2">`;

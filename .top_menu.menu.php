@@ -1,14 +1,14 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Новостройки", 
+		"Объекты", 
 		"/newbuild/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Акции и скидки", 
+		"Акции", 
 		"/discounts/", 
 		Array(), 
 		Array(), 

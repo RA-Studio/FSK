@@ -9463,6 +9463,9 @@ body textarea:required:valid {
     height: 50px;
     margin-bottom: 18px;
 }
+.parking-project-data .img{
+    height: 65px;
+}
 .gallery {
     overflow: hidden;
 }
@@ -12901,3 +12904,34 @@ body > div:last-child {
 .datepicker--time-row input[type="range"] {
     border: none !important;
 }
+
+
+/*Паркинги*/
+.gallery-items-row{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.gallery-items-row + .gallery-items-row{
+  margin-top: 24px;
+}
+.gallery-items-row:nth-child(odd) .gallery-items-row-item:first-child,
+.gallery-items-row:nth-child(even) .gallery-items-row-item:last-child{
+  flex: 0 0 calc(40% - 12px)
+}
+.gallery-items-row:nth-child(odd) .gallery-items-row-item:last-child,
+.gallery-items-row:nth-child(even) .gallery-items-row-item:first-child{
+  flex: 0 0 calc(60% - 12px)
+}
+.gallery-items-row-item{
+    height: 350px;
+}
+.gallery-items-row-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Паркинги Конец*/

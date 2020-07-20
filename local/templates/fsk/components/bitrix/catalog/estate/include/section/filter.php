@@ -10,8 +10,7 @@ sort($filterData['builtyear']);
 $downShow = false;
 ?>
 <?/*<div class="filter-preloader" style="display: none"></div>*/?>
-
-<form class="filter">
+<form class="filter" >
     <input type="hidden" value="<?=$arParams['IBLOCK_ID']?>" name="IBLOCK_ID">
     <input type="hidden" value="<?=$SectionInfo['ID']?>" name="SECTION_ID">
         <?if($apart){?>
@@ -19,7 +18,7 @@ $downShow = false;
                 <div class="filter-fields">
 
                     <div class="filter__field filter-field">
-                        <div class="filter-field__label">Стоимость, млн/р.</div>
+                        <div class="filter-field__label">Стоимость, <?=$typeOfApartment == 'parking' ? 'тыс/р.' : 'млн/р.'?></div>
                         <div class="ui-range">
                             <div class="ui-range__col"><span>от</span>
                                 <input class="ui-range__val ui-range__from" name = ">=PROPERTY_price100short" value="<?=floor(min($filterData['price100short']))?>">
@@ -171,7 +170,7 @@ $downShow = false;
                         </div>
                     <?endif;?>
                     <div class="filter__field filter-field">
-                        <div class="filter-field__label">Стоимость, млн/р.</div>
+                        <div class="filter-field__label">Стоимость, <?=$typeOfApartment == 'parking' ? 'тыс/р.' : 'млн/р.'?></div>
                         <div class="ui-range">
                             <div class="ui-range__col"><span>от</span>
                                 <input class="ui-range__val ui-range__from" name = ">=PROPERTY_price100short" value="<?=floor(min($filterData['price100short']))?>">
@@ -226,9 +225,9 @@ $downShow = false;
                             </div>
                         </div>
                     <?endif;?>
-
+                    <pre style="display: none"><?print_r($filterData['builtyear'])?></pre>
                     <?if(count(array_filter($filterData['room'])) == 0):?>
-                        <?if($filterData['builtyear']):?>
+                        <?if($filterData['builtyear'] && $typeOfApartment != 'parking'):?>
                             <?$downShow = true?>
                             <div class="filter__field filter-field">
                                 <div class="filter-field__label">Готовность до</div>

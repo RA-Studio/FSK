@@ -76,7 +76,7 @@ function declOfNum(number, titles) { // функция склонения стр
 var queryLocalAll = localStorage.getItem('buildQuery');
 if(queryLocalAll) {
     queryLocalAll = JSON.parse(queryLocalAll);
-    // console.log(queryLocalAll);
+
 }
 
 function loadPage() {
@@ -160,7 +160,7 @@ function loadPage() {
                         $(_this).slider("values", 1, $(this).val())
                     }
                 } else {
-                    console.log("Нет такого параметра");
+                    /*console.log("Нет такого параметра");*/
                 }
                 upadateFilterData(el);
             });
@@ -380,7 +380,7 @@ function loadPage() {
     });
 
     function AnchorActive() {
-        console.log('AnchorActive');
+        /*console.log('AnchorActive');*/
         $('.scrollspy-item').each(function(e) {
             var dataName = $(this).attr('id');
             var posit = $(this).offset().top - 400;
@@ -397,7 +397,7 @@ function loadPage() {
 
 
     function lineFixing() {
-        console.log('lineFixing');
+        /*console.log('lineFixing');*/
         if ( $(window).scrollTop() >= scrollspyOffset ) {
             $('.scrollspy-menu').addClass('scrollspy-menu--fixed');
             $('.wrapper').addClass('scrollspy-padding');
@@ -509,7 +509,7 @@ function loadPage() {
                 str = str.substr(0,symbolsCount-16) + "... ";
 
                 let linkT = setInterval(()=>{
-                    console.log($(this).closest('.quarter').find('.quarter-link').html());
+                    /*console.log($(this).closest('.quarter').find('.quarter-link').html());*/
                     var linkHref = $(this).closest('.quarter').find('.quarter-link').attr('href');
                     if (linkHref != undefined && linkHref!= ''){
                         var link = '<a href="' + linkHref + '"' + '>Читать далее</a>';
@@ -752,7 +752,7 @@ $(document).ready(function() {
     setTimeout(() => {
         $listImg = document.querySelectorAll('[data-loda-img]');
         $listImg.forEach(element => {
-            console.log(element.getAttribute('data-loda-img'));
+            /*console.log(element.getAttribute('data-loda-img'));*/
             let img = element.getAttribute('data-loda-img');
             element.setAttribute('src', img);
         });
@@ -761,7 +761,7 @@ $(document).ready(function() {
     let timeLoad = 2000;
     let path = window.location.pathname;
 
-    console.log(path,'local');
+    /*console.log(path,'local');*/
     switch(path) {
         case '/':
             timeLoad = 2000;
@@ -769,8 +769,11 @@ $(document).ready(function() {
         case '/newbuild/':
             timeLoad = 0;
         break;
+        default:
+            timeLoad = 0;
+            break;
     }
-    console.log(timeLoad,'time');
+    /*console.log(timeLoad,'time');*/
 
     setTimeout(() => {
         try {
@@ -818,7 +821,7 @@ $(document).ready(function() {
         $(this).addClass("active");
         $(this).closest(".ui-select").removeClass("opened");
         $(this).closest(".ui-select").find(".ui-select__trigger").text($(this).text());
-        console.log($(this).parents(".ui-select"));//.data(`event-change`)
+       /* console.log($(this).parents(".ui-select"));//.data(`event-change`)*/
 
         if($($(this).parents(".ui-select")[0].previousElementSibling).data(`event-change`) == `updateResult`) {
             window.controller.getData().filterApartment(this);
@@ -849,11 +852,11 @@ $(document).ready(function() {
     });
 
     $(document).on('change', '.filter input:not([type="checkbox"])', function(){
-        console.log($(this).closest('.ui-range').find('.ui-range__slider').data('max'));
+       /* console.log($(this).closest('.ui-range').find('.ui-range__slider').data('max'));*/
         if( $(this).closest('.ui-range').find('.ui-range__slider').data('max') < $(this).val() ){
             $(this).val($(this).closest('.ui-range').find('.ui-range__slider').data('max'));
         }
-        console.log($(this).closest('.ui-range').find('.ui-range__slider').data('min'));
+        /*console.log($(this).closest('.ui-range').find('.ui-range__slider').data('min'));*/
         if( $(this).closest('.ui-range').find('.ui-range__slider').data('min') > $(this).val() ){
             $(this).val($(this).closest('.ui-range').find('.ui-range__slider').data('min'));
         }
