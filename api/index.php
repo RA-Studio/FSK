@@ -1,5 +1,4 @@
 <?php
-
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
 
 
@@ -7,7 +6,11 @@ if (!CModule::IncludeModule('rastudio')) {
     return;
 }
 
+RaStudio\Api\LoggerAdapter::add(print_r([file_get_contents('php://input'), $_SERVER['REQUEST_METHOD']], true));
+
 $sControllerName = "ApiController";
+
+
 
 try {
     $sClassPath = RS_MODULE_DIR . "/lib/api/" . $sControllerName;
@@ -28,9 +31,6 @@ try {
 
     list($code, $xml) = $sClassName::$sMethodName($_SERVER['REQUEST_METHOD'], $_REQUEST["ENTITY"], file_get_contents('php://input'));
 
-    header('Status: ' . $code);
-    $sHeader = 'Content-Type: application/xml; charset=utf-8';
-    header($sHeader);
     echo $xml;
 
 } catch (\Exception $e) {

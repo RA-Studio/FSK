@@ -25,4 +25,15 @@ class Cart {
         }
     }
 
+    public static function getIDByNum($num) {
+        $arSelect = ['ID','CODE'];
+        $arFilter = Array("IBLOCK_ID"=> 1, "CODE" => $num);
+        $res = \CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
+        $arElement = [];
+        while($ob = $res->GetNextElement()){
+            $temp = $ob->GetFields();
+        }
+        return $temp['ID'] ? : false;
+    }
+
 }

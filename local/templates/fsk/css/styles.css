@@ -1955,9 +1955,9 @@ button, select {
   text-transform: none;
 }
 
-button, html [type="button"], [type="reset"], [type="submit"] {
+/*button, html [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
-}
+}*/
 
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   padding: 0;
@@ -5336,7 +5336,7 @@ body input:required:valid, body textarea:required:valid {
   height: 130px;
   margin: 0 10px;
   padding: 0 30px;
-  
+
   border-radius: 3px;
   font-size: 20px;
 }
@@ -8176,7 +8176,6 @@ body input:required:valid, body textarea:required:valid {
   border-radius: 3px;
 }
 
-
 .p-hero__inner {
   width: 511px;
   padding: 64px 100px 24px 24px;
@@ -8263,6 +8262,14 @@ body input:required:valid, body textarea:required:valid {
   transition: all 0.1s linear;
 }
 
+.p-item.contact-page {
+  align-items: center;
+}
+
+.p-item.contact-page .p-item__content {
+  padding: 20px 50px;
+}
+
 .p-item:hover {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -8295,6 +8302,10 @@ body input:required:valid, body textarea:required:valid {
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
+}
+
+.p-item__img.contact .img {
+
 }
 
 .p-item__content {
@@ -10803,7 +10814,7 @@ body input:required:valid, body textarea:required:valid {
 }
 
 .project-photos .gallery-btns .btn {
-  margin: 24px 24px 0 0;
+  margin-right: 24px;
 }
 .project-photos .gallery-btns{
   margin-top: 24px;
@@ -12039,7 +12050,7 @@ input[type="number"] {
     color: #363839;
     margin: 0;
     line-height: 21px;
-    -ms-text-overflow: ellipsis;
+    /*-ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
     -ms-line-clamp: 4;
@@ -12049,7 +12060,7 @@ input[type="number"] {
     display: box;
     word-wrap: break-word;
     -webkit-box-orient: vertical;
-    box-orient: vertical;
+    box-orient: vertical;*/
 }
 .advantages-new-slider__next,
 .advantages-new-slider__prev{
@@ -12279,7 +12290,7 @@ input[type="number"] {
 .scrollspy-menu--fixed a::after{
 	background: #fff;
 }
-.scrollspy-menu a:hover, 
+.scrollspy-menu a:hover,
 .scrollspy-menu a:focus {
     text-shadow: 0px 5px 5px #0000004D;
 }
@@ -13231,7 +13242,7 @@ input[type="number"] {
     margin-bottom: 15px;
     width: 50%!important;
   }
-  .new-form-content-row__input, 
+  .new-form-content-row__input,
   .new-form-content-row__input:nth-child(2),
   .new-form-content-row__input:last-child{
     margin-right: 0;
@@ -13835,7 +13846,7 @@ input[type="number"] {
 }
 .contacts-social-row-item-content{
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px; 
+  border-radius: 5px;
   padding: 27px 29px;
   height: 100%;
   width: 100%;
@@ -13858,6 +13869,7 @@ input[type="number"] {
 .completed-projects{
   display: grid;
   grid-gap: 24px;
+  margin-bottom: 24px;
   grid-template-columns: repeat(4, 1fr);
 }
 .completed-projects-item{
@@ -13913,7 +13925,7 @@ input[type="number"] {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
-} 
+}
 .contacts-today{
   display: flex;
   justify-content: space-between;
@@ -13934,7 +13946,7 @@ input[type="number"] {
   align-items: center;
   border-top: 1px solid #E5E8E8;
   border-bottom: 1px solid #E5E8E8;
-  padding: 30px 0; 
+  padding: 30px 0;
 }
 .contacts-akpa__text{
   max-width: 655px;
@@ -14303,3 +14315,9 @@ body > div:last-child {
 .datepicker--time-row input[type=range]{
   border: none!important
 }
+
+.rc-anchor-normal {
+  height: 50px!important
+}
+
+

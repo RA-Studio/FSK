@@ -1,0 +1,96 @@
+// Файлы сторонних библиотек
+
+// Общие файлы стилей
+
+//chunks
+
+//pages
+@import 'common/adaptive';
+
+.global-popup-message{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 250px;
+	min-height: 50px;
+	background: var(--cta-color);
+	z-index: 1000;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: white;
+	font-weight: 500;
+	text-align: center;
+	box-shadow: 0px 0px 13px -5px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&.error{
+		background: var(--accent-color);
+	}
+	&.warning{
+		color: var(--add-accent-color);
+		background: #FF3;
+	}
+}
+label{
+	margin-bottom: 0;
+}
+.info-block{
+	background: #FFDD2D;
+	border-radius: 3px;
+	padding: 17px 20px;
+	display: flex;
+	align-items: center;
+	svg{
+		margin-right: 18px;
+		flex-shrink: 0;
+	}
+}
+@include w480{
+	.info-block{
+		svg{
+			display: none;
+		}
+	}
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+	flex-direction: column;
+}
+.content {
+	flex: 1;
+	padding-top: 60px;
+	padding-bottom: 100px;
+}
+.grey-block{
+	height: 100px;
+	background: #F6F8FA;
+}
+
+.btn-new{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.1s linear;
+	font-weight: normal;
+	position: relative;
+	> svg{
+		margin-right: 8px;
+	}
+}
+@include w480{
+	.grey-block{
+		height: 80px;
+	}
+	.section-margin{
+		margin-top: 40px;
+	}
+}
+
+@import 'pages/index';
+@import 'pages/anketa';
+@import 'pages/auth';
+@import 'pages/lk';
+@import 'pages/info';

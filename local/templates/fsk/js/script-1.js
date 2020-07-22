@@ -51,12 +51,12 @@ $(document).ready(function(){
             //success.html('<p>На данный момент квартира не доступна для резирвирования!</p>');
             break;
           case 'ok':
-               location.href=href;
-            break;
+            location.href=href;
+          break;
           default:
             console.log(success.message);
             //success.html(success);
-            break;
+          break;
         }
       },
       error:(function (error) {

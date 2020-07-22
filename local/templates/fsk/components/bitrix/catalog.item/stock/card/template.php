@@ -34,9 +34,10 @@ $preview = !empty($item['PROPERTIES']['UF_PREVIEW_PICTURE']['VALUE'])?$item['PRO
     }
     ?></a><?
     if(!empty($item['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE'])){
-        ?><div class="p-labels p-labels--absolute"><?
-            foreach ($item['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE'] as $tag){
-                ?><span class="p-label"><?=$tag?></span><?
+        ?><div class="p-labels p-labels--absolute">
+        <?
+            foreach ($item['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE'] as $key=>$tag){
+                ?><a href="<?=$item['PROPERTIES']['UF_DISCOUNTS_TAGS']['VALUE_XML_ID'][$key]?>" class="p-label"><?=$tag?></a><?
             }
         ?></div><?
     }

@@ -76,13 +76,13 @@ $page = $APPLICATION->GetCurPage();
 	)
 );?>
 	</div>
-	 <?$APPLICATION->IncludeFile(
-            $page."/include/SEO.php",
-            array(),
-            array(
-                "NAME"=>"ФСК в цифрах",
-                "MODE" => "html",
-            )
-        );?>
-</div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+         <?$APPLICATION->IncludeFile(
+                $page."/include/SEO.php",
+                array(),
+                array(
+                    "NAME"=>"ФСК в цифрах",
+                    "MODE" => "html",
+                )
+            );?>
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

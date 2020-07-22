@@ -2,7 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("О застройщике");
 $page = $APPLICATION->GetCurPage();
-?><div class="page desktop-padding">
+?>
+    <div class="page desktop-padding">
     <div class="container">
         <?global $USER;
         if($USER->IsAdmin() && $_GET['bitrix_include_areas']=='Y'){?>
@@ -70,8 +71,8 @@ $page = $APPLICATION->GetCurPage();
         ?>
 <div class="content">
     <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"compl_projects", 
+	"bitrix:news.list",
+	"compl_projects",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -205,8 +206,8 @@ $page = $APPLICATION->GetCurPage();
     );?>
 </div>
         <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"raitings", 
+	"bitrix:news.list",
+	"raitings",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",

@@ -219,19 +219,35 @@ class OrderTable extends Main\Entity\DataManager {
             "IBLOCK_ID",
             "NAME",
             "CODE",
-            'PROPERTY_PRICE',
+            "IBLOCK_SECTION_ID",
+            "SECTION_ID",
+            'PROPERTY_*',
         );
-        $arElement = [];
+
+        $arElement = array();
+        $section = array();
         if (\CModule::IncludeModule("iblock")) {
             $res = \CIBlockElement::GetList(array(), $arFilter, false, array(), $arSelect);
             while ($ob = $res->GetNextElement()) {
                 $arElement = $ob->GetFields();
+                $arElement['PROPERTIES'] = $ob->GetProperties();
             }
         }
+        $nav = \CIBlockSection::GetNavChain(false, $arElement['IBLOCK_SECTION_ID']);
+        $arSectionPath = $nav->GetNext();
+
+       /* $arFilter = array('IBLOCK_ID' => $arElement['IBLOCK_ID'], 'ID'=>$arSectionPath['ID']);
+        $rsSections = \CIBlockSection::GetList(array(), $arFilter);
+        if ($arSection = $rsSections->Fetch())
+        {
+            $section = $arSection;
+        }*/
         $mess = "
             <p>".$order['UF_USER_NAME']." ".$order['UF_SECOND_NAME'].", Вы успешно забронировали квартиру!</p>
             <p>Наш менеджер свяжется с Вами в ближайшее время.</p>
         ";
+
+
 
         $arEventFields = array(
             "MESSAGE" => $mess,
@@ -243,15 +259,23 @@ class OrderTable extends Main\Entity\DataManager {
             "ARTICLE"=>$arElement['CODE'],
             "ORDER_ID"=>$orderId,
             "EVENT_NAME" => "RESERVE_SUCCESS",
-
+            "BASKET"=>json_encode($arElement),
+            "OBJECT_NAME"=> explode(',',$arElement['NAME'])[0],
+            "OBJECT_LC"=>$arSectionPath['NAME'],
+            "OBJECT_SECTION"=>$arElement['PROPERTIES']['section']['VALUE'],
+            "OBJECT_BUILDING_SECTION"=>$arElement['PROPERTIES']['buildingsection']['VALUE'],
+            "OBJECT_PRICE"=>\CurrencyFormat($arElement['PROPERTIES']['price100']['VALUE'], 'RUB'),
+            "OBJECT_FLOOR"=>$arElement['PROPERTIES']['floor']['VALUE'],
+            "OBJECT_AREA"=>$arElement['PROPERTIES']['area']['VALUE'].' м<sup>2</sup>',
+            "OBJECT_ID"=> \CurrencyFormat($arElement['CODE'], 'NUN'),
+            "OBJECT_PLAN_IMAGE"=> 'https://fsknw.ru'.\CFile::GetPath($arElement['PROPERTIES']['image']['VALUE'][0]),
         );
         $sent = Event::send(array(
             "EVENT_NAME" => "RESERVE_SUCCESS",
             "LID" => "s1",
             "C_FIELDS" => $arEventFields,
         ));
-
-        //return print_r($sent);
+        return $sent;
     }
 
     public static function sendError($orderId){
@@ -265,12 +289,23 @@ class OrderTable extends Main\Entity\DataManager {
              "CODE",
              'PROPERTY_PRICE',
          );
-        $arElement = [];
+        $arElement = array();
+        $section = array();
         if (\CModule::IncludeModule("iblock")) {
-            $res = \CIBlockElement::GetList(array(), $arFilter, false, array(),$arSelect);
-             if($ob = $res->GetNextElement()){
-                 $arElement = $ob->GetFields();
-             }
+            $res = \CIBlockElement::GetList(array(), $arFilter, false, array(), $arSelect);
+            while ($ob = $res->GetNextElement()) {
+                $arElement = $ob->GetFields();
+                $arElement['PROPERTIES'] = $ob->GetProperties();
+            }
+        }
+        $nav = \CIBlockSection::GetNavChain(false, $arElement['IBLOCK_SECTION_ID']);
+        $arSectionPath = $nav->GetNext();
+
+        $arFilter = array('IBLOCK_ID' => $arElement['IBLOCK_ID'], 'ID'=>$arSectionPath['ID']);
+        $rsSections = \CIBlockSection::GetList(array(), $arFilter);
+        if ($arSection = $rsSections->Fetch())
+        {
+            $section = $arSection;
         }
          $mess = "
              <p>".$order['UF_USER_NAME']." ".$order['UF_SECOND_NAME'].", Вы успешно забронировали квартиру!</p>
@@ -287,6 +322,15 @@ class OrderTable extends Main\Entity\DataManager {
              "ARTICLE"=>$arElement['CODE']?$arElement['CODE']:"",
              "ORDER_ID"=>$orderId,
              "EVENT_NAME" => "RESERVE_ERROR",
+             "OBJECT_NAME"=> explode(',',$arElement['NAME'])[0],
+             "OBJECT_LC"=>$section['NAME'],
+             "OBJECT_SECTION"=>$arElement['PROPERTIES']['section']['VALUE'],
+             "OBJECT_BUILDING_SECTION"=>$arElement['PROPERTIES']['buildingsection']['VALUE'],
+             "OBJECT_PRICE"=>\CurrencyFormat($arElement['PROPERTIES']['price100']['VALUE'], 'RUB'),
+             "OBJECT_FLOOR"=>$arElement['PROPERTIES']['floor']['VALUE'],
+             "OBJECT_AREA"=>$arElement['PROPERTIES']['area']['VALUE'].' м<sup>2</sup>',
+             "OBJECT_ID"=> \CurrencyFormat($arElement['CODE'], 'NUN'),
+             "OBJECT_PLAN_IMAGE"=> 'https://fsknw.ru'.\CFile::GetPath($arElement['PROPERTIES']['image']['VALUE'][0]),
 
          );
          $sent = Event::send(array(
@@ -298,7 +342,7 @@ class OrderTable extends Main\Entity\DataManager {
          return $sent;
     }
 
-    public static function orderCancel($orderId, $status){
+    public static function orderCancel($orderId, $status,$error){
         self::update($orderId, array('ID'=>$orderId,'UF_STATUS'=>$status));
     }
 

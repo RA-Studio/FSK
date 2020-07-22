@@ -1,0 +1,46 @@
+.card-btn .btn {
+	width: 100%;
+}
+
+.card-btn .popup-btn-FORM10 {
+	margin-bottom: 15px
+}
+
+.results-offer__footer-wrap {
+	margin-top: 20px
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+	.card-data {
+		position: relative;
+		padding-bottom: 85px;
+	}
+
+	.card-btn {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		bottom: 0;
+		z-index: 2;
+	}
+
+	.card-btn .popup-btn-FORM10 {
+		margin-bottom: 0
+	}
+
+	.card-btn .btn {
+		width: calc(50% - 12px);
+	}
+}
+.card {
+	padding-top: 100px !important;
+	padding-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+	.card {
+		padding-top: 150px;
+
+	}
+}

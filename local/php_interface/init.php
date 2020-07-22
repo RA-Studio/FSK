@@ -8,11 +8,16 @@ if (\Bitrix\Main\Loader::includeModule('rastudio') === false) {
 if(!\CModule::IncludeModule('rastudio')) {
     echo("Модуль rastudio не подключен");
 }
-function testAgent()
-{
-    mail('vasilevich-a-s@mail.ru', 'Агент', 'Агент');
-    return "testAgent();";
+
+$aDeveloperIps = [ '46.28.228.22' ];
+
+if (in_array($_SERVER['REMOTE_ADDR'], $aDeveloperIps)) {
+    define('OPEN_SHOP', true);
+} else {
+    define('OPEN_SHOP', false);
 }
+
+
 
 
 function reserveCheck()

@@ -41,6 +41,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Паркинги", 
+		"/parking/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

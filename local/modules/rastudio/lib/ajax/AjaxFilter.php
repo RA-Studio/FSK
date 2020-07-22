@@ -139,6 +139,8 @@ class AjaxFilter {
             $temp['PROPERTIES']['livingspace']['VALUE'] = $property['livingspace']['VALUE'];
             $temp['PROPERTIES']['kitchenspace']['VALUE'] = $property['kitchenspace']['VALUE'];
             $temp['PROPERTIES']['floorstotal']['VALUE'] = $property['floorstotal']['VALUE'];
+            $temp['PROPERTIES']['buildingsection']['VALUE'] = $property['buildingsection']['VALUE'];
+            $temp['PROPERTIES']['section']['VALUE'] = $property['section']['VALUE'];
             $temp['PROPERTIES']['builtyear']['VALUE'] = $property['builtyear']['VALUE'];
             $temp['PROPERTIES']['renovation']['VALUE'] = $property['renovation']['VALUE'];
             $temp['PROPERTIES']['buildingphase']['VALUE'] = $property['buildingphase']['VALUE'];
@@ -243,7 +245,7 @@ class AjaxFilter {
             return $request['response']->shapeError([],print_r($globalFilter, true));
         }
     }
-    
+
     public static function actionInBuildFilterCountElement() {
 
         $request = \RaStudio\Ajax\Response::getRequestObj();
@@ -322,7 +324,19 @@ class AjaxFilter {
                 "IBLOCK_ID" => $iblockID,
                 "ACTIVE"=>"Y",
                 "INCLUDE_SUBSECTIONS" => "Y",
-                //"PROPERTY_category" => "commercial",
+                $arRequest,
+            );
+            if($newArray) {
+                $arFilter[] = array(
+                    "LOGIC" => "AND",
+                    $newArray,
+                );
+            }
+        } elseif($arRequest["PROPERTY_category"] == "parking") {
+            $arFilter = Array(
+                "IBLOCK_ID" => $iblockID,
+                "ACTIVE"=>"Y",
+                "INCLUDE_SUBSECTIONS" => "Y",
                 $arRequest,
             );
             if($newArray) {
@@ -350,9 +364,13 @@ class AjaxFilter {
             }
         }
 
-
-
-        $folder = $arRequest["PROPERTY_category"] == "commercial" ? "/commercial/" : "/newbuild/";
+        $folder = '/newbuild/';
+        if($arRequest["PROPERTY_category"] == 'commercial') {
+            $folder = '/commercial/';
+        } else if ($arRequest["PROPERTY_category"] == 'parking') {
+            $folder = '/parking/';
+        }
+        //$folder = $arRequest["PROPERTY_category"] == "commercial" ? "/commercial/" : "/newbuild/";
 
         $globalFilter = $arFilter;
 
@@ -503,6 +521,10 @@ class AjaxFilter {
                         $arFilter["PROPERTY_category"] = "commercial";
                         unset($arFilter["PROPERTY_propertytype"]);
                     }
+                    if($arRequest["PROPERTY_category"] == "parking") {
+                        $arFilter["PROPERTY_category"] = "parking";
+                        unset($arFilter["PROPERTY_propertytype"]);
+                    }
 
                     $minPriceApartment = [];
 
@@ -548,7 +570,7 @@ class AjaxFilter {
             }
         }
         if($arResultList) {
-            
+
             usort($arResultList['section'], function($a, $b){
                 return ($a['SORT'] - $b['SORT']);
             });

@@ -1,6 +1,6 @@
 <div class="content">
 	<h2 class="h1 title">Контакты</h2>
-	<div class="p-item page-block">
+	<div class="p-item page-block contact-page">
 		<div class="p-item__img">
  <a href="/contacts/"><img alt="alt" src="/local/templates/fsk/img/Contacts-2.jpg" class="img"></a>
 		</div>

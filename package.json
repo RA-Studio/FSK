@@ -1,0 +1,48 @@
+{
+  "name": "fsknw",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "rastudio",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "css-loader": "^1.0.1",
+    "dadata-suggestions": "^1.1.1",
+    "inputmask": "^4.0.3",
+    "lodash": "^4.17.11",
+    "mobile-detect": "^1.4.2",
+    "npm": "^6.5.0",
+    "style-loader": "^0.23.1",
+    "vue": "^2.6.11",
+    "vue-click-outside": "^1.1.0",
+    "vue-imask": "^6.0.3",
+    "vue-inputmask": "^0.2.1",
+    "vue-range-slider": "^0.6.0",
+    "vue-router": "^3.0.1",
+    "vuejs-datepicker": "^1.6.2",
+    "vuelidate": "^0.7.5",
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "file-loader": "^6.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

@@ -1,6 +1,6 @@
 <div class="content">
 	<h2 class="h1 title">Новости</h2>
-	<div class="p-item page-block">
+	<div class="p-item page-block contact-page">
 		<div class="p-item__img">
  <a href="/news/"><img alt="alt" src="/local/templates/fsk/img/News.jpg" class="img"></a>
 		</div>
