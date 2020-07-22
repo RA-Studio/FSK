@@ -648,6 +648,21 @@
             <excludedPath path="/var/www/fsknw/public_html/upload" />
             <excludedPath path="/var/www/fsknw/public_html/imgload" />
             <excludedPath path="/var/www/fsknw/public_html/index_files" />
+            <excludedPath path="/var/www/fsknw/public_html/.well-known" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-files.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-1.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-10.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-11.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-12.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-2.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-3.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-4.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-7.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-8.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap-iblock-9.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/sitemap.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/parse.xml" />
+            <excludedPath path="/var/www/fsknw/public_html/mortgage.xml" />
           </excludedPaths>
         </serverdata>
       </paths>
