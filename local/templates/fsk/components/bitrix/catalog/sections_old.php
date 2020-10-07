@@ -458,7 +458,7 @@ if(!$USER->IsAdmin()){?>
             "mainForm",
             array(
                 "COMPONENT_TEMPLATE" => "mainForm",
-                "FORM_ID" => "FORM3",
+                "FORM_ID" => "FORM4",
                 "FORM_NAME" => "Нужна консультация специалиста?",
                 "WIDTH_FORM" => "500px",
                 "DISPLAY_FIELDS" => array(
@@ -479,7 +479,7 @@ if(!$USER->IsAdmin()){?>
                 "FORM_SUBMIT_VALUE" => "Позвоните мне",
                 "SEND_AJAX" => "Y",
                 "SHOW_MODAL" => "N",
-                "_CALLBACKS" => "success_FORM2",
+                "_CALLBACKS" => "success_FORM4",
                 "OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
                 "ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
                 "ENABLE_SEND_MAIL" => "Y",

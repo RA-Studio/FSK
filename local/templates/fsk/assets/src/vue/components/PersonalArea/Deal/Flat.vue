@@ -42,8 +42,8 @@
                 <div class="interactive-btns"></div>
                 <div class="card-data">
                     <div class="card-data__col-1">
-                        <div class="h3 card-data__title" v-if="apartment.apartments !== 'true'">{{apartment.name}} м<sup>2</sup></div>
-                        <div class="h3 card-data__title" v-if="apartment.apartments === 'true'">Лот {{apartment.area}} м<sup>2</sup></div>
+                        <div class="h3 card-data__title" v-if="apartment.apartments !== 'true'">{{ convert(apartment.name) }} м<sup>2</sup></div>
+                        <div class="h3 card-data__title" v-if="apartment.apartments === 'true'">Лот {{convert(apartment.area)}} м<sup>2</sup></div>
                         <ul class="card-data__list">
                             <li v-if="apartment.area"><span>Общая площадь</span><span>{{apartment.area}} м<sup>2</sup></span></li>
                             <li v-if="apartment.livingSpace"><span>Жилая площадь</span><span>{{apartment.livingSpace}} м<sup>2</sup></span></li>
@@ -62,13 +62,13 @@
                                     {{order.price}}
                                 </span>
                             </li>
-                            <li><span>Дата брони</span><span>{{order.create}}</span></li>
-                            <li><span>Резерв до</span><span>{{order.reserveDate}}</span></li>
+                            <li v-if="order.create"><span>Дата брони</span><span>{{order.create}}</span></li>
+                            <li v-if="order.reserveDate"><span>Резерв до</span><span>{{order.reserveDate}}</span></li>
                         </ul>
                     </div>
                     <div class="card-data__col-2">
-                        <p class="card-price-1">Цена по акции: <span>{{apartment.price}}</span></p>
-                        <span class="card-id">Стандартная цена: {{apartment.price100}}</span><br>
+                        <p class="card-price-1">Цена по акции: <span>{{numberWithCommas(this.price)}}</span></p>
+                        <span class="card-id">Стандартная цена: {{numberWithCommas(apartment.price)}}</span><br>
                         <span class="card-id">ID квартиры: {{apartment.number}}</span>
                         <div class="card-btn">
                             <a href="#modal-FORM10" @click.prevent="setOrderMode()" class="popup-btn-FORM10 btn btn--bg js-call-callback" type="button">Продолжить оформление</a>
@@ -94,10 +94,25 @@
                   section: 'Схема корпусов',
                   decoration: 'Отделка',
               },
+              price:0,
           }
         },
         created() {},
         mounted(){
+            /*if ((this.apartment.apartments === "false") && (this.apartment.category === "storeroom" || this.apartment.category === "flat")){
+              this.apartment.price100 = Math.round(this.apartment.price100*0.99);
+            }*/
+          let price = 0;
+          if (this.apartment.category === "flat"){
+            if (this.apartment.priceOnline100 != ''){
+              this.price = this.apartment.priceOnline100;
+            }else{
+              this.price = Math.round(this.apartment.price100*0.99);
+            }
+          }else{
+            this.price = this.apartment.price100;
+          }
+            let index = 0;
             for(let i in this.apartment.image.big) {
                 let bigImg = this.apartment.image.big[i];
                 let minImg = this.apartment.image.min[i];
@@ -105,9 +120,11 @@
                     tabName: this.listTabs[i],
                     bigImg,
                     minImg,
-                    active: i === 'plan',
+                    active: index === 0,
                 });
+                index++;
             }
+
         },
         updated() {},
         components: {},
@@ -121,6 +138,15 @@
                     this.$set(this.tabs[i], 'active', i === id);
                 }
             },
+            numberWithCommas(x) {
+              return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' р.';
+            },
+            convert(str) {
+              return str.replace(/&quot;/g,'"')
+                  .replace(/&gt;/g,'>')
+                  .replace(/&lt;/g,'<')
+                  .replace(/&amp;/g,'&');
+            }
         },
     };
 </script>

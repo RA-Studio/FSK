@@ -8,36 +8,50 @@ use \Bitrix\Main\SystemException;
 use \Bitrix\Sale\Order;
 use \Bitrix\Sale\PaySystem;
 use RaStudio\Table\OrderTable;
+use RaStudio\Api\ShopWorker;
 
-
-/*лог*/
-LoggerAdapter::add(print_r($_REQUEST, true));
-LoggerAdapter::add(print_r("up", true));
-
-
-
+use RaStudio\User;
+use RaStudio\Helper;
 ?>
-<?/*
-error
 
-https://fsknw.ru/local/modules/rastudio/lib/api/SberCallback.php?orderNumber=258_0&mdOrder=6be4f964-077e-7ef8-85c7-5d1a020bb65c&operation=declinedByTimeout&status=0
-
-
-success
-
-https://fsknw.ru/local/modules/rastudio/lib/api/SberCallback.php?orderNumber=258_0&mdOrder=08122399-b658-74ba-a072-c3e7020bb65c&operation=deposited&status=1
-*/?>
 <?
 $oderId = explode('_',$_REQUEST['orderNumber'])[0];
-if ($_REQUEST['status']){
-    //echo 'success';
-    OrderTable::update($oderId, array('ID'=>$oderId,'UF_STATUS'=>2));
-    OrderTable::sendSuccess($oderId);
 
-}else{
-    //echo 'error';
-    OrderTable::update($oderId, array('ID'=>$oderId,'UF_STATUS'=>0));
-    OrderTable::sendError($oderId);
+LoggerAdapter::add("Ответ от сбербанка по заказу `$oderId`: ```".print_r($_REQUEST,true)."```");
+
+$order = OrderTable::getOrderById($oderId);
+$userGuid = User::getByLogin(Helper::parsePhone($order[OrderTable::COL_PHONE]))['XML_ID'];
+
+if(CModule::IncludeModule("iblock")) {
+
+}
+
+$arFilter = Array("IBLOCK_ID"=> 1, "ID" => $order[OrderTable::COL_BASKET]);//, "ACTIVE"=>"Y"
+$res = \CIBlockElement::GetList(Array(), $arFilter, false, Array(), $arSelect);
+$arElement = [];
+while($ob = $res->GetNextElement()) { $arElement = $ob->GetFields(); $arElement['PROPERTIES'] = $ob->GetProperties(); }
+
+if ($_REQUEST['status']){
+
+    $payType = array_flip(ShopWorker::$payType);
+    $res = ShopWorker::confirmReservation([
+        'order_guid' => $order[OrderTable::COL_RESERVE],
+        'client_guid' => $userGuid,
+        'flat_id' =>  $arElement['CODE'],
+        'pay_type' => $payType[$order[OrderTable::COL_PAY_TYPE]],
+    ]);
+    if($res['status'] === 'ok') {
+        OrderTable::update($oderId, array('ID' => $oderId, OrderTable::COL_STATUS => 2, OrderTable::COL_RESERVE_DATE => $res['reserve_dataEnd']));
+        OrderTable::sendSuccess($oderId);
+    }
+} else {
+//    OrderTable::update($oderId, array('ID' => $oderId, OrderTable::COL_STATUS => 0));
+//    OrderTable::sendError($oderId);
+//    $request = ShopWorker::canselReservation([
+//        'order_guid' => $order[OrderTable::COL_RESERVE],
+//        'client_guid' => $userGuid,
+//        'flat_id' => $arElement['CODE'],
+//    ]);
 }
 
 ?>

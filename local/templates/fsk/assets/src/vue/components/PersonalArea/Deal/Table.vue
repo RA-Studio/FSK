@@ -4,6 +4,7 @@
             v-for="(item, key) in list" 
             :key="key" :order="item" 
             @setOrderMode="setOrderMode(item)"
+            v-if="item.status>0"
         ></flat-block>
 
         <div v-if="false" class="lk-deals-row header-row">

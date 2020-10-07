@@ -52,6 +52,7 @@ if (!empty($text)) {
     <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<?=SITE_TEMPLATE_PATH?>/img/favicon/browserconfig.xml">
+	<meta name="cmsmagazine" content="5030b50dd17858824f3ab635603e59bc" />
     <meta name="theme-color" content="#ffffff">
     <?if(!$USER->IsAdmin() && strpos($_SERVER['HTTP_USER_AGENT'],'Chrome-Lighthouse') == false):?>
         <!-- Google Tag Manager -->
@@ -89,11 +90,93 @@ if (!empty($text)) {
         $APPLICATION->ShowCSS(true);
     }
 
+
+
     ?>
+    <?if(OPEN_SHOP):?>
+    <style>
+        .btn-login {
+            background: #e94200;
+            width: 40px;
+            height: 40px;
+            border-radius: 2em;
+            padding: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .none {
+            display: none !important;
+        }
+        .black-sheet {
+            position: absolute;
+            background: #00000073;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 210;
+        }
+        .auth-block {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 220;
+        }
 
+        .auth .tab-line {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            padding: 40px 50px 0px 50px;
+        }
+        .auth-block-content {
+            padding-top: 0px;
+        }
+        .auth .tab-line span{
+            cursor: pointer;
+            padding: 0px 10px;
+        }
+        .auth .tab-line .active{
+            color: #e94200;
+        }
+        .auth .auth-block .auth-block-content input.error {
+            border: 1px solid red;
+        }
+        .auth .auth-block .close-btm {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .auth .auth-block .close-btm svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .auth .auth-block .close-btm svg:hover {
+            width: 100%;
+            height: 100%;
+            fill: #e94200;
+        }
+    </style>
+    <?=file_get_contents($_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH . '/include/authform.php')?>
+    <?endif?>
     <script><?=file_get_contents($_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH . '/js/jquery.js')?></script>
+    <?if(OPEN_SHOP === false):?>
+        <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/css/style-mini.css'?>">
+    <?else:?>
+        <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/css/stylesnew.css'?>">
+    <?endif?>
 
-    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/css/style-mini.css'?>">
+    <!-- calltouch -->
+    <script type="text/javascript">
+        (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)};s.type="text/javascript";s.async=true;s.src="https://mod.calltouch.ru/init.js?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","2f2ec1fn");
+    </script>
+    <!-- calltouch -->
+    
     <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH . '/assets/build/main.css'?>">
     <!--script src="<?=SITE_TEMPLATE_PATH . '/js/jquery.js'?>"></script-->
 
@@ -107,7 +190,7 @@ if (!empty($text)) {
             var __cs = __cs || [];
             __cs.push(["setCsAccount", "TCdqgdKk41PTkqYykKODPrcsrqM_2dHV"]);
         </script>
-        <script type="text/javascript" async src="https://app.comagic.ru/static/cs.min.js"></script>
+        <!--script type="text/javascript" async src="https://app.comagic.ru/static/cs.min.js"></script-->
     <?endif?>
 </head>
 <body>
@@ -203,7 +286,9 @@ if (!empty($text)) {
             <?endif?>
             <div class="header-call js-call-callback">
                 <a href="#modal-FORM10" class="popup-btn-FORM10 header-call__ic">
+                    <?if(OPEN_SHOP === false):?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14.547" height="24.331" viewBox="0 0 14.547 24.331"><g transform="translate(-8967.75 1214.75)"><path d="M0,.5H13.047" transform="translate(8968.5 -1195.909)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><path d="M0,1.25H3.262" transform="translate(8973.393 -1211.988)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><rect width="13.047" height="22.831" rx="2" transform="translate(8968.5 -1214)" stroke-width="1.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg>
+                    <?endif?>
                 </a>
                 <div class="header-call__data">
                 <span>

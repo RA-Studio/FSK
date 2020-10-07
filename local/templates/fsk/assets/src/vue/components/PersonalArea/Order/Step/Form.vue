@@ -114,6 +114,7 @@
         },
         created() {
             let userData = this.$store.getters.userInfo;
+
             if(userData) {
                 this.insertUserData(userData);
             } else {
@@ -266,8 +267,8 @@
                     let fields = this.users[userKey].data;
                     for(let fieldKey in fields) {
                         let field = fields[fieldKey];
+                        if('checkValidation' in field) field.checkValidation();
                         if(field.error) {
-                            if('valid' in field) field.valid.$touch();
                             if(error === false) {
                                 error = true;
                                 user = this.users[userKey].index;
@@ -275,7 +276,6 @@
                             }
                             if(fields[fieldKey].type === 'file') {
                                 this.$set(fields[fieldKey], 'sendError', true);
-                                console.log(fields);
                             }
                         } else {
                             if(fields[fieldKey].type === 'file') this.$set(fields[fieldKey], 'sendError', false);
@@ -311,7 +311,7 @@
                     data: {
                         firstName: { type: 'text', lable: 'Имя', placeholder: 'Иван', value: '', class: '', mask: mask.rusCharsAll, validata: { required, minLength: minLength(2) }, closed: index === 0 },
                         middleName: { type: 'text', lable: 'Отчество', placeholder: 'Иванович', value: '', class: '', mask: mask.rusCharsAll, validata: { minLength: minLength(2) }, closed: false, },
-                        lastName: { type: 'text', lable: 'Фамилия', placeholder: 'Иванов', value: '', class: '', mask: mask.rusCharsAll, validata: { required, minLength: minLength(2) }, closed: index === 0, },
+                        lastName: { type: 'text', lable: 'Фамилия', placeholder: 'Иванов', value: '', class: '', mask: mask.rusCharsAll, validata: { required, minLength: minLength(2) }, closed: index === 0 },
                         dateBirth: { type: 'text',lable: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', value: '', class: '', mask: mask.date, validata:{ required, minLength: minLength(10) } },
                         gender: { type: 'radio', lable: 'Пол', value: 'Мужской', class: '', list: { 'Мужской':'Мужской', 'Женский':'Женский' } },
                         phone: { type: 'text', lable: 'Телефон', placeholder: '+7 (999) 123-45-67', value: '', class: '', mask: mask.phone, validata: { required, minLength: minLength(18) }, closed: index === 0 },

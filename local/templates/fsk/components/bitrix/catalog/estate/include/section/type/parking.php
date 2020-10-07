@@ -324,14 +324,14 @@ if (!empty($text)) {
                                         <svg class="svg btn__ic ic-tel"  xmlns="http://www.w3.org/2000/svg" width="14.547" height="24.331" viewBox="0 0 14.547 24.331"><g transform="translate(-8967.75 1214.75)"><path d="M0,.5H13.047" transform="translate(8968.5 -1195.909)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><path d="M0,1.25H3.262" transform="translate(8973.393 -1211.988)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><rect width="13.047" height="22.831" rx="2" transform="translate(8968.5 -1214)" stroke-width="1.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg>
                                         Консультация
                                     </a>
-                                    <div data-type="reserved" class="btn--reserved" >
-                                        <svg class="svg btn__ic ic-tel" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.5 10L7.5 12.6654" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M9.91016 13L4.82144 13" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <rect x="0.75" y="0.75" width="13.5" height="8.5" rx="1.25" stroke="white" stroke-width="1.5"/>
-                                        </svg>
-                                        Забронировано
-                                    </div>
+                                  <a href="#modal-FORM3" data-type="reserved" data-id="" data-iblock="1" class="btn btn--cta popup-btn-FORM3" type="button">
+                                    <svg class="svg btn__ic ic-tel" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.5 10L7.5 12.6654" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M9.91016 13L4.82144 13" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <rect x="0.75" y="0.75" width="13.5" height="8.5" rx="1.25" stroke="white" stroke-width="1.5"/>
+                                    </svg>
+                                    Забронировать
+                                  </a>
                                     <a href="/reserve/" data-type="reserveBtn" data-id="" data-iblock="1" class=" btn btn--cta " type="button">
                                         <svg class="svg btn__ic ic-tel" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.5 10L7.5 12.6654" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -340,8 +340,6 @@ if (!empty($text)) {
                                         </svg>
                                         Забронировать
                                     </a>
-
-
                                 </div>
                             </div>
                         </div>
@@ -370,9 +368,19 @@ if (!empty($text)) {
                 <div class="results-empty" style="display: none">По вашему запросу ничего не найдено.</div>
             </div>
             <div class="results-refresh">
-                <svg class="svg btn__ic" style="width: 14px;height: 14px" xmlns="http://www.w3.org/2000/svg" width="12.662" height="13.637" viewBox="0 0 12.662 13.637"><g transform="translate(-17.067)"><g transform="translate(17.067)"><g transform="translate(0)"><path d="M28.268,0a.487.487,0,0,0-.487.487V2.266A6.319,6.319,0,0,0,17.067,6.818a.487.487,0,1,0,.974,0A5.357,5.357,0,0,1,27.35,3.2l-2.158.719a.488.488,0,1,0,.308.925l2.922-.974a.487.487,0,0,0,.333-.464V.487A.487.487,0,0,0,28.268,0Z" transform="translate(-17.067)" fill="#e94200"/></g></g><g transform="translate(18.041 6.331)"><g transform="translate(0)"><path d="M62.4,221.867a.487.487,0,0,0-.487.487A5.357,5.357,0,0,1,52.6,225.97l2.158-.719a.488.488,0,1,0-.308-.925l-2.922.974a.487.487,0,0,0-.333.464v2.922a.487.487,0,0,0,.974,0v-1.779a6.319,6.319,0,0,0,10.715-4.552A.487.487,0,0,0,62.4,221.867Z" transform="translate(-51.198 -221.867)" fill="#e94200"/></g></g></g></svg>
-                Информация обновлена
-                <span><?=CIBlockFormatProperties::DateFormat("j.m.Y", strtotime($timeUpdate));?></span>.
+              <div class="results-refresh__wrapper">
+                <div class="results-refresh__item">
+                  <svg class="svg btn__ic" style="width: 14px;height: 14px" xmlns="http://www.w3.org/2000/svg" width="12.662" height="13.637" viewBox="0 0 12.662 13.637"><g transform="translate(-17.067)"><g transform="translate(17.067)"><g transform="translate(0)"><path d="M28.268,0a.487.487,0,0,0-.487.487V2.266A6.319,6.319,0,0,0,17.067,6.818a.487.487,0,1,0,.974,0A5.357,5.357,0,0,1,27.35,3.2l-2.158.719a.488.488,0,1,0,.308.925l2.922-.974a.487.487,0,0,0,.333-.464V.487A.487.487,0,0,0,28.268,0Z" transform="translate(-17.067)" fill="#e94200"/></g></g><g transform="translate(18.041 6.331)"><g transform="translate(0)"><path d="M62.4,221.867a.487.487,0,0,0-.487.487A5.357,5.357,0,0,1,52.6,225.97l2.158-.719a.488.488,0,1,0-.308-.925l-2.922.974a.487.487,0,0,0-.333.464v2.922a.487.487,0,0,0,.974,0v-1.779a6.319,6.319,0,0,0,10.715-4.552A.487.487,0,0,0,62.4,221.867Z" transform="translate(-51.198 -221.867)" fill="#e94200"/></g></g></g></svg>
+                  Информация обновлена
+                  <span>&nbsp;<?=CIBlockFormatProperties::DateFormat("j.m.Y", strtotime($timeUpdate));?></span>.
+                </div>
+                <div class="results-refresh__item">
+                  <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.59814 5.61456H8.90706V3.90591C8.90706 1.75219 7.15487 0 5.00118 0C2.84742 0 1.09516 1.75219 1.09516 3.90591V5.61456H0.404088C0.180884 5.61456 0 5.79545 0 6.01862V13.5973C0 13.8205 0.180884 14.0014 0.404088 14.0014H9.59817C9.82131 14.0014 10.0022 13.8205 10.0022 13.5973V6.01862C10.0022 5.79545 9.82127 5.61456 9.59814 5.61456ZM5.63113 10.2271V11.8405C5.63113 11.9814 5.51689 12.0957 5.37593 12.0957H4.62622C4.4853 12.0957 4.37103 11.9814 4.37103 11.8405V10.2271C4.09225 10.0294 3.91019 9.70445 3.91019 9.33673C3.91019 8.73433 4.39858 8.24588 5.00108 8.24588C5.60351 8.24588 6.0919 8.73433 6.0919 9.33673C6.09194 9.70445 5.90987 10.0294 5.63113 10.2271ZM7.04221 5.61456H2.96002V3.90591C2.96002 2.78044 3.87567 1.86485 5.00118 1.86485C6.12662 1.86485 7.04221 2.78044 7.04221 3.90591V5.61456Z" fill="#BEBEBE"></path>
+                  </svg>
+                  Предварительная бронь
+                </div>
+              </div>
             </div>
             <div class="results-more">
                 <button class="btn btn--transp" type="button">

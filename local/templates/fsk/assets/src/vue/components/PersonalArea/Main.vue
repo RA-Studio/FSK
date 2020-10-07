@@ -47,14 +47,14 @@
                 description: 'Управление информацией о вашем аккаунте: контакты, документы и т.д.',
                 link: '/lk/details/',
               },
-              2: {
-                page: 'faq',
-                title: 'Помощь и инфо',
-                icon: `${this.$store.state.locationImg}/lk-faq-icon.svg`,
-                src: `${this.$store.state.locationImg}/lk-faq.jpg`,
-                description: 'Появились вопоосы? Здесь вы найдете ответы и контакты наших специалистов',
-                link: '/lk/faq/',
-              }
+              // 2: {
+              //   page: 'faq',
+              //   title: 'Помощь и инфо',
+              //   icon: `${this.$store.state.locationImg}/lk-faq-icon.svg`,
+              //   src: `${this.$store.state.locationImg}/lk-faq.jpg`,
+              //   description: 'Появились вопоосы? Здесь вы найдете ответы и контакты наших специалистов',
+              //   link: '/lk/faq/',
+              // }
             }
           }
         },

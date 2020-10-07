@@ -8,6 +8,11 @@ $(document).ready(function(){
     var lazyLoadInstance = new LazyLoad({
         elements_selector: ".lazyload"
     });
+
+    $('[data-type="reserved"]').on('click',function (e){
+        $('#FORM3').find('[name="FIELDS[OBJECT]"]').val($(this).data('id'));
+        $('#FORM3').find('[name="FIELDS[OBJECT_PAGE]"]').val('https://fsknw.ru/detail.php?NUMBER='+$(this).data('id'));
+    })
 });
 $(document).ready(function() {
     var updateCatalog = function(allmutations){
@@ -376,7 +381,7 @@ function loadPage() {
     $('.scrollspy-menu a, .anchor-scroll').on('click', function(e){
         var id = $(this).attr('href');
         e.preventDefault();
-        $('html,body').stop().animate({ scrollTop: $(id).offset().top-150 }, 1000);
+        $('html,body').animate({ scrollTop: $(id).offset().top-150 }, 1000);
     });
 
     function AnchorActive() {
@@ -407,10 +412,10 @@ function loadPage() {
         }
     }
 
-    // $(window).scroll(function() {
-    //     AnchorActive();
-    //     lineFixing();
-    // });
+    $(window).scroll(function() {
+        AnchorActive();
+        lineFixing();
+    });
 
 
     // END scrollspy в подменю на странице ЖК
@@ -603,15 +608,13 @@ function loadPage() {
 
 
     // Зум изображения в карточке квартиры
-    setTimeout(() => {
-        if($('.zoom-link').length){
-            $('.zoom-link').fancybox({
-                buttons: [
-                    "close"
-                ]
-            });
-        }
-    }, 9000);
+    if($('.zoom-link').length){
+        $('.zoom-link').fancybox({
+            buttons: [
+                "close"
+            ]
+        });
+    }
 
 
     // =============================== ДЛЯ ДЕМО ===============================
@@ -882,7 +885,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
     var myHash = location.hash;
-    $(document).on('click', 'a:not(.tabs-navigation-item):not(.tabs-gallery__btn):not(.custom-popup__video)', function () {
+    $(document).on('click', 'a:not(.tabs-navigation-item):not(.tabs-gallery__btn):not(.custom-popup__video):not(.scrollspy-menu a)', function () {
       if($(this.hash).length){
         $('html,body').animate({scrollTop: $(this.hash).offset().top - 100}, 1000);
       }
@@ -1191,8 +1194,7 @@ $(document).on('click', '.contacts-today-content__btn', function (e) {
     $('.contacts-today-content').removeClass('hide')
 });
 
-
-window.onload = function() {
+$(document).ready(function (){
     setTimeout(() => {
         let scriptMap = document.createElement('script'),
             scriptDate = document.createElement('script'),
@@ -1210,7 +1212,26 @@ window.onload = function() {
         document.getElementsByTagName('head')[0].appendChild(scriptForm);
         document.getElementsByTagName('head')[0].appendChild(scriptFancybox);
     }, 3000);
-};
+})
+/*window.onload = function() {
+    setTimeout(() => {
+        let scriptMap = document.createElement('script'),
+            scriptDate = document.createElement('script'),
+            scriptMask = document.createElement('script'),
+            scriptForm = document.createElement('script'),
+            scriptFancybox = document.createElement('script');
+        scriptMap.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=75dbee99-a6cf-46b3-b846-8323b7986d25";
+        scriptDate.src = "/local/templates/fsk/js/air-datepicker.js";
+        scriptMask.src = "/local/templates/fsk/js/input-mask.js";
+        scriptForm.src = "/local/components/slam/easyform/templates/uniform/uniform.js";
+        scriptFancybox.src = "/local/templates/fsk/js/fancybox.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptMap);
+        document.getElementsByTagName('head')[0].appendChild(scriptDate);
+        document.getElementsByTagName('head')[0].appendChild(scriptMask);
+        document.getElementsByTagName('head')[0].appendChild(scriptForm);
+        document.getElementsByTagName('head')[0].appendChild(scriptFancybox);
+    }, 3000);
+};*/
 
 $(document).on('click', '.custom-popup__video', function (e) {
     let videoSrc = this.dataset.src;

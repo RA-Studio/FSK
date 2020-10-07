@@ -70,7 +70,7 @@
             <div class="card__col-3">
                 <div class="card__info">
                     <div class="interactive-btns">
-                        <a class="interactive-btn interactive-download" href="#" title="Скачать" download></a>
+                        <a class="interactive-btn interactive-download" href="#" title="Скачать" data-event="loadPDF" data-id=""></a>
                         <a class="interactive-btn interactive-print" href="print.html" target="_blank" title="Распечатать"></a>
                         <div class="interactive-btn interactive-favorite" data-role="favorite" data-id="">
                             <img class="svg lazyload" data-src="<?=SITE_TEMPLATE_PATH?>/img/icons/ic-star.svg" alt="Добавить в закладки">
@@ -131,14 +131,14 @@
                                     Консультация
                                 </a>
                                 <?if(OPEN_SHOP):?>
-                                    <div data-type="reserved" class="btn--reserved" >
-                                        <svg class="svg btn__ic ic-tel" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.5 10L7.5 12.6654" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M9.91016 13L4.82144 13" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <rect x="0.75" y="0.75" width="13.5" height="8.5" rx="1.25" stroke="white" stroke-width="1.5"/>
-                                        </svg>
-                                        Забронировано
-                                    </div>
+                                  <a href="#modal-FORM3" data-type="reserved" data-id="" data-iblock="1" class="btn btn--cta popup-btn-FORM3" type="button">
+                                    <svg class="svg btn__ic ic-tel" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M7.5 10L7.5 12.6654" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M9.91016 13L4.82144 13" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <rect x="0.75" y="0.75" width="13.5" height="8.5" rx="1.25" stroke="white" stroke-width="1.5"/>
+                                    </svg>
+                                    Забронировать
+                                  </a>
                                     <a href="/reserve/" data-type="reserveBtn" data-id="" data-iblock="1" class=" btn btn--cta " type="button">
                                         <svg class="svg btn__ic ic-tel" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.5 10L7.5 12.6654" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>

@@ -7,7 +7,27 @@
 <br>
 <?
 use RaStudio\Api\RestApi;
+use RaStudio\Api\ShopWorker;
+use RaStudio\Cart;
 //da9dba46-98fb-11ea-bbc5-00155d463c42
+
+
+//$result = ShopWorker::getAllApartment();
+//
+//$result = array_filter($result, function($v) {
+//    $notInclude = ['Продан', 'Ожидание'];
+//    return in_array($v['status'], $notInclude) === false;
+//});
+/*?><pre><?print_r($result)?></pre><?*/
+//echo(count($result));
+//Cart::setStatusByStatusArray($result);
+
+
+
+die();
+
+
+
 
 $dataSend = array(
   "firstName" => "TEST",

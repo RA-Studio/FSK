@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="lk-wrap">
         <div class="preloader" v-if="$store.state.loader">
             <div class="pl">
                 <div class="pl__ball"></div>

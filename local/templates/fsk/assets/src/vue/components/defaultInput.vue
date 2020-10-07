@@ -3,7 +3,7 @@
         'anketa-content-block-row-input':true,
         'input-error': error,
         [input.class]: true,
-        'disabled': (!$v.$error && $v.$dirty && (input.validata != undefined || input.value )),
+        'disabled': (!error && $v.$dirty && (input.validata != undefined || input.value )),
     }" v-show="input.hidden === undefined || input.hidden === false">
         <label class="general-itemInput__label_top">{{input.lable}}</label>
         <input
@@ -43,12 +43,14 @@ export default {
     },
     methods: {
         checkValidation() {
-            if(this.input.mask !== undefined) {
+
+            if(this.input.mask !== undefined && this.input.mask !== "") {
                 let value = IMask.createMask(this.input.mask).resolve(this.input.value);
                 this.$set(this.input, 'value', value);
             }
             this.$v.$touch();
             this.$set(this.input, 'error', this.error)
+
         },
     },
     computed: {
@@ -56,14 +58,20 @@ export default {
             return this.input.validata !== undefined && (( ('required' in this.input.validata) && this.$v.$error) || (this.input.value && !('required' in this.input.validata) && this.$v.$error))
         }
     },
-    created() {
+    mounted() {
         if(this.input.value) this.$v.$touch();
         let error = this.error;
         if('validata' in this.input) {
-            if('required' in this.input.validata && !this.input.value) error = true;
+            if('required' in this.input.validata && !this.input.value) {
+                error = true;
+            }
         }
         this.$set(this.input, 'error', error);
         this.$set(this.input, 'valid', this.$v);
+        this.$set(this.input, 'checkValidation', () => {
+            console.log('this.checkValidation');
+            this.checkValidation();
+        });
     },
     validations() {
         if(this.input.validata === undefined) return false;
