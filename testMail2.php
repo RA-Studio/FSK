@@ -8,6 +8,9 @@
 <?
 use RaStudio\Api\RestApi;
 use RaStudio\Api\ShopWorker;
+use RaStudio\Table\OrderTable;
+OrderTable::sendSuccess(517);
+
 /*
 $dataSend = array( "firstName" => "TEST", "secondName" => "TEST", "lastName" => "TESST", "phone" => "89100000001" );
 //ShopWorker::createdUser($dataSend);

@@ -177,10 +177,7 @@ class fidAppartmentParse {
             if($this->type === 'parking' && $value['category'] != "garage" ) continue;
             if($this->type === 'apartment' && $value['category'] != "flat" ) continue;
             if($this->type === 'commercial' && $value['category'] != "commercial" ) continue;
-
-            echo('<pre>');
-                print_r($value);
-            echo('</pre>');
+            if($this->type === 'storeroom' && $value['category'] != "storeroom" ) continue;
 
             $buildingID = $value['yandex-building-id'];
             $val = false;
@@ -273,7 +270,9 @@ class fidAppartmentParse {
                                 if($key == "price100") $property["price100short"] = $temp[0].".".$temp[1][0].$temp[1][1];
 
                             }
-
+                            if ($key == 'priceGrant100'){
+                                $property["priceGrant100exceptions"] = json_encode($value['exceptions']);
+                            }
                             $property[$key] = $value['value'];
                         }
                     } else {
@@ -305,7 +304,12 @@ class fidAppartmentParse {
                 }
 
 
-                if($apartment['category'] == "garage") {
+                if($apartment['category'] == "storeroom") {
+                    $buildName = $apartment['building-name'];
+                    $name = "Кладовая в ЖК «".$buildName. "», ".$area;
+                    $property['category'] = "storeroom";
+                    echo($name);
+                } else if($apartment['category'] == "garage") {
                     $buildName = $apartment['building-name'];
                     $name = "ПРК в ЖК «".$buildName. "», ".$area;
                     $property['category'] = "parking";
@@ -324,7 +328,6 @@ class fidAppartmentParse {
                         $this->elementController->Update($ID, array(
                                 'ACTIVE' => 'Y',
                                 "NAME" => $name,
-
                             )
                         );
                         $this->statistic['UPDATAELEMENT']++;
@@ -417,47 +420,48 @@ class fidAppartmentParse {
 
     }
 }
+//if(false) {
+    /***********************************************************************************************/
+    $homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/newflat";
+    $arElementApartmentAll = [];
+    $parserApartment = new fidAppartmentParse(1, $homepage, "storeroom");
+    $parserApartment->generateArrayApartment([
+        "NAME" => "Кладовки",
+        "CODE" => "storeroom",
+    ], "storeroom");
+    $parserApartment->addApartment();
+    $parserApartment->printStatistic();
+    /***********************************************************************************************/
+    $homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/newflat";
+    $arElementApartmentAll = [];
+    $parserApartment = new fidAppartmentParse(1, $homepage, "parking");
+    $parserApartment->generateArrayApartment([
+        "NAME" => "Паркинг",
+        "CODE" => "parking",
+    ],"parking");
+    $parserApartment->addApartment();
+    $parserApartment->printStatistic();
+    /**********************************************************************************************/
+    $homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/newflat";
+    $arElementApartmentAll = [];
+    $parserApartment = new fidAppartmentParse(1, $homepage, "apartment");
+    $parserApartment->generateArrayApartment([
+        "NAME" => "Квартиры",
+        "CODE" => "apartment",
+    ],"apartment");
+    $parserApartment->addApartment();
+    $parserApartment->printStatistic();
+    /**********************************************************************************************/
+    $arElementСommercialAll = [];
+    $homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/commercial";
+    $parserСommercial = new fidAppartmentParse(1, $homepage, "commercial");
+    $parserСommercial->generateArrayApartment([
+        "NAME" => "Комерческие помещения",
+        "CODE" => "commercial",
+    ],"commercial");
+    $parserСommercial->addApartment();
+    $parserСommercial->printStatistic();
+    /*************************************************************************************************/
+//}
 
-/***********************************************************************************************/
-
-$homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/newflat";
-
-$arElementApartmentAll = [];
-$parserApartment = new fidAppartmentParse(1, $homepage, "parking");
-
-$parserApartment->generateArrayApartment([
-    "NAME" => "Паркинг",
-    "CODE" => "parking",
-],"parking");
-$parserApartment->addApartment();
-$parserApartment->printStatistic();
-
-/**********************************************************************************************/
-
-$homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/newflat";
-
-$arElementApartmentAll = [];
-$parserApartment = new fidAppartmentParse(1, $homepage, "apartment");
-
-$parserApartment->generateArrayApartment([
-   "NAME" => "Квартиры",
-   "CODE" => "apartment",
-],"apartment");
-$parserApartment->addApartment();
-$parserApartment->printStatistic();
-
-/**********************************************************************************************/
-
-$arElementСommercialAll = [];
-$homepage = "https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/siteIntegration/commercial";
-$parserСommercial = new fidAppartmentParse(1, $homepage, "commercial");
-$parserСommercial->generateArrayApartment([
-    "NAME" => "Комерческие помещения",
-    "CODE" => "commercial",
-],"commercial");
-
-$parserСommercial->addApartment();
-$parserСommercial->printStatistic();
-
-/*************************************************************************************************/
 ?>

@@ -1218,4 +1218,5 @@ $(document).on('click', '.custom-popup__video', function (e) {
     console.log(this.dataset.src);
     $('#modal-videobuild .modal-callback__inner iframe').remove();
     $('#modal-videobuild .modal-callback__inner').append(`<iframe width="560" height="315" src="${videoSrc}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+
 });

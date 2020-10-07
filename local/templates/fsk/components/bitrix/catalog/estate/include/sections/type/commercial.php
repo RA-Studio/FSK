@@ -110,7 +110,6 @@ use Bitrix\Main\Entity;
                     Мы предлагаем коммерческие площади в жилых комплексах разной степени готовности.
                     Все помещения свободного назначения, высота потолков до 4 метров, с отдельным входом (со двора и/или с улицы).
                     Метраж доступных помещений от 51 м<sup>2</sup> до 146 м<sup>2</sup>.</br></br>
-                    Загрузите pdf с вариантами помещений или выберите комплекс ниже.
                 </p>
                 <div class="commerce-pdf-wrap">
                     <?
@@ -265,7 +264,7 @@ use Bitrix\Main\Entity;
         "mainForm",
         array(
             "COMPONENT_TEMPLATE" => "mainForm",
-            "FORM_ID" => "FORM3",
+            "FORM_ID" => "FORM4",
             "FORM_NAME" => "Нужна консультация специалиста?",
             "WIDTH_FORM" => "500px",
             "DISPLAY_FIELDS" => array(
@@ -286,7 +285,7 @@ use Bitrix\Main\Entity;
             "FORM_SUBMIT_VALUE" => "Позвоните мне",
             "SEND_AJAX" => "Y",
             "SHOW_MODAL" => "N",
-            "_CALLBACKS" => "success_FORM2",
+            "_CALLBACKS" => "success_FORM4",
             "OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
             "ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
             "ENABLE_SEND_MAIL" => "Y",

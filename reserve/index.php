@@ -8,9 +8,6 @@ use \Bitrix\Sale\PaySystem;
 use RaStudio\Table\OrderTable;
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Бронирование квартиры");
-$APPLICATION->SetPageProperty("TITLE", "Бронирование квартиры");
-$APPLICATION->SetTitle("Бронирование квартиры");
 
 define("STOP_STATISTICS", true);
 define('NO_AGENT_CHECK', true);
@@ -67,20 +64,20 @@ if ( isset($_GET['PAYMENT'] ) && $_GET['PAYMENT']=='SBERBANK' && CModule::Includ
     $successful = true;
     //if ($_SESSION['RESERVE_SEND_TIME']<=(time()-(20*60))){
 
-        /*$_SESSION['RESERVE'] = array();
-        OrderTable::update($_GET['ORDER_ID'], array('ID'=>$_GET['ORDER_ID'],'UF_STATUS'=>2));
-        $order = OrderTable::getOrderById($_GET['ORDER_ID']);
-        $PRODUCT_ID = $order['UF_PRODUCT'];*/
-        /*if (CModule::IncludeModule("iblock")) {
-            CIBlockElement::SetPropertyValuesEx(
-               // $PRODUCT_ID, false, array("UF_STATUS" => '31')
-            );
-        }*/
-        /*if ($_SESSION['RESERVE_SENT'] != 'Y') {
-            OrderTable::sendSuccess($_GET['ORDER_ID']);
-            $_SESSION['RESERVE_SENT'] = 'Y';
-        }*/
-   // }
+    /*$_SESSION['RESERVE'] = array();
+    OrderTable::update($_GET['ORDER_ID'], array('ID'=>$_GET['ORDER_ID'],'UF_STATUS'=>2));
+    $order = OrderTable::getOrderById($_GET['ORDER_ID']);
+    $PRODUCT_ID = $order['UF_PRODUCT'];*/
+    /*if (CModule::IncludeModule("iblock")) {
+        CIBlockElement::SetPropertyValuesEx(
+           // $PRODUCT_ID, false, array("UF_STATUS" => '31')
+        );
+    }*/
+    /*if ($_SESSION['RESERVE_SENT'] != 'Y') {
+        OrderTable::sendSuccess($_GET['ORDER_ID']);
+        $_SESSION['RESERVE_SENT'] = 'Y';
+    }*/
+    // }
 }
 
 if ($USER->IsAuthorized()){
@@ -90,6 +87,9 @@ if ($USER->IsAuthorized()){
     $email = $rsUser['EMAIL'];
     $phone = $rsUser['PERSONAL_PHONE'];
 }
+
+//скидка в %
+$discount = 1;
 
 if (isset($_SESSION['RESERVE']['IBLOCK']) && isset($_SESSION['RESERVE']['ID']) && CModule::IncludeModule('iblock')) {
     $id = $_SESSION['RESERVE']['ID'];
@@ -101,6 +101,12 @@ if (isset($_SESSION['RESERVE']['IBLOCK']) && isset($_SESSION['RESERVE']['ID']) &
     while($ob = $res->GetNextElement()){
         $object = $ob->GetFields();
         $object['PROPERTIES'] = $ob->GetProperties();
+        if ($object['PROPERTIES']['category']['VALUE'] == 'flat'){
+            $price = $object['PROPERTIES']['priceOnline100']['VALUE'];
+        }else{
+            $price = $object['PROPERTIES']['price100']['VALUE'];
+        }
+        //$object['PROPERTIES']['price100']['VALUE'] = round($object['PROPERTIES']['price100']['VALUE']*(1-$discount/100));
     }
     $image = CFile::GetPath($object['PROPERTIES']['image']['VALUE'][0]);
 
@@ -113,67 +119,97 @@ if (isset($_SESSION['RESERVE']['IBLOCK']) && isset($_SESSION['RESERVE']['ID']) &
     }
 }
 
+$objectType = [
+    'storeroom' => [1 => 'кладовой', 2 => 'кладовая'],
+    'flat' => [1 => 'квартиры', 2 => 'квартира'],
+    'parking' => [1 => 'машино-места', 2 => 'машино-место', 3 => 'паркинга', 4 => 'паркинг'],
+    'commercial' => [1 => 'коммерческого помещения', 2 => 'коммерческое помещение'],
+];
+
+if ($object['PROPERTIES']['category']['VALUE'] === 'parking') {
+    $objectTypeVal = $objectType[$object['PROPERTIES']['category']['VALUE']][3];
+} else {
+    $objectTypeVal = $objectType[$object['PROPERTIES']['category']['VALUE']][1];
+}
+$APPLICATION->SetPageProperty("description", "Бронирование".$objectTypeVal);
+$APPLICATION->SetPageProperty("TITLE", "Бронирование ".$objectTypeVal);
+$APPLICATION->SetTitle("Бронирование ".$objectTypeVal);
+
 $error = false;
+$typeError = 0;
 if (!isset($object) || empty($object)){
     $error = true;
+    $typeError = 1;
+} else if($object['PROPERTIES']['UF_STATUS']['VALUE'] == 'Забронирована' && $successful === false) {
+    $error = true;
+    $typeError = 2;
 }
-?>
-    <?global $USER;?>
-    <div class="page reservation <?if ($USER->IsAdmin()) {?>reserv-info-padding<?}?>">
-        <?if ($successful){?>
-            <div class="reservation-top">
-                <div data-type="nav" data-id="confirm" class="reservation-top-item completed">
-                    <div class="reservation-top-item__circle">1</div>
-                    <div class="reservation-top-item__text">Договор</br>оферта</div>
-                </div>
-                <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
-                </svg>
-                <div data-type="nav" data-id="card" class="reservation-top-item completed">
-                    <div class="reservation-top-item__circle">2</div>
-                    <div class="reservation-top-item__text">Данные</br>покупателя</div>
-                </div>
-                <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
-                </svg>
-                <div data-type="nav" data-id="payment" class="reservation-top-item active">
-                    <div class="reservation-top-item__circle">3</div>
-                    <div class="reservation-top-item__text">Оплата</br>резерва</div>
-                </div>
-            </div>
-        <?}else{?>
-            <div class="reservation-top">
-                <div data-type="nav" data-id="confirm" class="reservation-top-item active">
-                    <div class="reservation-top-item__circle">1</div>
-                    <div class="reservation-top-item__text">Договор</br>оферта</div>
-                </div>
-                <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
-                </svg>
-                <div data-type="nav" data-id="card" class="reservation-top-item">
-                    <div class="reservation-top-item__circle">2</div>
-                    <div class="reservation-top-item__text">Данные</br>покупателя</div>
-                </div>
-                <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
-                </svg>
-                <div data-type="nav" data-id="payment" class="reservation-top-item">
-                    <div class="reservation-top-item__circle">3</div>
-                    <div class="reservation-top-item__text">Оплата</br>резерва</div>
-                </div>
-            </div>
-        <?}?>
-        <div class="container">
 
-            <div id="confirm" <?=($successful || $error)?'style="display:none;"':'style="display:block;"'?> data-type="content" class="reservation-oferta" >
+$dopText = "<p style=\"font-size: 0.7em;\">
+На все объекты недвижимости применяется скидка 15% от базовой стоимости при 100% оплате/ипотеке (кроме программ с субсидированной ставкой от ПАО «Сбербанк»), цена на сайте указана с учетом скидки.
+<br> При применении ипотечных программ с субсидированной ставкой от ПАО «Сбербанк» скидка составляет 10% от базовой стоимости (рассчитывается менеджером).
+</p>";
+
+?>
+
+<?global $USER;?>
+<?$reseveSum = "30 000"?>
+<?$reseveSumText = "тридцать тысяч"?>
+<div class="page reservation <?if ($USER->IsAdmin()) {?>reserv-info-padding<?}?>">
+    <?if ($successful){?>
+        <div class="reservation-top">
+            <div data-type="nav" data-id="confirm" class="reservation-top-item completed">
+                <div class="reservation-top-item__circle">1</div>
+                <div class="reservation-top-item__text">Договор</br>оферта</div>
+            </div>
+            <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
+            </svg>
+            <div data-type="nav" data-id="card" class="reservation-top-item completed">
+                <div class="reservation-top-item__circle">2</div>
+                <div class="reservation-top-item__text">Данные</br>покупателя</div>
+            </div>
+            <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
+            </svg>
+            <div data-type="nav" data-id="payment" class="reservation-top-item active">
+                <div class="reservation-top-item__circle">3</div>
+                <div class="reservation-top-item__text">Оплата</br>резерва</div>
+            </div>
+        </div>
+    <?}else{?>
+        <div class="reservation-top">
+            <div data-type="nav" data-id="confirm" class="reservation-top-item active">
+                <div class="reservation-top-item__circle">1</div>
+                <div class="reservation-top-item__text">Договор</br>оферта</div>
+            </div>
+            <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
+            </svg>
+            <div data-type="nav" data-id="card" class="reservation-top-item">
+                <div class="reservation-top-item__circle">2</div>
+                <div class="reservation-top-item__text">Данные</br>покупателя</div>
+            </div>
+            <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L11 15L1 29" stroke="#BEBEBE" stroke-width="1.5"/>
+            </svg>
+            <div data-type="nav" data-id="payment" class="reservation-top-item">
+                <div class="reservation-top-item__circle">3</div>
+                <div class="reservation-top-item__text">Оплата</br>резерва</div>
+            </div>
+        </div>
+    <?}?>
+    <div class="container">
+        <div id="confirm" <?=($successful || $error)?'style="display:none;"':'style="display:block;"'?> data-type="content" class="reservation-oferta" >
                 <?if (isset($object) && !empty($object)){?>
                     <?if ($object['PROPERTIES']['apartments']['VALUE'] == 'true'){
                         ?>
                         <div class="about-bron">
+                            <?=$dopText?>
                             <div class="about-bron-text">
                                 <p>
                                     <strong class="about-bron-text__title">Основные условия бронирования:</strong>
-                                    1. Стоимость бронирования составляет 20 000 руб. Это сумма в дальнейшем включается в стоимость лота.
+                                    1. Стоимость бронирования составляет <?=$reseveSum?> руб. Это сумма в дальнейшем включается в стоимость лота.
                                 </p>
                                 <p>
                                     2. Бронирование подразумевает фиксацию стоимости на момент оплаты бронирования, а также закрепление данного объекта за вами на срок:<br>
@@ -204,7 +240,7 @@ if (!isset($object) || empty($object)){
                                 1.2. В соответствии с пунктом 2 статьи 437 Гражданского кодекса Российской Федерации (далее – ГК РФ) в случае принятия изложенных ниже условий и оплаты услуг Исполнителя, физическое или юридическое лицо, производящее акцепт этой оферты, становится Заказчиком (в соответствии с пунктом 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте).
                             </p>
                             <p>
-                                1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b>20&nbsp;000 (двадцать тысяч) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
+                                1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
                             </p>
                             <p>
                                 1.4. Осуществляя акцепт оферты по Договору в порядке, определенном в п. 1.3 Договора (оплачивая услуги Исполнителя), Заказчик подтверждает, что он ознакомлен и ему понятны условия Договора, полностью и безоговорочно принимает все условия Договора в том виде, в каком они изложены в тексте Договора.
@@ -290,7 +326,7 @@ if (!isset($object) || empty($object)){
                                 <b>4.</b> <b>Порядок расчетов</b>
                             </p>
                             <p>
-                                4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b>20&nbsp;000 (двадцать тысяч) рублей</b>, (НДС не облагается в связи с применением УСН).
+                                4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>, (НДС не облагается в связи с применением УСН).
                             </p>
                             <p>
                                 Заказчик обязуется произвести оплату услуги в момент заключения настоящего Договора.
@@ -383,11 +419,12 @@ if (!isset($object) || empty($object)){
                     }elseif ($object['PROPERTIES']['rooms']['VALUE']>1 && ($lk == 'komendantskiy' || $lk=='pushkinskiy')){
                         if ($lk=='pushkinskiy'){
                             ?>
+                            <?=$dopText?>
                             <div class="about-bron">
                                 <div class="about-bron-text">
                                     <p>
                                         <strong class="about-bron-text__title">Основные условия бронирования:</strong>
-                                        1. Стоимость бронирования составляет 20 000 руб. Это сумма в дальнейшем включается в стоимость квартиры.
+                                        1. Стоимость бронирования составляет <?=$reseveSum?> руб. Это сумма в дальнейшем включается в стоимость <?=$objectType[$object['PROPERTIES']['category']['VALUE']][1]?>.
                                     </p>
                                     <p>
                                         2. Бронирование подразумевает фиксацию стоимости на момент оплаты бронирования, а также закрепление данного объекта за вами на срок:<br>
@@ -421,7 +458,7 @@ if (!isset($object) || empty($object)){
                                     1.2. В соответствии с пунктом 2 статьи 437 Гражданского кодекса Российской Федерации (далее – ГК РФ) в случае принятия изложенных ниже условий и оплаты услуг Исполнителя, физическое или юридическое лицо, производящее акцепт этой оферты, становится Заказчиком (в соответствии с пунктом 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте).
                                 </p>
                                 <p>
-                                    1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b>20&nbsp;000 (двадцать тысяч) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
+                                    1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
                                 </p>
                                 <p>
                                     1.4. Осуществляя акцепт оферты по Договору в порядке, определенном в п. 1.3 Договора (оплачивая услуги Исполнителя), Заказчик подтверждает, что он ознакомлен и ему понятны условия Договора, полностью и безоговорочно принимает все условия Договора в том виде, в каком они изложены в тексте Договора.
@@ -511,7 +548,7 @@ if (!isset($object) || empty($object)){
                                     <b>4.</b> <b>Порядок расчетов</b>
                                 </p>
                                 <p>
-                                    4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b>20&nbsp;000 (двадцать тысяч) рублей</b>,<b> </b>(НДС не облагается в связи с применением УСН).
+                                    4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>,<b> </b>(НДС не облагается в связи с применением УСН).
                                 </p>
                                 <p>
                                     Заказчик обязуется произвести оплату услуги в момент заключения настоящего Договора.
@@ -583,7 +620,7 @@ if (!isset($object) || empty($object)){
                                     7.2.1.2. В случае непоступления Исполнителю от Заказчика сообщения/ уведомления об отказе от приобретения кладовой за цену, предложенную Исполнителем, цена кладовой считается принятой Заказчиком (согласованной Сторонами) и расторжение настоящего Договора по основанию, указанному в п. 7.2.1 Договора, не допускается.
                                 </p>
                                 <p>
-                                    7.2.1.3. При расторжении настоящего Договора в соответствии с п. 7.2.1 Договора, возврат стоимости услуг Исполнителя в размере 20&nbsp;000 (двадцать тысяч) рублей осуществляется в течение 30 (тридцати) рабочих дней с даты получения Исполнителем от Заказчика заявления о возврате денежных средств с указанием банковских реквизитов для перечисления.
+                                    7.2.1.3. При расторжении настоящего Договора в соответствии с п. 7.2.1 Договора, возврат стоимости услуг Исполнителя в размере <?=$reseveSum?> (<?=$reseveSumText?>) рублей осуществляется в течение 30 (тридцати) рабочих дней с даты получения Исполнителем от Заказчика заявления о возврате денежных средств с указанием банковских реквизитов для перечисления.
                                 </p>
                                 <p>
                                     7.2.2. Заказчик уведомлен Исполнителем, что заключение/ подписание Договора реализации в отношении объекта недвижимости, выбранного Заказчиком на сайте fsknw.ru и забронированного для него Исполнителем в соответствии с условиями настоящего Договора, осуществляется в срок, указанный в п. 2.1 Договора, при условии заключения Заказчиком Договора реализации в отношении кладовой.
@@ -622,11 +659,12 @@ if (!isset($object) || empty($object)){
                             <?
                         }else{
                             ?>
+                            <?=$dopText?>
                             <div class="about-bron">
                                 <div class="about-bron-text">
                                     <p>
                                         <strong class="about-bron-text__title">Основные условия бронирования:</strong>
-                                        1. Стоимость бронирования составляет 20 000 руб. Это сумма в дальнейшем включается в стоимость квартиры.
+                                        1. Стоимость бронирования составляет <?=$reseveSum?> руб. Это сумма в дальнейшем включается в стоимость <?=$objectType[$object['PROPERTIES']['category']['VALUE']][1]?>.
                                     </p>
                                     <p>
                                         2. Бронирование подразумевает фиксацию стоимости на момент оплаты бронирования, а также закрепление данного объекта за вами на срок:<br>
@@ -660,7 +698,7 @@ if (!isset($object) || empty($object)){
                                     1.2. В соответствии с пунктом 2 статьи 437 Гражданского кодекса Российской Федерации (далее – ГК РФ) в случае принятия изложенных ниже условий и оплаты услуг Исполнителя, физическое или юридическое лицо, производящее акцепт этой оферты, становится Заказчиком (в соответствии с пунктом 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте).
                                 </p>
                                 <p>
-                                    1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b>20&nbsp;000 (двадцать тысяч) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
+                                    1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
                                 </p>
                                 <p>
                                     1.4. Осуществляя акцепт оферты по Договору в порядке, определенном в п. 1.3 Договора (оплачивая услуги Исполнителя), Заказчик подтверждает, что он ознакомлен и ему понятны условия Договора, полностью и безоговорочно принимает все условия Договора в том виде, в каком они изложены в тексте Договора.
@@ -750,7 +788,7 @@ if (!isset($object) || empty($object)){
                                     <b>4.</b> <b>Порядок расчетов</b>
                                 </p>
                                 <p>
-                                    4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b>20&nbsp;000 (двадцать тысяч) рублей</b>,<b> </b>(НДС не облагается в связи с применением УСН).
+                                    4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>,<b> </b>(НДС не облагается в связи с применением УСН).
                                 </p>
                                 <p>
                                     Заказчик обязуется произвести оплату услуги в момент заключения настоящего Договора.
@@ -822,7 +860,7 @@ if (!isset($object) || empty($object)){
                                     7.2.1.2. В случае непоступления Исполнителю от Заказчика сообщения/ уведомления об отказе от приобретения машино-места за цену, предложенную Исполнителем, цена машино-места считается принятой Заказчиком (согласованной Сторонами) и расторжение настоящего Договора по основанию, указанному в п. 7.2.1 Договора, не допускается.
                                 </p>
                                 <p>
-                                    7.2.1.3. При расторжении настоящего Договора в соответствии с п. 7.2.1 Договора, возврат стоимости услуг Исполнителя в размере 20&nbsp;000 (двадцать тысяч) рублей осуществляется в течение 30 (тридцати) рабочих дней с даты получения Исполнителем от Заказчика заявления о возврате денежных средств с указанием банковских реквизитов для перечисления.
+                                    7.2.1.3. При расторжении настоящего Договора в соответствии с п. 7.2.1 Договора, возврат стоимости услуг Исполнителя в размере <?=$reseveSum?> (<?=$reseveSumText?>) рублей осуществляется в течение 30 (тридцати) рабочих дней с даты получения Исполнителем от Заказчика заявления о возврате денежных средств с указанием банковских реквизитов для перечисления.
                                 </p>
                                 <p>
                                     7.2.2. Заказчик уведомлен Исполнителем, что заключение/ подписание Договора реализации в отношении объекта недвижимости, выбранного Заказчиком на сайте fsknw.ru и забронированного для него Исполнителем в соответствии с условиями настоящего Договора, осуществляется в срок, указанный в п. 2.1 Договора, при условии заключения Заказчиком Договора реализации в отношении машино-место, расположенного в подземном гараже.
@@ -864,11 +902,12 @@ if (!isset($object) || empty($object)){
                         }
                         ?>
                     <?}else{?>
+                        <?=$dopText?>
                         <div class="about-bron">
                             <div class="about-bron-text">
                                 <p>
                                     <strong class="about-bron-text__title">Основные условия бронирования:</strong>
-                                    1. Стоимость бронирования составляет 20 000 руб. Это сумма в дальнейшем включается в стоимость квартиры.
+                                    1. Стоимость бронирования составляет <?=$reseveSum?> руб. Это сумма в дальнейшем включается в стоимость <?=$objectType[$object['PROPERTIES']['category']['VALUE']][1]?>.
                                 </p>
                                 <p>
                                     2. Бронирование подразумевает фиксацию стоимости на момент оплаты бронирования, а также закрепление данного объекта за вами на срок:<br>
@@ -899,7 +938,7 @@ if (!isset($object) || empty($object)){
                                 1.2. В соответствии с пунктом 2 статьи 437 Гражданского кодекса Российской Федерации (далее – ГК РФ) в случае принятия изложенных ниже условий и оплаты услуг Исполнителя, физическое или юридическое лицо, производящее акцепт этой оферты, становится Заказчиком (в соответствии с пунктом 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте).
                             </p>
                             <p>
-                                1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b>20&nbsp;000 (двадцать тысяч) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
+                                1.3. Моментом полного и безоговорочного принятия Заказчиком предложения Исполнителя заключить Договор-оферты (акцептом оферты) считается факт оплаты услуг Исполнителя в размере <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>, посредством перечисления денежных средств на расчетный счет Исполнителя по следующим реквизитам: <b>р/сч. 40702810555000039612, кор/сч. 30101810500000000653, Банк: СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК Г. САНКТ ПЕТЕРБУРГ, БИК 044030653</b>.
                             </p>
                             <p>
                                 1.4. Осуществляя акцепт оферты по Договору в порядке, определенном в п. 1.3 Договора (оплачивая услуги Исполнителя), Заказчик подтверждает, что он ознакомлен и ему понятны условия Договора, полностью и безоговорочно принимает все условия Договора в том виде, в каком они изложены в тексте Договора.
@@ -985,7 +1024,7 @@ if (!isset($object) || empty($object)){
                                 <b>4.</b> <b>Порядок расчетов</b>
                             </p>
                             <p>
-                                4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b>20&nbsp;000 (двадцать тысяч) рублей</b>,<b> </b>(НДС не облагается в связи с применением УСН).
+                                4.1.<b> </b>Стоимость услуги Исполнителя, указанной в п. 2.1 Договора, составляет <b><?=$reseveSum?> (<?=$reseveSumText?>) рублей</b>,<b> </b>(НДС не облагается в связи с применением УСН).
                             </p>
                             <p>
                                 Заказчик обязуется произвести оплату услуги в момент заключения настоящего Договора.
@@ -1069,56 +1108,289 @@ if (!isset($object) || empty($object)){
                         </div>
                     <?}?>
 
-<?/*
-                    <?global $USER;
-                    if($USER->IsAdmin()){?>
-                    <pre><?print_r($object['PROPERTIES']['rooms'])?></pre>
-                        <pre><?print_r($object['PROPERTIES'])?></pre>
-                    <?}else{?>
+                    <?/*
+                        <?global $USER;
+                        if($USER->IsAdmin()){?>
+                        <pre><?print_r($object['PROPERTIES']['rooms'])?></pre>
+                            <pre><?print_r($object['PROPERTIES'])?></pre>
+                        <?}else{?>
 
-                    <?}?>
-*/?>
-                <div class="reservation-oferta-next">
-                    <div class="btn btn--bg reservation-oferta-next__btn" data-btn="confirm">
-                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.7511 0.801702C21.4191 0.430683 20.881 0.430683 20.549 0.801702L10.3654 12.1834L6.45106 7.80851C6.11913 7.43749 5.58097 7.43753 5.24897 7.80851C4.91701 8.17949 4.91701 8.78096 5.24897 9.15198L9.7644 14.1986C10.0962 14.5695 10.6348 14.5693 10.9665 14.1986L21.7511 2.14521C22.083 1.77423 22.083 1.17272 21.7511 0.801702Z" fill="#FFFEFE"/>
-                            <path d="M10 1.5C5.31308 1.5 1.5 5.31308 1.5 10C1.5 14.6869 5.31308 18.5 10 18.5C14.6869 18.5 18.5 14.6869 18.5 10C18.5 5.31308 14.6869 1.5 10 1.5ZM10 0C15.5229 0 20 4.47715 20 10C20 15.5229 15.5229 20 10 20C4.47715 20 0 15.5229 0 10C0 4.47715 4.47715 0 10 0Z" fill="white"/>
-                        </svg>
-                        Принимаю условия
+                        <?}?>
+    */?>
+                    <div class="reservation-oferta-next">
+                        <div class="btn btn--bg reservation-oferta-next__btn" data-btn="confirm">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.7511 0.801702C21.4191 0.430683 20.881 0.430683 20.549 0.801702L10.3654 12.1834L6.45106 7.80851C6.11913 7.43749 5.58097 7.43753 5.24897 7.80851C4.91701 8.17949 4.91701 8.78096 5.24897 9.15198L9.7644 14.1986C10.0962 14.5695 10.6348 14.5693 10.9665 14.1986L21.7511 2.14521C22.083 1.77423 22.083 1.17272 21.7511 0.801702Z" fill="#FFFEFE"/>
+                                <path d="M10 1.5C5.31308 1.5 1.5 5.31308 1.5 10C1.5 14.6869 5.31308 18.5 10 18.5C14.6869 18.5 18.5 14.6869 18.5 10C18.5 5.31308 14.6869 1.5 10 1.5ZM10 0C15.5229 0 20 4.47715 20 10C20 15.5229 15.5229 20 10 20C4.47715 20 0 15.5229 0 10C0 4.47715 4.47715 0 10 0Z" fill="white"/>
+                            </svg>
+                            Принимаю условия
+                        </div>
                     </div>
-                </div>
                 <?}?>
             </div>
-            <form id="card" data-type="content" style="display:none;" class="reservation-card" >
-                <h2 class="h1 title">Информация для брони</h2>
-                <div class="reservation-card-form">
-                    <div class="reservation-card__title">Данные покупателя</div>
-
-                    <div class="reservation-card-form-content">
-                        <div class="reservation-card-form-content-col">
-                            <span>Имя:</span>
-                            <input type="text" name="first_name" data-required=""  value="<?//=$name?>">
+        <form id="card" data-type="content" style="display:none;" class="reservation-card" >
+                <div class="anketa-content-block section-margin">
+                    <h2 class="h1 title">Основные данные</h2>
+                    <div class="anketa-content-block-row">
+                        <div class="anketa-content-block-row-input">
+                            <label class="general-itemInput__label_top">Фамилия</label>
+                            <input placeholder="Иванов" id="last_name" name="last_name" type="text" data-required="" required>
                         </div>
-                        <div class="reservation-card-form-content-col">
-                            <span>Фамилия:</span>
-                            <input type="text" name="last_name" data-required="" value="<?//=$lastName?>">
+                        <div class="anketa-content-block-row-input">
+                            <label class="general-itemInput__label_top">Имя</label>
+                            <input placeholder="Иван" id="first_name" name="first_name" type="text" data-required="" required>
                         </div>
-                        <div class="reservation-card-form-content-col">
-                            <span>E-mail:</span>
-                            <input type="text" name="email" data-type="email " data-required="" value="<?//=$email?>">
+                        <div class="anketa-content-block-row-checkbox">
+                            <label for="">Способ оплаты</label>
+                            <div class="anketa-content-block-row-checkbox-row">
+                                <label class="anketa-content-block-row-checkbox-row-input">
+                                    <input type="radio" name="payType" checked="checked" value="mortgage">
+                                    <span></span>
+                                    <span>Ипотека</span>
+                                </label>
+                                <label class="anketa-content-block-row-checkbox-row-input">
+                                    <input type="radio" name="payType" value="full">
+                                    <span></span>
+                                    <span>100% оплата</span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="reservation-card-form-content-col">
-                            <span>Телефон:</span>
-                            <input type="text" name="tel" data-type="tel" data-required="" value="<?//=$phone?>">
+                    </div>
+                    <div class="anketa-content-block-row">
+                        <div class="anketa-content-block-row-input">
+                            <label class="general-itemInput__label_top">E-mail</label>
+                            <input placeholder="username@mail.ru" id="email" name="email" data-type="email " data-required="" required>
+                        </div>
+                        <div class="anketa-content-block-row-input">
+                            <label class="general-itemInput__label_top">Телефон</label>
+                            <input placeholder="+7 (999) 123-45-67" id="tel" name="tel" data-required="" type="text" required>
+                            <span class="confimButtom none" data-send-sms-order>
+                                    Выслать код
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7" cy="7" r="7" fill="#FFCA0F"/>
+                                        <path d="M6 5L8 7L6 9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                        </div>
+                        <div class="anketa-content-block-row-input">
+                            <label class="general-itemInput__label_top">Код подтверждения телефона</label>
+                            <input placeholder="ХХХХ" id="sms" disabled="disabled" name="sms" data-required="" type="text" required>
+                            <div class="confirm-code-repeat confimButtom none" data-send-sms-order>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12.5" cy="12.5" r="12.5" fill="#E94200"></circle><g clip-path="url(#clip0)"><path d="M12.9165 6.70924V4.1665L9.28398 7.79898L12.9165 11.4315V8.16223C15.3139 8.16223 17.2754 10.1238 17.2754 12.5212C17.2754 14.9186 15.3139 16.8802 12.9165 16.8802C10.519 16.8802 8.55748 14.9186 8.55748 12.5212H7.10449C7.10449 15.7178 9.71988 18.3332 12.9165 18.3332C16.113 18.3332 18.7284 15.7178 18.7284 12.5212C18.7284 9.32462 16.113 6.70924 12.9165 6.70924Z" fill="white"></path></g><defs><clipPath id="clip0"><rect width="14.1667" height="14.1667" fill="white" transform="translate(5.8335 4.1665)"></rect></clipPath></defs></svg>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <style>
+                    .reservation-card-bot__btn.disabled {
+                        background: #bababa;
+                        border: 1px #bababa;
+                    }
+                    .confimButtom {
+                        position: absolute;
+                        right: 10px;
+                        top: 56%;
+                        font-size: 14px;
+                        color: blue;
+                        cursor: pointer;
+                        display: -webkit-flex;
+                        display: -moz-flex;
+                        display: -ms-flex;
+                        display: -o-flex;
+                        display: flex;
+                        -ms-align-items: center;
+                        align-items: center;
+                        color: #727272;
+                    }
+                    .confimButtom svg{
+                        margin-left: 8px;
+                    }
+                </style>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function (event) {
+                        currentPayType();
+                    });
+
+                    function currentPayType(){
+                        let type = document.querySelector(`input[name="payType"]:checked`);
+                        let notice =document.querySelector(`[data-target="mortgageNotice"]`);
+                        if (type){
+                            if (type.value==='mortgage'){
+                                notice.style.display = 'block';
+                            }else{
+                                notice.style.display = 'none';
+                            }
+                        }
+                    }
+                    const userData = <?=json_encode([ "first_name" => $name, "last_name" => $lastName, "email" => $email, "tel" => $phone])?>;
+                    const inputSelector = '#card input:not([name="sms"])';
+
+                    function closeConfirmCodeRepeat() {
+                        let confirmCodeRepeat = document.querySelectorAll('.confirm-code-repeat');
+                        confirmCodeRepeat[0].classList.add('none');
+                        setTimeout(() => {
+                            confirmCodeRepeat[0].classList.remove('none');
+                        }, 60000);
+                    }
+
+                    let payBtm = document.querySelector('[data-type="pay"]');
+
+                    Helper.addEvent(document, 'click', '[data-btn="confirm"]', (e) => {
+                        payBtm = document.querySelector('[data-type="pay"]');
+                        payBtm.removeAttribute('data-type');
+                        payBtm.classList.add('disabled');
+                        let phones = document.querySelectorAll('[name="tel"]');
+                        let smss = document.querySelectorAll('[name="sms"]');
+                        let lastName = document.querySelectorAll('[name="last_name"]');
+                        let firstName = document.querySelectorAll('[name="first_name"]');
+
+                        let input = document.querySelectorAll('input');
+
+                        input.forEach( element => {
+                            let name = element.getAttribute('name');
+                            if(userData[name]) {
+                                element.value = userData[name];
+                                element.classList.add('input-border');
+                            }
+                        });
+
+                        phones.forEach( element => Helper.initMask(element, { mask: '+{7} (000) 000-00-00' }));
+                        lastName.forEach( element => Helper.initMask(element, { mask: /^[А-ЯЁ]*[а-яё]*$/ }));
+                        firstName.forEach( element => Helper.initMask(element, { mask: /^[А-ЯЁ]*[а-яё]*$/ }));
+                        smss.forEach( element => Helper.initMask(element, { mask: '0000' }));
+
+                        checkFieldValidation(inputSelector);
+
+                    });
+
+
+                    Helper.addEvent(document, 'click', '[data-send-sms-order]', (e) => {
+                        let form = document.querySelector('#card');
+                        let input = form.querySelectorAll('input');
+                        let formData = {};
+                        let formDataS = new FormData();
+                        input.forEach(element => {
+                            let name = element.getAttribute('name');
+                            formData[name] = element.value;
+                            formDataS.append(name, element.value);
+                        });
+                        if(formData['tel']) {
+                            QuerySend.querySendPost(formDataS, (response) => {
+                                if (response.isSuccess == true) {
+                                    let phones = document.querySelectorAll('[name="tel"]');
+                                    phones.forEach(element => {
+                                        let top = $(element).parents('.anketa-content-block-row-input').find('.confimButtom').eq(0);
+                                        top.addClass('none');
+                                        closeConfirmCodeRepeat();
+                                    });
+                                } else alert(response.message);
+                            }, '/ajax/?act=User.SendSMSOrderConfirm');
+                        } else {
+                            alert('Не введен телефон');
+                        }
+                    });
+
+                    const checkFieldValidation = (inputSelector) => {
+                        let dataForm = {};
+                        let inputs = document.querySelectorAll(inputSelector);
+                        inputs.forEach((input) => {
+                            let name = input.getAttribute('name');
+                            let type = input.getAttribute('type');
+                            if(type === 'radio') {
+                                if(input.checked) {
+                                    dataForm[name] = input.value;
+                                }
+                            } else {
+                                dataForm[name] = input.value;
+                            }
+                        });
+                        let smsField = document.querySelectorAll('[name="sms"]');
+                        let phones = document.querySelectorAll('[name="tel"]');
+                        let tel = dataForm['tel'].replace(/[^\d;]/g, '');
+                        console.log(tel,tel.length)
+                        if(dataForm['last_name'].length > 1 && dataForm['first_name'].length > 1 && tel.length === 11) {
+                            smsField.forEach(element => {
+                                element.removeAttribute('disabled')
+                            });
+                            phones.forEach(element => {
+                                let top = $(element).parents('.anketa-content-block-row-input').find('.confimButtom').eq(0);
+                                top.removeClass('none');
+                            });
+                        } else {
+                            smsField.forEach(element => {
+                                element.setAttribute('disabled','disabled');
+                                element.value = "";
+                            });
+                            phones.forEach(element => {
+                                let top = $(element).parents('.anketa-content-block-row-input').find('.confimButtom').eq(0);
+                                top.addClass('none');
+                            });
+                        }
+                        let allFieldIn = true;
+                        for(let fieldKey in dataForm) {
+                            if(fieldKey === 'basket' || fieldKey === 'iblock') continue;
+                            let field = dataForm[fieldKey];
+                            if(field.length < 2) allFieldIn = false;
+                        }
+                        if(allFieldIn) {
+                            payBtm.setAttribute('data-type', 'pay');
+                            payBtm.classList.remove('disabled');
+                        } else {
+                            if (payBtm){
+                                payBtm.removeAttribute('data-type');
+                                payBtm.classList.add('disabled');
+                            }
+                        }
+                    };
+
+                    Helper.addEvent(document, 'input', inputSelector, (e) => {
+                        console.log('input');
+                        currentPayType();
+                        checkFieldValidation(inputSelector);
+                    });
+                </script>
+                <?/*
+                    <!--h2 class="h1 title">Информация для брони</h2>
+                    <div class="reservation-card-form">
+                        <div class="reservation-card__title">Данные покупателя</div>
+
+                        <div class="reservation-card-form-content" style="padding-bottom: 0px;">
+                            <div class="reservation-card-form-content-col">
+                                <span>Имя</span>
+                                <input type="text" name="first_name" data-required=""  value="<?//=$name?>">
+                            </div>
+                            <div class="reservation-card-form-content-col">
+                                <span>Фамилия</span>
+                                <input type="text" name="last_name" data-required="" value="<?//=$lastName?>">
+                            </div>
+                            <div class="reservation-card-form-content-col">
+                                <span>Способ оплаты:</span>
+                                <input type="text" name="last_name" data-required="" value="<?//=$lastName?>">
+                            </div>
+                        </div>
+                        <div class="reservation-card-form-content">
+                            <div class="reservation-card-form-content-col">
+                                <span>Телефон</span>
+                                <input type="text" name="tel" data-type="tel" data-required="" value="<?//=$phone?>">
+                            </div>
+                            <div class="reservation-card-form-content-col">
+                                <span>Код подтверждения телефона</span>
+                                <input type="text" name="first_name" data-required=""  value="<?//=$name?>">
+                            </div>
+                            <div class="reservation-card-form-content-col">
+                                <span>E-mail:</span>
+                                <input type="text" name="email" data-type="email " data-required="" value="<?//=$email?>">
+                            </div>
+
+
+                        </div>
+                    </div-->
+                    */?>
                 <p>Все поля в данной форме являются обязательными к заполнению.</p>
                 <?if (isset($object) && !empty($object)){?>
                     <div class="reservation-card-main">
                         <div class="reservation-card__title">Информация об объекте</div>
                         <div class="reservation-card-main-content">
-
                             <div class="reservation-card-main-content__img">
                                 <input type="hidden" name="product" value="<?=$object['ID']?>">
                                 <input type="hidden" name="basket" value="">
@@ -1130,16 +1402,15 @@ if (!isset($object) || empty($object)){
                                     <img alt="plan" src="<?=$image?>">
                                 <?}?>
                             </div>
-
                             <div class="reservation-card-main-content-info">
-                                <div class="reservation-card-main-content-info__name"><?=$object['NAME']?> м2</div>
+                                <div class="reservation-card-main-content-info__name"><?=$object['PROPERTIES']['apartments']['VALUE'] == "true" ? "Лот ".$object['PROPERTIES']['area']['VALUE']." м2" : $object['NAME']." м2"?> </div>
                                 <div class="reservation-card-main-content-info-row">
                                     <span>Общая площадь</span>
                                     <span><?=$object['PROPERTIES']['area']['VALUE']?> м2</span>
                                 </div>
                                 <div class="reservation-card-main-content-info-row">
                                     <span>Жилая площадь</span>
-                                    <span><?=$object['PROPERTIES']['livingspace']['VALUE']?> м<sup>2</sup></span>
+                                    <span><?=$object['PROPERTIES']['livingspace']['VALUE']?> м2</span>
                                 </div>
                                 <div class="reservation-card-main-content-info-row">
                                     <span>Этаж / этажей</span>
@@ -1151,17 +1422,30 @@ if (!isset($object) || empty($object)){
                                 </div>
                                 <div class="reservation-card-main-content-info-row reservation__price">
                                     <span>Стоимость при 100% оплате/ипотеке</span>
-                                    <span><?=CurrencyFormat($object['PROPERTIES']['price100']['VALUE'], 'RUB');?> </span>
+                                    <span><?=CurrencyFormat($price, 'RUB');?> </span>
                                 </div>
-                                    <input type="hidden" name="price" value="20000">
                                 <?/*
-                                <!--div-- class="reservation-card-main-content-info-row reservation__price">
-                                    <span>Стоимость при резерве</span>
-                                    <input type="hidden" name="price" value="10000">
-                                    <span>10 000 р.</span>
-                                </!--div-->
-                                */?>
+                                    <!--div-- class="reservation-card-main-content-info-row reservation__price">
+                                        <span>Стоимость при резерве</span>
+                                        <input type="hidden" name="price" value="10000">
+                                        <span>10 000 р.</span>
+                                    </!--div-->
+                                    */?>
                                 <div class="reservation-card-main-content-info__id">ID объекта: <?=CurrencyFormat($object['CODE'], 'NUN');?></div>
+                              <div data-target="mortgageNotice" style=" display: none ">
+                                <?if (!empty($object['PROPERTIES']['priceGrant100exceptions']['VALUE'])){
+                                  $mortgageInfo = json_decode($object['PROPERTIES']['priceGrant100exceptions']['~VALUE'],true);
+                                  foreach ($mortgageInfo as $mortgage){
+                                  ?>
+                                    <div class="reservation-card-main-content-info__id">
+                                      При выборе кредитного продукта <?=$mortgage['bank']?> с субсидированными ставками применяется сниженная скидка на
+                                      объект в размере <?=$mortgage['percent']?>%, стоимость
+                                      составляет&nbsp;<?= CurrencyFormat($mortgage['value'], 'RUB'); ?>
+                                    </div>
+                                  <?}
+                                  ?>
+                                <?}?>
+                              </div>
                             </div>
                         </div>
                     </div>
@@ -1177,8 +1461,16 @@ if (!isset($object) || empty($object)){
                     </div>
                 </div>
             </form>
-            <div id="error" data-type="content" <?=($error && !$successful)?'style="display:block;"':'style="display:none;"'?> class="reservation-message" >
-                <div class="reservation-message-error reservation-message-block">
+        <div id="error" data-type="content" <?=($error && !$successful)?'style="display:block;"':'style="display:none;"'?> class="reservation-message" >
+            <div class="reservation-message-error reservation-message-block">
+                <?if($typeError === 2):?>
+                    <div class="reservation-message-col">
+                        <p style="text-align: center">
+                            Данная квартира находится в предварительном резерве.<br>
+                            Пожалуйста, свяжитесь с менеджером по тел. <a href="tel:88127035555">+7 (812) 703-55-55</a> для уточнения информации.
+                        </p>
+                    </div>
+                <?else:?>
                     <div class="reservation-message-col">
                         <p>Что-то пошло не так!</br></br>Свяжитесь с нашим специалистом для решения вопроса, либо попробуйте забронировать ещё раз.</p>
                         <a class="btn btn--transp reservation-message__btn" href="/newbuild/komendantskiy/">
@@ -1186,40 +1478,60 @@ if (!isset($object) || empty($object)){
                             Забронировать снова
                         </a>
                     </div>
-                    <div class="reservation-message-img">
-                        <div class="reservation-message-img__back"></div>
-                        <div class="reservation-message-img__text">
-                            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="31" cy="31" r="29" stroke="white" stroke-width="4"/>
-                                <path d="M43 41.9988L21.0012 20" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                                <path d="M21 41.9988L42.9988 20" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                            </svg>
-                            Ошибка</br>бронирования!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="success" <?=$successful?'style="display:block;"':'style="display:none;"'?> data-type="content" class="reservation-message">
-                <div class="reservation-message-success reservation-message-block">
-                    <div class="reservation-message-col">
-                        <p>Наш специалист свяжется с вами в ближайшее (рабочее) время</br> для подтверждения резерва.</br></br> Вы можете посмотреть другие объекты, перейдя в раздел “Новостройки”.</p>
-                        <a class="btn btn--transp reservation-message__btn" href="/newbuild/" >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="svg btn__ic ic-arrow inlined-svg lazyloaded" data-src="/local/templates/fsk/img/icons/ic-arrow.svg" width="20" height="20" role="img" aria-labelledby="title"><title>link</title><g transform="translate(0 20) rotate(-90)"><g transform="translate(20) rotate(90)" fill="none"><path d="M10,0A10,10,0,1,1,0,10,10,10,0,0,1,10,0Z" stroke="none"></path><path d="M 10.00000095367432 1.500001907348633 C 5.313080787658691 1.500001907348633 1.500001907348633 5.313080787658691 1.500001907348633 10.00000095367432 C 1.500001907348633 14.68692111968994 5.313080787658691 18.5 10.00000095367432 18.5 C 14.68692111968994 18.5 18.5 14.68692111968994 18.5 10.00000095367432 C 18.5 5.313080787658691 14.68692111968994 1.500001907348633 10.00000095367432 1.500001907348633 M 10.00000095367432 1.9073486328125e-06 C 15.52285099029541 1.9073486328125e-06 20 4.477150917053223 20 10.00000095367432 C 20 15.52285099029541 15.52285099029541 20 10.00000095367432 20 C 4.477150917053223 20 1.9073486328125e-06 15.52285099029541 1.9073486328125e-06 10.00000095367432 C 1.9073486328125e-06 4.477150917053223 4.477150917053223 1.9073486328125e-06 10.00000095367432 1.9073486328125e-06 Z" stroke="none"></path></g><g transform="translate(7.236 5.719)"><g transform="translate(5.504 5.4) rotate(90)"><g transform="translate(0 5.504) rotate(-90)"><path d="M0,0,2.752,2.752,5.5,0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"></path></g></g><line y2="7.826" transform="translate(2.739)" fill="none" stroke-linecap="round" stroke-width="1.5"></line></g></g></svg>
-                            Перейти в новостройки
-                        </a>
-                    </div>
-                    <div class="reservation-message-img">
-                        <div class="reservation-message-img__back"></div>
-                        <div class="reservation-message-img__text">
-                            <svg width="63" height="62" viewBox="0 0 63 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="31" cy="31" r="29" stroke="white" stroke-width="4"/>
-                                <path d="M62 6.58582C61.219 5.80473 59.9527 5.80473 59.1716 6.58582L29.6246 36.7753L20.4143 27.565C19.6332 26.7839 18.367 26.7839 17.5858 27.565C16.8047 28.346 16.8047 29.6122 17.5858 30.3933L28.2104 41.0177C28.9911 41.7987 30.2583 41.7981 31.0388 41.0177L62 9.41426C62.7811 8.63324 62.781 7.36691 62 6.58582Z" fill="white"/>
-                            </svg>
-                            Квартира успешно</br>забронирована!
-                        </div>
+                <?endif?>
+                <div class="reservation-message-img">
+                    <div class="reservation-message-img__back"></div>
+                    <div class="reservation-message-img__text">
+                        <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="31" cy="31" r="29" stroke="white" stroke-width="4"/>
+                            <path d="M43 41.9988L21.0012 20" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M21 41.9988L42.9988 20" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                        Ошибка</br>бронирования!
                     </div>
                 </div>
             </div>
         </div>
+        <div id="success" <?=$successful?'style="display:block;"':'style="display:none;"'?> data-type="content" class="reservation-message">
+            <div class="reservation-message-success reservation-message-block">
+                <div class="reservation-message-img">
+                    <div class="reservation-message-img__back"></div>
+                    <div class="reservation-message-img__text">
+                        <svg width="58" height="57" viewBox="0 0 58 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.0016 55.4123C44.1342 55.4123 56.4016 43.3639 56.4016 28.5015C56.4016 13.6392 44.1342 1.59082 29.0016 1.59082C13.869 1.59082 1.60156 13.6392 1.60156 28.5015C1.60156 43.3639 13.869 55.4123 29.0016 55.4123Z" stroke="white" stroke-width="2"/>
+                            <path d="M41.6916 19.3291C41.2804 18.8903 40.6137 18.8903 40.2025 19.3291L24.6466 36.2879L19.7975 31.1141C19.3863 30.6753 18.7197 30.6753 18.3084 31.1141C17.8972 31.5528 17.8972 32.2641 18.3084 32.7029L23.902 38.6711C24.3131 39.1098 24.9802 39.1095 25.3911 38.6711L41.6916 20.9179C42.1028 20.4792 42.1028 19.7679 41.6916 19.3291Z" fill="white" stroke="white" stroke-width="0.5"/>
+                        </svg>
+                        Бронирование прошло успешно!
+                    </div>
+                </div>
+                <div class="reservation-message-col">
+                    <p>Благодарим вас! Теперь объект и стоимость зафиксированы за вами. Наш специалист свяжется с вами в ближайшее время для обсуждения дальнейших этапов.</p>
+                    <p>Мы создали для вас личный кабинет, где вы можете отслеживать статус своего бронирования, а также осуществить онлайн-оформление и оплату вашей квартиры или апартамента.</p>
+                    <?/*<a class="btn btn--transp reservation-message__btn" href="/newbuild/" >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="svg btn__ic ic-arrow inlined-svg lazyloaded" data-src="/local/templates/fsk/img/icons/ic-arrow.svg" width="20" height="20" role="img" aria-labelledby="title"><title>link</title><g transform="translate(0 20) rotate(-90)"><g transform="translate(20) rotate(90)" fill="none"><path d="M10,0A10,10,0,1,1,0,10,10,10,0,0,1,10,0Z" stroke="none"></path><path d="M 10.00000095367432 1.500001907348633 C 5.313080787658691 1.500001907348633 1.500001907348633 5.313080787658691 1.500001907348633 10.00000095367432 C 1.500001907348633 14.68692111968994 5.313080787658691 18.5 10.00000095367432 18.5 C 14.68692111968994 18.5 18.5 14.68692111968994 18.5 10.00000095367432 C 18.5 5.313080787658691 14.68692111968994 1.500001907348633 10.00000095367432 1.500001907348633 M 10.00000095367432 1.9073486328125e-06 C 15.52285099029541 1.9073486328125e-06 20 4.477150917053223 20 10.00000095367432 C 20 15.52285099029541 15.52285099029541 20 10.00000095367432 20 C 4.477150917053223 20 1.9073486328125e-06 15.52285099029541 1.9073486328125e-06 10.00000095367432 C 1.9073486328125e-06 4.477150917053223 4.477150917053223 1.9073486328125e-06 10.00000095367432 1.9073486328125e-06 Z" stroke="none"></path></g><g transform="translate(7.236 5.719)"><g transform="translate(5.504 5.4) rotate(90)"><g transform="translate(0 5.504) rotate(-90)"><path d="M0,0,2.752,2.752,5.5,0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"></path></g></g><line y2="7.826" transform="translate(2.739)" fill="none" stroke-linecap="round" stroke-width="1.5"></line></g></g></svg>
+                            Перейти в новостройки
+                        </a>*/?>
+                </div>
+            </div>
+            <div class="lk-items">
+                <a href="/lk/" class="lk-items-card">
+                    <div class="lk-items-card-info">
+                        <div class="lk-items-card-info__title">
+                            <img src="/local/templates/fsk/assets/src/images/lk-data-icon.svg" alt="Моя сделка">
+                            Личный кабинет
+                        </div>
+                        <div class="lk-items-card-info__text">Следите за этапами сделки, загружайте документы, выпускайте электронную подпись: все онлайн!</div>
+                        <div class="lk-items-card-info__btn btn-new btn--transp">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 1.52344C5.03738 1.52344 1 5.56082 1 10.5234C1 15.4861 5.03738 19.5234 10 19.5234C14.9626 19.5234 19 15.4861 19 10.5234C19 5.56082 14.9626 1.52344 10 1.52344ZM10 0.523438C15.5228 0.523438 20 5.00059 20 10.5234C20 16.0463 15.5228 20.5234 10 20.5234C4.47715 20.5234 0 16.0463 0 10.5234C0 5.00059 4.47715 0.523438 10 0.523438Z" fill="#F35E41"></path><path d="M11.1191 13.2874L13.8711 10.5354L11.1191 7.78735" stroke="#F04B2F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.71924 10.5483H13.5452" stroke="#F04B2F" stroke-linecap="round"></path></svg>
+                            Перейти в кабинет
+                        </div>
+                    </div>
+                    <div class="lk-items-card__img">
+                        <img src="/local/templates/fsk/assets/src/images/auth.jpg" alt="Моя сделка" style="object-position: 15% center;">
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
+</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

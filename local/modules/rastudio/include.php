@@ -5,7 +5,7 @@ define('ROOT_DIR', $_SERVER['DOCUMENT_ROOT']);
 define('LOCAL_DIR', ROOT_DIR . '/local');
 define('BOBOX_DIR', LOCAL_DIR . '/templates/bobox');
 define('RS_MODULE_DIR', LOCAL_DIR . '/modules/rastudio');
-define('LOG_MODULE_DIR', LOCAL_DIR );
+define('LOG_MODULE_DIR', "/".RS_MODULE_DIR );
 define('OUT_LIST_PRODUCT_TEMPLATE', BOBOX_DIR."/components/bitrix/catalog.element/bobobCatalogElement/include/listblock/out/index.php" );
 
 require_once (ROOT_DIR . '/bitrix/modules/main/admin_tools.php');
@@ -13,10 +13,12 @@ require_once (ROOT_DIR . '/bitrix/modules/main/filter_tools.php');
 IncludeModuleLangFile(__DIR__);
 
 CModule::AddAutoloadClasses('rastudio', [
+
     '\\RaStudio\\Config' => 'lib/Config.php',
     '\\RaStudio\\Api\\Config' => 'lib/api/Config.php',
     '\\RaStudio\\Api\\RestApi' => 'lib/api/RestApi.php',
     '\\RaStudio\\Api\\ShopWorker' => 'lib/api/ShopWorker.php',
+
     /*General*/
     '\\RaStudio\\Helper' => 'lib/Helper.php',
     '\\RaStudio\\GeoLocation' => 'lib/GeoLocation.php',
@@ -29,6 +31,7 @@ CModule::AddAutoloadClasses('rastudio', [
     '\\RaStudio\\FileStatic' => 'lib/FileStatic.php',
     '\\RaStudio\\XmlParser' => 'lib/XmlParser.php',
     '\\RaStudio\\Cart' => 'lib/Cart.php',
+    '\\RaStudio\\User' => 'lib/User.php',
     /*General*/
 
     /*Ajax*/
@@ -37,6 +40,7 @@ CModule::AddAutoloadClasses('rastudio', [
     '\\RaStudio\\Ajax\\AjaxFilter' => 'lib/ajax/AjaxFilter.php',
     '\\RaStudio\\Ajax\\AjaxBuild' => 'lib/ajax/AjaxBuild.php',
     '\\RaStudio\\Ajax\\AjaxOrder' => 'lib/ajax/AjaxOrder.php',
+    '\\RaStudio\\Ajax\\AjaxUser' => 'lib/ajax/AjaxUser.php',
     /*Ajax*/
 
     /*Api*/

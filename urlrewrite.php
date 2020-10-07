@@ -32,6 +32,14 @@ $arUrlRewrite=array (
     'PATH' => '/discounts/index.php',
     'SORT' => 100,
   ),
+  13 => 
+  array (
+    'CONDITION' => '#^/storeroom/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/storeroom/index.php',
+    'SORT' => 100,
+  ),
   11 => 
   array (
     'CONDITION' => '#^/newbuild/#',

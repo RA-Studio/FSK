@@ -4614,7 +4614,18 @@ body input:required:valid, body textarea:required:valid {
 .results__cell {
   text-align: center;
 }
-
+.results-cell-reserved{
+  color: #BEBEBE;
+}
+.results-cell-reserved .results-cell-5 span{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.results-cell-reserved .results-cell-5 svg{
+  margin-right: 9px;
+}
 .results-cell-1 {
   /*min-width: 40px;*/
     width: 60px;
@@ -4949,6 +4960,17 @@ body input:required:valid, body textarea:required:valid {
   font-size: 14px;
   line-height: 1;
   color: var(--sub-text-color);
+}
+.results-refresh__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.results-refresh__item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 30px;
 }
 
 .results-refresh .btn__ic {

@@ -1,0 +1,17 @@
+.map{
+	padding-top: 50px;
+	&-table{
+		border-collapse: collapse;
+		width: 100%;
+		td{
+			border: 1px solid #000;
+			width: 25%;
+			a{
+				display: block;
+				font-size: 18px;
+				font-weight: 500;
+				padding: 12px 15px;
+			}
+		}
+	}
+}

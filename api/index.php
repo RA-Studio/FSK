@@ -6,7 +6,7 @@ if (!CModule::IncludeModule('rastudio')) {
     return;
 }
 
-RaStudio\Api\LoggerAdapter::add(print_r([file_get_contents('php://input'), $_SERVER['REQUEST_METHOD']], true));
+//RaStudio\Api\LoggerAdapter::add(print_r([file_get_contents('php://input'), $_SERVER['REQUEST_METHOD']], true));
 
 $sControllerName = "ApiController";
 

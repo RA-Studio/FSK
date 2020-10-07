@@ -248,7 +248,6 @@ $WITH_FORM = strlen($arParams['WIDTH_FORM']) > 0 ? 'style="max-width:'.$arParams
         }
     });
     function success_<?=$FORM_ID?>() {
-          console.log($('#<?=$FORM_ID?>'));
           $('#<?=$FORM_ID?>').find('input, textarea, button').attr('disabled', 'disabled');
           setTimeout(function(){
               $('#<?=$FORM_ID?>').find('input, textarea').val('').removeClass('input-border');

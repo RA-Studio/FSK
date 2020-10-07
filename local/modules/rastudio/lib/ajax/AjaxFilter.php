@@ -213,6 +213,20 @@ class AjaxFilter {
                     $temp['PROPERTIES']['image_out']['VALUE'][$value['DESCRIPTION']] = \CFile::ResizeImageGet($value, array('width'=>600, 'height'=>600), BX_RESIZE_IMAGE_PROPORTIONAL, true)['src'];
                 }
 
+                if($arRequest["PROPERTY_category"] == "storeroom") {
+                    $planMini = $temp['PROPERTIES']['image_out']['VALUE']['plan'];
+                    $planBig = $temp['PROPERTIES']['image_out_big']['VALUE']['plan'];
+
+                    $floorPlanMini = $temp['PROPERTIES']['image_out_big']['VALUE']['floor_plan'];
+                    $floorPlanBig = $temp['PROPERTIES']['image_out']['VALUE']['floor_plan'];
+
+                    $planMini = $planMini ? $planMini : $floorPlanMini;
+                    $planBig = $planBig ? $planBig : $floorPlanBig;
+
+                    $temp['PROPERTIES']['image_out']['VALUE']['plan'] = $planMini;
+                    $temp['PROPERTIES']['image_out_big']['VALUE']['plan'] = $planBig;
+                }
+
                 $temp['PROPERTIES']['image_out_big_new'] = $temp['PROPERTIES']['image_out_big']['VALUE'];
                 $temp['PROPERTIES']['image_out_big']['VALUE'] = $temp['PROPERTIES']['image_out_big']['VALUE']['plan'];
                 $temp['PROPERTIES']['image_out_new']['VALUE'] = $temp['PROPERTIES']['image_out']['VALUE'];
@@ -230,6 +244,8 @@ class AjaxFilter {
 			//}
 
         }
+
+
 
         $arResult = [
             "arResultCart" => $arResultCart,
@@ -332,7 +348,7 @@ class AjaxFilter {
                     $newArray,
                 );
             }
-        } elseif($arRequest["PROPERTY_category"] == "parking") {
+        } elseif($arRequest["PROPERTY_category"] == "parking" || $arRequest["PROPERTY_category"] == "storeroom") {
             $arFilter = Array(
                 "IBLOCK_ID" => $iblockID,
                 "ACTIVE"=>"Y",
@@ -367,6 +383,8 @@ class AjaxFilter {
         $folder = '/newbuild/';
         if($arRequest["PROPERTY_category"] == 'commercial') {
             $folder = '/commercial/';
+        } else if ($arRequest["PROPERTY_category"] == 'storeroom') {
+            $folder = '/storeroom/';
         } else if ($arRequest["PROPERTY_category"] == 'parking') {
             $folder = '/parking/';
         }
@@ -515,6 +533,7 @@ class AjaxFilter {
                         "SECTION_ID" => $temp['ID'],
                         "PROPERTY_propertytype" => "жилая",
                         "!PROPERTY_price" => false,
+                        "PROPERTY_category"=>$_POST['PROPERTY_category'],
                     );
 
                     if($arRequest["PROPERTY_category"] == "commercial") {
@@ -523,6 +542,10 @@ class AjaxFilter {
                     }
                     if($arRequest["PROPERTY_category"] == "parking") {
                         $arFilter["PROPERTY_category"] = "parking";
+                        unset($arFilter["PROPERTY_propertytype"]);
+                    }
+                    if($arRequest["PROPERTY_category"] == "storeroom") {
+                        $arFilter["PROPERTY_category"] = "storeroom";
                         unset($arFilter["PROPERTY_propertytype"]);
                     }
 

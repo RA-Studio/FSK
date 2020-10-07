@@ -47,16 +47,25 @@ class ApartmentControll {
         this.modeLoad = false;
         this.pathPage = document.location.pathname;
 
+        this.loadBlock = {
+            first: true,
+            load: false,
+        }
+
         if (this.pathPage.indexOf(`commercial`) != -1) {
             this.modeLoad = "commercial"
         }else if(  this.pathPage.indexOf(`parking`) != -1){
             this.modeLoad = "parking"
+        }else if(  this.pathPage.indexOf(`storeroom`) != -1){
+            this.modeLoad = "storeroom"
         }else if (this.pathPage.indexOf(`newbuild`) != -1 || this.pathPage == "/") {
             this.modeLoad = "flat";
         }
 
         if(this.modeLoad == "parking") {
             this.dataObject.templates.buildSectionUrl = "/parking/";
+        }else if(this.modeLoad == "storeroom") {
+            this.dataObject.templates.buildSectionUrl = "/storeroom/";
         }else if(this.modeLoad == "commercial") {
             this.dataObject.templates.buildSectionUrl = "/commercial/";
         }
@@ -547,7 +556,7 @@ class ApartmentControll {
                     if(request.isSuccess && result.items) {
                         _this.initData().map(result);
                         _this.setData().printBuildLine(result);
-                        if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/`) {
+                        if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/` || _this.pathPage == `/storeroom/`) {
                             if(!_this.dataObject.firstOut.load && result !== false) {
                                 _this.getDataAjax(jsonSend, "Filter.InBuildFilter").then((request) => {
                                     $(prelouder).hide();
@@ -642,18 +651,24 @@ class ApartmentControll {
                         $(prelouder).hide();
                         let result = request.result;
                         if (request.isSuccess && result) {
+
+                            _this.loadBlock.load = true;
+
                             $(`#p-6 .results .results__row.results__header`).show();
                             $(`#p-6 .results .results__body`).show();
                             $(`#p-6 .results .results-empty`).hide();
                             _this.setData().printApartmentLine(result);
                         } else {
-                            $(`#p-6`).remove();
-                            $(`[href="#p-6"]`).remove();
 
-                            /*$(`#p-6 .results .results__row.results__header`).hide();
-                            $(`#p-6 .results .results__body`).hide();
-                            $(`#p-6 .results .results-empty`).show();*/
-                            // _this.setData().apartmentList(`<div style="text-align: center;width: 100%;padding: 25px 0px;font-size: 20px;height: 100%;">По вашему запросу ничего не найдено</div>`);
+                            if(_this.loadBlock.load === true) {
+                                $(`#p-6 .results .results__row.results__header`).hide();
+                                $(`#p-6 .results .results__body`).hide();
+                                $(`#p-6 .results .results-empty`).show();
+                                _this.setData().apartmentList(`<div style="text-align: center;width: 100%;padding: 25px 0px;font-size: 20px;height: 100%;">По вашему запросу ничего не найдено</div>`);
+                            } else {
+                                $(`#p-6`).remove();
+                                $(`[href="#p-6"]`).remove();
+                            }
                         }
                         resolve();
                     });
@@ -700,8 +715,13 @@ class ApartmentControll {
         let _this = this;
         return {
             loadPDF(e) {
-                var request = $.ajax({
+                /*var request = $.ajax({
                     url: `https://api.restpack.io/pdf/preview/convert?url=https://fsknw.ru/print.php?ID=${$(e).data(`id`)}&json=true&pdf_page=A4&emulate_media=print`,
+                    method: "GET",
+                    dataType: "html"
+                });*/
+                var request = $.ajax({
+                    url: `https://fsknw.ru/generate_pdf/createPDF.php?ID=${$(e).data(`id`)}`,
                     method: "GET",
                     dataType: "html"
                 });
@@ -943,17 +963,23 @@ class ApartmentControll {
                     _this.dataObject.firstOut.load = false;
 
                     if(result !== false) _this.dataObject.firstOut.list = result;
-                    if(_this.pathPage == `/newbuild/` || _this.pathPage == `/commercial/` || _this.pathPage == `/parking/` || _this.pathPage == `/`) {
+                    if(
+                        _this.pathPage == `/newbuild/` ||
+                        _this.pathPage == `/commercial/` ||
+                        _this.pathPage == `/parking/` ||
+                        _this.pathPage == `/storeroom/` ||
+                        _this.pathPage == `/`
+                    ) {
                         $(`.quarter-list.view-1`).html(stringOut);
                         $(`.quarter-list.view-2 .f-row`).html(``);
                     }
-                    if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/`) {
+                    if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/` || _this.pathPage == `/storeroom/`) {
                         $(`.results.results--nofloors`).hide();
                         $(`.container.section-margin`).show();
                     }
                 } else {
 
-                    if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/`) {
+                    if(_this.pathPage == `/commercial/` || _this.pathPage == `/parking/` || _this.pathPage == `/storeroom/`) {
                         $(`.results.results--nofloors`).show();
                         $(`.quarter-list.view-1`).html(``);
                         $(`.container.section-margin`).hide();
@@ -993,7 +1019,7 @@ class ApartmentControll {
 
                         stringOut += `
 						<div class="results__row results-screen__header">
-                            <div>${key}</div>
+                            <div>${key == 0 ? '' : key}</div>
                         `;
                             if(minPrice !== NaN && minPrice && minPrice != NaN && minPrice != "NaN"){
                                 stringOut += `<div>от <span class="filter-data">${minPrice} р.</span></div>`;
@@ -1036,9 +1062,13 @@ class ApartmentControll {
                         if(!cart['PROPERTIES']['image_out_big']['VALUE']) {
                             cart['PROPERTIES']['image_out_big']['VALUE'] = `/local/templates/fsk/img/svg-logo-gray.svg`;
                         }
-
                         let price = _this.helper().XFormatPrice(cart['PROPERTIES']['price100']['VALUE']);
-                                stringOut += `  <div class="results__row" data-area-id="${cart['PROPERTIES']['area_dop']['VALUE']}" data-event="updatePopup" data-count="${key}" data-area="${cart['PROPERTIES']['area']['VALUE']}"  data-id="${result.arResultCart[key][keyCart]['ID']}" data-plan="${cart['PROPERTIES']['image_out_big']['VALUE']}"> `;
+                        let chechReserve = cart['PROPERTIES']['UF_STATUS']['VALUE'] === 'Забронирована';
+                        if (chechReserve){
+                            stringOut += `<div class="results__row results-row-reserved" data-area-id="${cart['PROPERTIES']['area_dop']['VALUE']}" data-event="updatePopup" data-count="${key}" data-area="${cart['PROPERTIES']['area']['VALUE']}"  data-id="${result.arResultCart[key][keyCart]['ID']}" data-plan="${cart['PROPERTIES']['image_out_big']['VALUE']}"> `;
+                        }else {
+                            stringOut += `  <div class="results__row" data-area-id="${cart['PROPERTIES']['area_dop']['VALUE']}" data-event="updatePopup" data-count="${key}" data-area="${cart['PROPERTIES']['area']['VALUE']}"  data-id="${result.arResultCart[key][keyCart]['ID']}" data-plan="${cart['PROPERTIES']['image_out_big']['VALUE']}"> `;
+                        }
                                if(cart['PROPERTIES']['image_out']['VALUE']){
                                    stringOut += ` <div class="results__cell results-cell-1 js-call-card" style="min-height: 60px;"><img class="img plan-thumb lazyload" data-src="${cart['PROPERTIES']['image_out']['VALUE']}" alt="alt"></div> `;
                                }else{
@@ -1049,10 +1079,15 @@ class ApartmentControll {
                                 stringOut += `<div class="results__cell results-cell-2"><span>${cart['PROPERTIES']['area']['VALUE']} м<sup>2</sup></span></div>`;
                                 if( _this.modeLoad == "flat" ) stringOut += `<div class="results__cell results-cell-3"><span>${stringFloor}</span></div>`;
                                 stringOut += `<div class="results__cell results-cell-4"><span>${cart['PROPERTIES']['builtyear']['VALUE']}</span></div>`;
-                                stringOut += `<div class="results__cell results-cell-5">`;
 
-                                if(price !== NaN && price && price != NaN && price != "NaN"){
-                                    stringOut += `<span>${price} р.</span>`
+                                    stringOut += `<div class="results__cell results-cell-5">`;
+                                let outPrice = chechReserve ? `<svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.59814 5.61456H8.90706V3.90591C8.90706 1.75219 7.15487 0 5.00118 0C2.84742 0 1.09516 1.75219 1.09516 3.90591V5.61456H0.404088C0.180884 5.61456 0 5.79545 0 6.01862V13.5973C0 13.8205 0.180884 14.0014 0.404088 14.0014H9.59817C9.82131 14.0014 10.0022 13.8205 10.0022 13.5973V6.01862C10.0022 5.79545 9.82127 5.61456 9.59814 5.61456ZM5.63113 10.2271V11.8405C5.63113 11.9814 5.51689 12.0957 5.37593 12.0957H4.62622C4.4853 12.0957 4.37103 11.9814 4.37103 11.8405V10.2271C4.09225 10.0294 3.91019 9.70445 3.91019 9.33673C3.91019 8.73433 4.39858 8.24588 5.00108 8.24588C5.60351 8.24588 6.0919 8.73433 6.0919 9.33673C6.09194 9.70445 5.90987 10.0294 5.63113 10.2271ZM7.04221 5.61456H2.96002V3.90591C2.96002 2.78044 3.87567 1.86485 5.00118 1.86485C6.12662 1.86485 7.04221 2.78044 7.04221 3.90591V5.61456Z" fill="#BEBEBE"/>
+</svg>
+${price} р.` : `${price} р.`;
+                                let outPriceMobile = chechReserve ? "в резерве" : `<span>${price} </span>р.`;
+                                if(price !== NaN && price && price != NaN && price != "NaN") {
+                                    stringOut += `<span>${outPrice}</span>`;
                                 } else {
                                     stringOut += `<span class="dashed-underline">По запросу</span>`
                                 }
@@ -1061,7 +1096,7 @@ class ApartmentControll {
                                 </div>
                                     <div class="results-cell-mob">
                                             <p class="data-1">${countApartment} - ${cart['PROPERTIES']['area']['VALUE']} м<sup>2</sup></p>
-                                            ${price !== NaN && price && price != NaN && price != "NaN" ? `<p class="data-2"> <span>${price} </span>р.</p>` : `<p class="data-2"><span class="dashed-underline">По запросу</span></p>`}
+                                            ${price !== NaN && price && price != NaN && price != "NaN" ? `<p class="data-2">${outPriceMobile}</p>` : `<p class="data-2"><span class="dashed-underline">По запросу</span></p>`}
                                         </div>
                                         <div class="results-cell-btns">
                                           <button class="interactive-btn interactive-follow" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="svg ic-arrow inlined-svg" width="20" height="20" role="img" aria-labelledby="title"><title>Перейти</title><g transform="translate(0 20) rotate(-90)"><g transform="translate(20) rotate(90)" fill="none"><path d="M10,0A10,10,0,1,1,0,10,10,10,0,0,1,10,0Z" stroke="none"></path><path d="M 10.00000095367432 1.500001907348633 C 5.313080787658691 1.500001907348633 1.500001907348633 5.313080787658691 1.500001907348633 10.00000095367432 C 1.500001907348633 14.68692111968994 5.313080787658691 18.5 10.00000095367432 18.5 C 14.68692111968994 18.5 18.5 14.68692111968994 18.5 10.00000095367432 C 18.5 5.313080787658691 14.68692111968994 1.500001907348633 10.00000095367432 1.500001907348633 M 10.00000095367432 1.9073486328125e-06 C 15.52285099029541 1.9073486328125e-06 20 4.477150917053223 20 10.00000095367432 C 20 15.52285099029541 15.52285099029541 20 10.00000095367432 20 C 4.477150917053223 20 1.9073486328125e-06 15.52285099029541 1.9073486328125e-06 10.00000095367432 C 1.9073486328125e-06 4.477150917053223 4.477150917053223 1.9073486328125e-06 10.00000095367432 1.9073486328125e-06 Z" stroke="none"></path></g><g transform="translate(7.236 5.719)"><g transform="translate(5.504 5.4) rotate(90)"><g transform="translate(0 5.504) rotate(-90)"><path d="M0,0,2.752,2.752,5.5,0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"></path></g></g><line y2="7.826" transform="translate(2.739)" fill="none" stroke-linecap="round" stroke-width="1.5"></line></g></g></svg></button>
@@ -1156,9 +1191,24 @@ class ApartmentControll {
                 }
 
                 if(element['PROPERTIES']['image_out_big_new'] != undefined) {
-                	_this.action().setImgPopupBlock(element['PROPERTIES']['image_out_big_new']['floor_plan'],1,element['PROPERTIES']['image_out_new']['VALUE']['floor_plan'], first);
-                    _this.action().setImgPopupBlock(element['PROPERTIES']['image_out_big_new']['section'],2,element['PROPERTIES']['image_out_new']['VALUE']['section'], first);
-                    _this.action().setImgPopupBlock(element['PROPERTIES']['image_out_big_new']['decoration'],3,element['PROPERTIES']['image_out_new']['VALUE']['decoration'], first);
+                	_this.action().setImgPopupBlock(
+                	    element['PROPERTIES']['image_out_big_new']['floor_plan'],
+                        1,
+                        element['PROPERTIES']['image_out_new']['VALUE']['floor_plan'],
+                        first
+                    );
+                    _this.action().setImgPopupBlock(
+                        element['PROPERTIES']['image_out_big_new']['section'],
+                        2,
+                        element['PROPERTIES']['image_out_new']['VALUE']['section'],
+                        first
+                    );
+                    _this.action().setImgPopupBlock(
+                        element['PROPERTIES']['image_out_big_new']['decoration'],
+                        3,
+                        element['PROPERTIES']['image_out_new']['VALUE']['decoration'],
+                        first
+                    );
                 }
                 if ( element.PROPERTIES.UF_STATUS.VALUE==='Забронирована'){//изменение кнопки если зарезервирована
                     var btns = document.querySelectorAll('[data-type="reserveBtn"]');
@@ -1182,6 +1232,10 @@ class ApartmentControll {
                 var reserve = document.querySelectorAll('[data-type="reserveBtn"]');
                 for (i = 0; i < reserve.length; ++i) {
                     reserve[i].dataset.id =element.ID;
+                }
+                var reserved = document.querySelectorAll('[data-type="reserved"]');
+                for (i = 0; i < reserved.length; ++i) {
+                    reserved[i].dataset.id =element.CODE;
                 }
                 //poppupForm.find('[data-type="reserveBtn"]').attr('data-id',element.ID);
 
@@ -1433,7 +1487,6 @@ class ApartmentControll {
         }
     }
     getDataAjax(data = {}, act = "", callbackFun) {
-        console.log(act);
         return new Promise((resolve, reject) => {
             let request = $.ajax({
                 context: this,
@@ -1445,7 +1498,6 @@ class ApartmentControll {
                 data: data,
             });
             request.done((response) => {
-                console.log(response.result);
                 resolve(response);
             });
             request.fail(( jqXHR, textStatus ) => {
@@ -1579,14 +1631,16 @@ class ApartmentControll {
                                 nameStingEnd = "Помещения";
                             }else if (_this.modeLoad == "parking") {
                                 nameStingEnd = "Машиноместо";
-                            }else if (item.apartment) {
+                            }else if (_this.modeLoad == "storeroom") {
+                                nameStingEnd = "Кладовая";
+                            } else if (item.apartment) {
                                 nameStingEnd = "Апартаменты";
                             } else {
                                 nameStingEnd = "Квартиры";
                             }
 
                             let postfix = '';
-                            if (_this.modeLoad == "parking"){
+                            if (_this.modeLoad == "parking" || _this.modeLoad == "storeroom"){
                                 postfix = "тыс/р.";
                             }else{
                                 postfix = "млн/р.";

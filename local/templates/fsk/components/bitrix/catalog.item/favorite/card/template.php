@@ -99,17 +99,22 @@ $globalSetting = RaStudio\Ajax\AjaxFilter::globalSetting();
             </div>
         </div>
     </div>
+    <?if(OPEN_SHOP):?>
+        <div class="favourite-item__footer">
+              <?if($item['PROPERTIES']['UF_STATUS']['VALUE']=='Забронирована'){?>
+                <a href="#modal-FORM3" data-type="reserved" data-id="" data-iblock="1" class="btn btn--cta popup-btn-FORM3" type="button">
+                  <img width="19" alt="phone" src="/local/templates/fsk/img/icons/ic-bag.svg" height="24" class="svg btn__ic">
+                  Забронировать
+                </a>
+              <?}else{?>
+                <a href="/reserve/" data-type="reserveBtn" data-id="<?=$item['ID']?>" data-iblock="<?=$item['IBLOCK_ID']?>" class=" btn btn--cta " type="button" style="display: inline-flex;">
+                  <img width="19" alt="phone" src="/local/templates/fsk/img/icons/ic-bag.svg" height="24" class="svg btn__ic">Забронировать
+                </a>
+              <?}?>
 
-    <div class="favourite-item__footer">
-        <a href="/reserve/" data-type="reserveBtn" data-id="<?=$item['ID']?>" data-iblock="<?=$item['IBLOCK_ID']?>" class=" btn btn--cta " type="button" style="display: inline-flex;">
-            <img width="19" alt="phone" src="/local/templates/fsk/img/icons/ic-bag.svg" height="24" class="svg btn__ic">Забронировать
-        </a>
-        <?/*
-        <button class="btn btn--cta js-call-callback" >
-
-        </button>
-*/?>
-    </div>
+            <?/*<button class="btn btn--cta js-call-callback" ></button>*/?>
+        </div>
+    <?endif?>
 </div>
 
 <?/*

@@ -184,7 +184,7 @@ $_SESSION['FAVORITE'] = $tempS;
 		"EVENT_MESSAGE_ID" => array(0=>"48",),
 		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE",
 		"FORM_AUTOCOMPLETE" => "Y",
-		"FORM_ID" => "FORM3",
+		"FORM_ID" => "FORM4",
 		"FORM_NAME" => "Нужна консультация специалиста?",
 		"FORM_SUBMIT_VALUE" => "Позвоните мне",
 		"FORM_SUBMIT_VARNING" => "Отправляя форму, вы подтверждаете своё согласие на <a href=\"/privacy-policy/\" target=\"_blank\">обработку персональных данных</a>",
@@ -203,7 +203,7 @@ $_SESSION['FAVORITE'] = $tempS;
 		"USE_JQUERY" => "N",
 		"USE_MODULE_VARNING" => "N",
 		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "success_FORM2"
+		"_CALLBACKS" => "success_FORM4"
 	)
 );?>
 <?/*

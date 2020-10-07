@@ -1,0 +1,115 @@
+.auth{
+	padding: 0 24px;
+	&-block{
+		background: #FFFFFF;
+		box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+		max-width: 840px;
+		height: 550px;
+		margin: 40px auto 0;
+		display: flex;
+		&__img{
+			width: 330px;
+			height: 100%;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: -50px center;
+			}
+		}
+		&-content{
+			flex: 1;
+			padding: 40px 50px;
+			&-input{
+				margin-bottom: 27px;
+				position: relative;
+				.confirm-code-repeat{
+					position: absolute;
+					z-index: 3;
+					right: 15px;
+					bottom: 12px;
+					cursor: pointer;
+					display: flex;
+				}
+				.confirm-code-repeat.disabled{
+					pointer-events: none;
+					svg circle{
+						fill: #BEBEBE
+					}
+				}
+				label{
+					display: block;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 17px;
+					color: #727272;
+					margin-bottom: 7px;
+				}
+				input{
+					width: 100%;
+					height: 50px;
+					border: 1px solid #E5E8E8;
+					border-radius: 3px;
+					padding: 0 15px;
+					font-weight: 300;
+					color: #000000;
+					transition: all 0.1s linear;
+					&::placeholder{
+						color: #727272;
+					}
+					&:focus{
+						box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+						border: 1px solid transparent;
+						outline: none;
+						& + label{
+							display: none;
+						}
+					}
+				}
+			}
+			&__btn{
+				width: 100%;
+				height: 50px;
+			}
+		}
+	}
+}
+
+@include w768{
+	.auth{
+		&-block{
+			&-content{
+				padding: 40px 20px;
+			}
+		}
+	}
+}
+
+@include w480{
+	.auth{
+		padding: 0;
+		&-block{
+			margin-top: 30px;
+			display: block;
+			padding-top: 54px;
+			position: relative;
+			box-shadow: none;
+			height: auto;
+			&__img{
+				width: 100%;
+				height: 180px;
+				img{
+					object-position: center;
+				}
+			}
+			&-content{
+				padding: 20px 15px 0;
+				.title{
+					position: absolute;
+					top: 0;
+				}
+			}
+		}
+	}
+}

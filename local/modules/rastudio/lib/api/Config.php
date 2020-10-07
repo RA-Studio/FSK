@@ -9,7 +9,7 @@ class Config
     const METHOD_TYPE_CREATE = 'POST';
     const METHOD_TYPE_UPDATE = 'PUT';
     const METHOD_TYPE_GET = 'GET';
-
+    const FILE_DIR = '/upload/order';
     const METHOD_INSTALLMENT_LIST = 'ListInstallmentPlanApartment';
     const METHOD_CALCULATE_INSTALLMENT = 'CalculateInstallmentPlanApartment';
     const METHOD_CANSEL_ORDER = 'CancelOrder';

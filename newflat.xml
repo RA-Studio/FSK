@@ -1,0 +1,2875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realty-feed xmlns="http://webmaster.yandex.ru/schemas/feed/realty/2010-06" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<generation-date xmlns="FSK_siteIntegration">2020-10-02T16:57:11</generation-date>
+	<offer xmlns="FSK_siteIntegration" internal-id="39683">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>garage</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>268767</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>537534</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>268767</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>268767</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>478943</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>3</floor>
+		<floors-total>7</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331439</yandex-house-id>
+		<building-section>П</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/96e6a3bb-d308-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/b013edf8-c4f0-11ea-bbc6-00155d463c42</image>
+		<description>UP-квартал «Комендантский» - жилой комплекс комфорт-класса от федерального застройщика - компании ФСК "Лидер". Он построен в Приморском районе, на пересечении Парашютной улицы и Шуваловского проспекта. В его состав входят три 23-этажных дома и паркинги, на первых этажах разместятся магазины, детские досуговые центры, кафе и другие предприятия коммерческой инфраструктуры.
+UP-квартал "Комендантский" построен с использованием современной монолитной технологии. Вентилируемый фасад из керамогранита, витражное остекление и яркое цветовое решение делают внешний облик домов динамичным и запоминающимся.
+Продуманная квартирография позволяет выбрать то, что подходит именно Вам: от функциональных MAXI-студий до просторных семейных квартир. Квартиры сдаются с предчистовой и полной чистовой отделкой по индивидуальному дизайн-проекту в двух цветовых решениях («Ваниль» и «Капучино»). 
+Собственную инфраструктуру комплекса дополняет инфраструктура Приморского района, в пешей доступности: детские сады и школы, супермаркеты, магазины строительных материалов, поликлиники, торгово-развлекательные центры и рестораны.
+UP-квартал "Комендантский" - это современный стиль жизни в развитой локации.</description>
+		<area>
+			<value>13.25</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>79</number-flat>
+		<section>1</section>
+		<decoration/>
+		<garage-type>parking place</garage-type>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="39693">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>garage</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>295588</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>591176</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>295588</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>295588</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>526738</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>3</floor>
+		<floors-total>7</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331439</yandex-house-id>
+		<building-section>П</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/96e6a3c2-d308-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/b013edf8-c4f0-11ea-bbc6-00155d463c42</image>
+		<description>UP-квартал «Комендантский» - жилой комплекс комфорт-класса от федерального застройщика - компании ФСК "Лидер". Он построен в Приморском районе, на пересечении Парашютной улицы и Шуваловского проспекта. В его состав входят три 23-этажных дома и паркинги, на первых этажах разместятся магазины, детские досуговые центры, кафе и другие предприятия коммерческой инфраструктуры.
+UP-квартал "Комендантский" построен с использованием современной монолитной технологии. Вентилируемый фасад из керамогранита, витражное остекление и яркое цветовое решение делают внешний облик домов динамичным и запоминающимся.
+Продуманная квартирография позволяет выбрать то, что подходит именно Вам: от функциональных MAXI-студий до просторных семейных квартир. Квартиры сдаются с предчистовой и полной чистовой отделкой по индивидуальному дизайн-проекту в двух цветовых решениях («Ваниль» и «Капучино»). 
+Собственную инфраструктуру комплекса дополняет инфраструктура Приморского района, в пешей доступности: детские сады и школы, супермаркеты, магазины строительных материалов, поликлиники, торгово-развлекательные центры и рестораны.
+UP-квартал "Комендантский" - это современный стиль жизни в развитой локации.</description>
+		<area>
+			<value>15.5</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>89</number-flat>
+		<section>1</section>
+		<decoration/>
+		<garage-type>parking place</garage-type>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="39757">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>garage</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>277941</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>555882</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>277941</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>277941</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>495291</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>5</floor>
+		<floors-total>7</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331439</yandex-house-id>
+		<building-section>П</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/96e6a3f0-d308-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/b013edf8-c4f0-11ea-bbc6-00155d463c42</image>
+		<description>UP-квартал «Комендантский» - жилой комплекс комфорт-класса от федерального застройщика - компании ФСК "Лидер". Он построен в Приморском районе, на пересечении Парашютной улицы и Шуваловского проспекта. В его состав входят три 23-этажных дома и паркинги, на первых этажах разместятся магазины, детские досуговые центры, кафе и другие предприятия коммерческой инфраструктуры.
+UP-квартал "Комендантский" построен с использованием современной монолитной технологии. Вентилируемый фасад из керамогранита, витражное остекление и яркое цветовое решение делают внешний облик домов динамичным и запоминающимся.
+Продуманная квартирография позволяет выбрать то, что подходит именно Вам: от функциональных MAXI-студий до просторных семейных квартир. Квартиры сдаются с предчистовой и полной чистовой отделкой по индивидуальному дизайн-проекту в двух цветовых решениях («Ваниль» и «Капучино»). 
+Собственную инфраструктуру комплекса дополняет инфраструктура Приморского района, в пешей доступности: детские сады и школы, супермаркеты, магазины строительных материалов, поликлиники, торгово-развлекательные центры и рестораны.
+UP-квартал "Комендантский" - это современный стиль жизни в развитой локации.</description>
+		<area>
+			<value>19.08</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>153</number-flat>
+		<section>1</section>
+		<decoration/>
+		<garage-type>parking place</garage-type>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="39797">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>garage</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Парашютная ул.</address>
+			<metro>
+				<name>Комендантский проспект</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>40</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>277941</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>555882</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>277941</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>277941</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>495291</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>5</floor>
+		<floors-total>7</floors-total>
+		<building-name>Комендантский UP квартал</building-name>
+		<yandex-building-id>331426</yandex-building-id>
+		<yandex-house-id>331439</yandex-house-id>
+		<building-section>П</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/96e6a409-d308-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/b013edf8-c4f0-11ea-bbc6-00155d463c42</image>
+		<description>UP-квартал «Комендантский» - жилой комплекс комфорт-класса от федерального застройщика - компании ФСК "Лидер". Он построен в Приморском районе, на пересечении Парашютной улицы и Шуваловского проспекта. В его состав входят три 23-этажных дома и паркинги, на первых этажах разместятся магазины, детские досуговые центры, кафе и другие предприятия коммерческой инфраструктуры.
+UP-квартал "Комендантский" построен с использованием современной монолитной технологии. Вентилируемый фасад из керамогранита, витражное остекление и яркое цветовое решение делают внешний облик домов динамичным и запоминающимся.
+Продуманная квартирография позволяет выбрать то, что подходит именно Вам: от функциональных MAXI-студий до просторных семейных квартир. Квартиры сдаются с предчистовой и полной чистовой отделкой по индивидуальному дизайн-проекту в двух цветовых решениях («Ваниль» и «Капучино»). 
+Собственную инфраструктуру комплекса дополняет инфраструктура Приморского района, в пешей доступности: детские сады и школы, супермаркеты, магазины строительных материалов, поликлиники, торгово-развлекательные центры и рестораны.
+UP-квартал "Комендантский" - это современный стиль жизни в развитой локации.</description>
+		<area>
+			<value>22.32</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>193</number-flat>
+		<section>1</section>
+		<decoration/>
+		<garage-type>parking place</garage-type>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40059">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>6461190</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>7601400</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>6396578</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>6396578</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>6772847</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>2</rooms>
+		<new-flat>true</new-flat>
+		<floor>7</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/ddc0db69-b0a7-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/1ac75340-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de8-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>61.5</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>34.3</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>9.86</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>879</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40112">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>4569345</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>5375700</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>4523652</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>4523652</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>4789749</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>13</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/c4337336-2722-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/79f0f49f-7f52-11e8-b496-001e67eddad1</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de8-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>39.6</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>16.7</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>11.54</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>932</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40149">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>6427377</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>7561620</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>6363103</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>6363103</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>6737403</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>2</rooms>
+		<new-flat>true</new-flat>
+		<floor>16</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/ddc0db83-b0a7-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/1ac75359-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de8-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>62.7</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>34.8</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>9.86</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>969</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40169">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>6661739</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>7837340</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>6595122</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>6595122</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>6983070</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>2</rooms>
+		<new-flat>true</new-flat>
+		<floor>18</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/ddc0db89-b0a7-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/1ac7535f-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de8-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>62.9</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>34.7</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>9.86</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>989</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40172">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>4658531</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>5480625</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>4611946</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>4611946</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>4883237</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>19</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/97d9830b-2723-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/79f0f4db-7f52-11e8-b496-001e67eddad1</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228de8-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>39.5</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>16.7</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>11.54</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>992</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40726">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>8044073</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>9463615</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>7963632</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>7963632</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>8432081</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>11</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cdebeb-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f174158c-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228def-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>74.9</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>43.8</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>11.79</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>327</number-flat>
+		<section>8</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40809">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>4680228</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>5506150</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>4633425</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>4633425</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>4905980</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>20</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/92e99096-0554-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/ec4afeba-9ec2-11e8-91fc-001e67eddad1</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228def-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>39.4</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>16.2</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>10.76</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>410</number-flat>
+		<section>8</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="40827">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>6444679</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>7581975</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>6380232</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>6380232</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>6755540</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>2</rooms>
+		<new-flat>true</new-flat>
+		<floor>2</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464672</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>hand-over</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2019</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cdec0c-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/bed5caff-fbe6-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df0-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>64.5</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>31.1</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>16.46</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>10</number-flat>
+		<section>9</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43662">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>7562314</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>8896840</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>7486691</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>7486691</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>7927084</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837230</yandex-house-id>
+		<building-section>1</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/34ce3199-bf29-11e9-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f17416a3-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfb5-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>77.6</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>42.08</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>14.52</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>3</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43809">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>7664817</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>9017432</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>7588169</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>7588169</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>8034532</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>2</rooms>
+		<new-flat>true</new-flat>
+		<floor>5</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837231</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/34ce31cb-bf29-11e9-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f17416b7-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfb8-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>70.12</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>29.24</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>15.18</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>75</number-flat>
+		<section>2</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43813">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>storeroom</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>226389</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>266340</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>226389</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>226389</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>237308</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>0</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837230</yandex-house-id>
+		<building-section>1</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>2</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/8d54799f-23a3-11e9-a7f0-0cc47a0cfc55</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfb5-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f4-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>6.86</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>4</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="43911">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>2875681</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3383154</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>2846924</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>2846924</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>3014390</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-section>3</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>3</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>3</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cdec71-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f17415d9-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df1-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>25.38</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>16.68</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>true</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>4</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="44168">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>7070691</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>8318461</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>6999985</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>6999985</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>7411748</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>13</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-section>3</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>3</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>3</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cdecfd-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f1741644-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>79.87</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>38.21</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>16.98</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>261</number-flat>
+		<section>2</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="44186">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>6867023</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>8078851</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>6798353</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>6798353</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>7198256</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>15</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-section>3</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>3</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>3</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cded04-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f174164a-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df2-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>79.87</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>38.21</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>16.98</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>279</number-flat>
+		<section>2</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="44350">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>5795952</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>6818768</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>5737993</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>5737993</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>6075522</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>2</rooms>
+		<new-flat>true</new-flat>
+		<floor>13</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-section>3</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>3</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>3</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cded55-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f1741683-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df3-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>62.13</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>25.26</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>16.51</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>443</number-flat>
+		<section>3</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="44358">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region>Санкт-Петербург</region>
+			<locality-name>Шушары</locality-name>
+			<address>Вишерская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>17</time-on-transport>
+				<time-on-foot>35</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>7757073</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>9125969</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>7679502</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>7679502</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>8131238</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>15</floor>
+		<floors-total>23</floors-total>
+		<building-name>Московский UP квартал</building-name>
+		<yandex-building-id>370705</yandex-building-id>
+		<yandex-house-id>464685</yandex-house-id>
+		<building-section>3</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>3</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>3</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/21cded5a-b0a8-11ea-bbc6-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f1741687-9e68-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228df3-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>UP-квартал "Московский" строится на юге Санкт-Петербурга в популярном районе в поселке Шушары. Удачно выбранный формат и активно развивающаяся локация стали залогом успеха проекта. В 2018 году был сдан первый корпус "Московского", в 2019 - второй корпус.
+UP-кварталы всегда выгодно выделяются на фоне стандартной массовой застройки: архитекторы и проектировщики делают акцент на яркий внешний вид, креативное цветовое решение фасадов и обустройство внутренней территории. Кроме того, существует ряд преимуществ, которые отражают особенности этой уникальной концепции. При создании UP-кварталов внимание уделяется как рациональному использованию пространства квартиры с продуманной планировкой, так и созданию благоустроенных дворов с ландшафтным дизайном, паркингами и детскими площадками, мимо которых не пройдет ни один ребёнок.
+UP-квартал «Московский» является флагманом локации: три корпуса, один из которых с переменной этажностью (от 9 до 23 этажей). Вблизи находится множество транспортных развязок (КАД, Московское шоссе, Витебский проспект). При возведении используется современная технология строительства с монолитным несущим каркасом и вентилируемым фасадом, облицованным керамогранитом. На первых этажах домов предусмотрена собственная инфраструктура – минимаркеты, фермерские магазины, кафе, отделения банков, фитнес-клубы, развивающие секции для детей. В жилом комплексе также находится встроенный детский сад.</description>
+		<area>
+			<value>86.79</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>38.68</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>19.18</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>true</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>451</number-flat>
+		<section>3</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45380">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>8157111</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>9596601</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>8075540</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>8075540</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>8550571</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>1</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837239</yandex-house-id>
+		<building-section>4</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/34ce3200-bf29-11e9-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/09169693-9e69-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfbb-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>83.34</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>44.32</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>14.64</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>1</number-flat>
+		<section>1</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45486">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>9325434</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>10971099</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>9232180</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>9232180</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>9775249</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>3</rooms>
+		<new-flat>true</new-flat>
+		<floor>2</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837241</yandex-house-id>
+		<building-section>5</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase>2</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/34ce330c-bf29-11e9-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/091696b5-9e69-11ea-bbc6-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfbe-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f3-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>93.69</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>46.57</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>17.27</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Предчистовая</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>37</number-flat>
+		<section>2</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45722">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>storeroom</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>205598</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>241880</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>205598</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>205598</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>215515</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>0</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837241</yandex-house-id>
+		<building-section>5</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5c7ad6eb-7e07-11e9-bbc3-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfbe-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f4-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>6.23</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>35</number-flat>
+		<section>2</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45736">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>storeroom</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Пушкин</locality-name>
+			<address>Камероновская ул.</address>
+			<metro>
+				<name>Купчино</name>
+				<time-on-transport>32</time-on-transport>
+				<time-on-foot>100</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>209888</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>246927</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>209888</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>209888</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>220012</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>0</rooms>
+		<new-flat>true</new-flat>
+		<floor>0</floor>
+		<floors-total>5</floors-total>
+		<building-name>UP-квартал "Пушкинский"</building-name>
+		<yandex-building-id>1837063</yandex-building-id>
+		<yandex-house-id>1837241</yandex-house-id>
+		<building-section>5</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>4</ready-quarter>
+		<built-year>2021</built-year>
+		<building-phase/>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5c7ad6f9-7e07-11e9-bbc3-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/f04edfbe-eead-11ea-bbc6-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/53cf80f4-36d2-11ea-bbc4-00155d463c42</image>
+		<description>Концепция UP-квартала «Пушкинский» как нельзя лучше подходит для особой локации, в которой он возводится: малоэтажная застройка в окружении парков, ландшафтный дизайн, закрытая территория, продуманные планировки, особые форматы квартир с саунами, гардеробными и высокими потолками на мансарде. 
+Камерная обстановка, акцент на комфорт и транспортная доступность позволяют создать атмосферу спокойствия и полной свободы.
+В проекте предусмотрены дополнительные решения для повышения уровня безопасности, поддержания хорошей физической формы и развития детей, а также возможности разнообразить досуг, отдохнуть всей семьей.
+Квартира в этом UP-квартале - это возможность жить в лучшем пригороде Петербурга и ощутить совершенно новое качество жизни! Здесь продумана каждая деталь: детские площадки и площадки для занятия спортом, зона барбекю, площадки для занятий йогой.
+Все квартиры сдаются с предчистовой отделкой, остается лишь выбрать финишное покрытие стен и пола.</description>
+		<area>
+			<value>6.36</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<renovation>Без отделки</renovation>
+		<apartments>false</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>49</number-flat>
+		<section>2</section>
+		<decoration>30</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45926">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>3243924</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3816381</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>3211484</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>3211484</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>3400395</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>10</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5de6b1ef-3c24-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/2739b00a-9bfe-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dda-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>18.4</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>10-63</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="45984">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>3103164</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3650781</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>3072132</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>3072132</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>3252846</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>11</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5de6b225-3c24-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/207718b0-9bfe-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dda-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>18.4</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>11-71</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="46053">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>2835044</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3335346</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>2806693</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>2806693</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>2971793</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>3</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/d4b63c98-464d-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/df05ace4-9bfd-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dd9-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>18.8</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>03-69</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="46056">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>2947054</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3467122</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>2917583</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>2917583</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>3089206</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>3</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/d4b63c9b-464d-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/df05acec-9bfd-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dd9-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>18.5</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>03-74</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="46102">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>2931124</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3448381</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>2901812</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>2901812</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>3072507</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>4</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/d4b63caa-464d-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/e5fbff4f-9bfd-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dd9-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>18.4</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>04-66</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="46116">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>3939695</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>4634935</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>3900298</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>3900298</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>4129727</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>5</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5de6b2a9-3c24-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/df05aa84-9bfd-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dd9-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>24.6</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>05-6</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="46175">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>3847815</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>4526842</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>3809337</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>3809337</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>4033416</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>6</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/5de6b2e1-3c24-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/df05aaa8-9bfd-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dd9-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>26.8</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>06-12</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+	<offer xmlns="FSK_siteIntegration" internal-id="46229">
+		<type>продажа</type>
+		<property-type>жилая</property-type>
+		<category>flat</category>
+		<creation-date>2020-09-02T04:57:11</creation-date>
+		<location>
+			<country>РОССИЯ</country>
+			<region/>
+			<locality-name>Санкт-Петербург</locality-name>
+			<address>Коломяжский пр.</address>
+			<metro>
+				<name>Чёрная речка</name>
+				<time-on-transport>4</time-on-transport>
+				<time-on-foot>17</time-on-foot>
+			</metro>
+		</location>
+		<price100>
+			<value>2883334</value>
+			<currency>RUR</currency>
+		</price100>
+		<price>
+			<value>3392157</value>
+			<currency>RUR</currency>
+		</price>
+		<priceOnline100>
+			<value>2854500</value>
+			<currency>RUR</currency>
+		</priceOnline100>
+		<priceGrant100>
+			<value>2854500</value>
+			<currency>RUR</currency>
+			<exceptions>
+				<exception>
+					<bank>СберБанк</bank>
+					<bik>044030653</bik>
+					<value>3022412</value>
+					<percent>10</percent>
+				</exception>
+			</exceptions>
+		</priceGrant100>
+		<sales-agent>
+			<name>Группа компаний ФСК</name>
+			<phone>+7(812)703-55-55</phone>
+			<category>developer</category>
+			<organization>Группа компаний ФСК</organization>
+			<url>https://fsknw.ru</url>
+			<email>landing@fsknw.ru</email>
+		</sales-agent>
+		<rooms>1</rooms>
+		<new-flat>true</new-flat>
+		<floor>6</floor>
+		<floors-total>13</floors-total>
+		<building-name>Zoom Apart </building-name>
+		<yandex-building-id>1955512</yandex-building-id>
+		<yandex-house-id>1955527</yandex-house-id>
+		<building-section>2</building-section>
+		<building-state>unfinished</building-state>
+		<ready-quarter>1</ready-quarter>
+		<built-year>2022</built-year>
+		<building-phase>1</building-phase>
+		<image tag="plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/d4b63cc6-464d-11ea-bbc4-00155d463c42</image>
+		<image tag="floor_plan">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/e5fbff95-9bfd-11e9-bbc4-00155d463c42</image>
+		<image tag="section">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/3a228dd9-d3b3-11e9-bbc4-00155d463c42</image>
+		<image tag="decoration">https://terminal.scloud.ru/03/sc81501_base07/hs/FSK_API/ImageRealty/0f875df9-3d17-11ea-bbc4-00155d463c42</image>
+		<description>Zoom Apart - инвест-отель на набережной Черной речки и новый центр притяжения в центре Петербурга. Масштаб проекта, наполнение сервисами и профессиональная УК гарантируют гостям – комфорт и удобство, а инвесторам максимальный доход. Непревзойденная локация: настоящий тихий центр Петербурга, где уединенность собственной набережной сочетается с близостью ко всем центральным точкам города. До метро «Черная речка» несколько минут пешком, до Невского проспекта – 10 минут на метро, близко Лахта-центр, Крестовский и Елагин острова. </description>
+		<area>
+			<value>18.1</value>
+			<unit>sq.m</unit>
+		</area>
+		<living-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</living-space>
+		<kitchen-space>
+			<value>0</value>
+			<unit>sq.m</unit>
+		</kitchen-space>
+		<apartments>true</apartments>
+		<lift>false</lift>
+		<parking>false</parking>
+		<is-elite>false</is-elite>
+		<studio>false</studio>
+		<deal-status>первичная продажа</deal-status>
+		<number-flat>06-75</number-flat>
+		<section>1</section>
+		<decoration>10</decoration>
+	</offer>
+</realty-feed>

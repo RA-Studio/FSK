@@ -20,9 +20,17 @@
         <ul class="mob-menu__list">
             <?
             foreach($arResult as $arItem):
-                if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1)
-                    continue;
-            ?><li><a class="mob-menu__title" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+                if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1) continue;
+            ?>
+                <?if($arItem["TEXT"] != 'Кабинет покупателя'){?>
+                    <li>
+                        <a class="mob-menu__title" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                    </li>
+                <?} else {?>
+                    <li>
+                        <a class="mob-menu__title login-modal-open" href="/lk/">Кабинет покупателя</a>
+                    </li>
+                <?}?>
             <?endforeach?>
             <li class="highlighted"><a class="sub-contacts__link" href="tel:+78127035555">
                 <div class="ic-container"><svg style="width:12px; height: 20px" xmlns="http://www.w3.org/2000/svg" width="14.547" height="24.331" viewBox="0 0 14.547 24.331"><g transform="translate(-8967.75 1214.75)"><path d="M0,.5H13.047" transform="translate(8968.5 -1195.909)" fill="none" stroke="#e94200" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><path d="M0,1.25H3.262" transform="translate(8973.393 -1211.988)" fill="none" stroke="#e94200" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/><rect width="13.047" height="22.831" rx="2" transform="translate(8968.5 -1214)" stroke-width="1.5" stroke="#e94200" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg></div>

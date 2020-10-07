@@ -17,6 +17,8 @@ if(CSite::InDir('/commercial/')) {
     $typeOfApartment = "commercial";
 }elseif(CSite::InDir('/parking/')) {
     $typeOfApartment = "parking";
+}elseif(CSite::InDir('/storeroom/')) {
+    $typeOfApartment = "storeroom";
 }else{
     $typeOfApartment = "flat";
 }?>

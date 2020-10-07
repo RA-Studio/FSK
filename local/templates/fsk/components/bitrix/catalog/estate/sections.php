@@ -1,8 +1,8 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Loader;
-Loader::includeModule("highloadblock"); 
-use Bitrix\Highloadblock as HL; 
+Loader::includeModule("highloadblock");
+use Bitrix\Highloadblock as HL;
 use Bitrix\Main\Entity;
 
 /** @var array $arParams */
@@ -23,6 +23,8 @@ if(CSite::InDir('/commercial/')) {
     $typeOfApartment = "commercial";
 }elseif(CSite::InDir('/parking/')) {
     $typeOfApartment = "parking";
+}elseif(CSite::InDir('/storeroom/')) {
+    $typeOfApartment = "storeroom";
 }else{
     $typeOfApartment = "flat";
 }

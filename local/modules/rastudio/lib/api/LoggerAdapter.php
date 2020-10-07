@@ -1,7 +1,9 @@
-<?php
-
+<?
 namespace RaStudio\Api;
 
+require_once ($_SERVER['DOCUMENT_ROOT']."/local/modules/rastudio/lib/sms/sms.class.php");
+
+use \RaStudio\Helper;
 
 class LoggerAdapter
 {
@@ -13,7 +15,7 @@ class LoggerAdapter
         $ch = curl_init();
 
         $options = [
-            CURLOPT_URL => 'https://hooks.slack.com/services/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',
+            CURLOPT_URL => 'https://hooks.slack.com/services/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',
             CURLOPT_POST => true,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTPHEADER => array('Content-type: application/json'),
@@ -33,12 +35,26 @@ class LoggerAdapter
     public static function addFile($message, $file = false) {
 
         if($file === false) {
-            $filepath = LOG_MODULE_DIR."logstandart.txt";
+            $filepath = ROOT_DIR."/logstandart.txt";
         } else {
-            $filepath = LOG_MODULE_DIR.$file;
+            $filepath = ROOT_DIR.$file;
         }
 
         file_put_contents($filepath, $message);
+    }
+
+    public static function sendSms($phone = false, $message = false) {
+        if($phone === false || empty($phone)) return false;
+        if($message === false || empty($message)) return false;
+        $phone = Helper::parsePhone($phone);
+        $messages = new \Sms\Xml\Messages('Fsknwsms', 'fsk123');
+        $messages->setUrl('https://sms.targetsms.ru');
+        $mes = $messages->createNewMessage('FSKNW', $message, 'sms');
+        $abonent = $mes->createAbonent($phone);
+        $abonent->setNumberSms(0);
+        $mes->addAbonent($abonent);
+        $messages->addMessage($mes);
+        return $messages->send();
     }
 
 }

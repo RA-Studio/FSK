@@ -298,7 +298,7 @@ class Helper {
 
         // валидация
         $iLength = strlen($sPhone);
-        if ($iLength < 7 || $iLength > 11) {
+        if ($iLength < 10 || $iLength > 11) {
             return null;
         }
 

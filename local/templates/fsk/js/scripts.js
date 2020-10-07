@@ -770,12 +770,18 @@ class ApartmentControll {
         let _this = this;
         return {
             loadPDF(e) {
-                var request = $.ajax({
+                /*var request = $.ajax({
                     url: `https://api.restpack.io/pdf/preview/convert?url=https://fsknw.ru/print.php?ID=${$(e).data(`id`)}&json=true&pdf_page=A4&emulate_media=print`,
+                    method: "GET",
+                    dataType: "html"
+                });*/
+                var request = $.ajax({
+                    url: `https://fsknw.ru/generate_pdf/createPDF.php?ID=${$(e).data(`id`)}`,
                     method: "GET",
                     dataType: "html"
                 });
                 request.done(function( msg ) {
+                    console.log(msg);
                     let data = JSON.parse(msg);
                     window.open(data.file, '_blank');
                 });
@@ -842,7 +848,7 @@ class ApartmentControll {
                 });
             },
             setImgPopupBlock(plan,index, mini){
-            	if(index == 1) console.log(plan,index, mini, setImgPopupBlock);
+
                 let poppupForm = $(`#card-example`);
                 let planBlockNew = $(poppupForm).find(`.card__col-2 .card__img`).eq(index);
                 if(index == -1) {

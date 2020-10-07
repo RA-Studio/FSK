@@ -48,6 +48,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Кладовые помещения", 
+		"/storeroom/pushkinskiy/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

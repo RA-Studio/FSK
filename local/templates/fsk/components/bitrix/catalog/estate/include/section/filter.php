@@ -18,7 +18,7 @@ $downShow = false;
                 <div class="filter-fields">
 
                     <div class="filter__field filter-field">
-                        <div class="filter-field__label">Стоимость, <?=$typeOfApartment == 'parking' ? 'тыс/р.' : 'млн/р.'?></div>
+                        <div class="filter-field__label">Стоимость, <?=$typeOfApartment == 'parking' || $typeOfApartment == 'storeroom' ? 'тыс/р.' : 'млн/р.'?></div>
                         <div class="ui-range">
                             <div class="ui-range__col"><span>от</span>
                                 <input class="ui-range__val ui-range__from" name = ">=PROPERTY_price100short" value="<?=floor(min($filterData['price100short']))?>">
@@ -170,7 +170,7 @@ $downShow = false;
                         </div>
                     <?endif;?>
                     <div class="filter__field filter-field">
-                        <div class="filter-field__label">Стоимость, <?=$typeOfApartment == 'parking' ? 'тыс/р.' : 'млн/р.'?></div>
+                        <div class="filter-field__label">Стоимость, <?=$typeOfApartment == 'parking' || $typeOfApartment == 'storeroom' ? 'тыс/р.' : 'млн/р.'?></div>
                         <div class="ui-range">
                             <div class="ui-range__col"><span>от</span>
                                 <input class="ui-range__val ui-range__from" name = ">=PROPERTY_price100short" value="<?=floor(min($filterData['price100short']))?>">

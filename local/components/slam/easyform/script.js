@@ -3,7 +3,7 @@ if (typeof JCEasyForm !== 'undefined' && $.isFunction(JCEasyForm)) {
     console.log('reconnection attempt JCEasyForm');
 
 } else {
-    
+
     var JCEasyForm = function(arParams) {
         if (typeof arParams === 'object') {
             if(!window.jQuery) {
@@ -134,7 +134,7 @@ if (typeof JCEasyForm !== 'undefined' && $.isFunction(JCEasyForm)) {
                         }
 
                         _this.form.find('.submit-button').addClass('spinner');
-
+                        console.log('first');
                         $.ajax({
                             type: 'POST',
                             url: _this.params.TEMPLATE_FOLDER,
@@ -197,6 +197,46 @@ if (typeof JCEasyForm !== 'undefined' && $.isFunction(JCEasyForm)) {
                             dataParams.push({name: 'arParams[' + i + ']', value: oldParams[i]});
                         }
 
+
+                        let formId = _this.form.attr('id');
+                        if (formId === 'FORM10') {
+                            let phoneOriginal = document.getElementById(formId + '_FIELD_PHONE').value;
+                            let phone = phoneOriginal.replace(/[^0-9]/gim,'');
+                            let name = document.getElementById(formId + '_FIELD_TITLE').value;
+                            if(window.location.pathname === '/parking/komendantskiy/') {
+                                formId = 'FORM22';
+                                /*console.log('location.pathname',  window.location.pathname);
+                                console.log('FORM', formId);*/
+                            }
+                            window.ctw.createRequest(
+                                formId,
+                                phone,
+                                [
+                                    {"name": "Name", "value": name},
+                                ],
+                                function(success, data){
+                                    //console.log(success, data)
+                                    if (success) {
+                                        console.log('Создана заявка на колбек, идентификатор: ' + data.callbackRequestId)
+                                    } else {
+                                        switch(data.type) {
+                                            case "request_throttle_timeout":
+                                            case "request_throttle_count":
+                                                console.log('Достигнут лимит создания заявок, попробуйте позже');
+                                                break;
+                                            case "request_phone_blacklisted":
+                                                console.log('номер телефона находится в черном списке');
+                                                break;
+                                            case "validation_error":
+                                                console.log('были переданы некорректные данные');
+                                                break;
+                                            default:
+                                                console.log('Во время выполнения запроса произошла ошибка: ' + data.type);
+                                        }
+                                    }
+                                }
+                            )
+                        }
                         $.ajax({
                             type: 'POST',
                             url: _this.params.TEMPLATE_FOLDER,

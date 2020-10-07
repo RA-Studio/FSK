@@ -233,7 +233,7 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"EVENT_MESSAGE_ID" => array(0=>"49",),
 		"FIELDS_ORDER" => "TITLE,PHONE,CUR_PAGE,USER_ID",
 		"FORM_AUTOCOMPLETE" => "Y",
-		"FORM_ID" => "FORM3",
+		"FORM_ID" => "FORM4",
 		"FORM_NAME" => "Нужна консультация специалиста?",
 		"FORM_SUBMIT_VALUE" => "Позвоните мне",
 		"FORM_SUBMIT_VARNING" => "Отправляя форму, вы подтверждаете своё согласие на <a href=\"/privacy-policy/\" target=\"_blank\">обработку персональных данных</a>",
@@ -252,7 +252,7 @@ $APPLICATION->SetTitle("Ипотека с ФСК");
 		"USE_JQUERY" => "N",
 		"USE_MODULE_VARNING" => "N",
 		"WIDTH_FORM" => "500px",
-		"_CALLBACKS" => "success_FORM3"
+		"_CALLBACKS" => "success_FORM4"
 	)
 );?> <!-- /.form-->
 	<div class="container" id="voen">

@@ -9,6 +9,15 @@ if(!\CModule::IncludeModule('rastudio')) {
     echo("Модуль rastudio не подключен");
 }
 
+$aDeveloperIps = [ '46.28.228.23' ];
+
+if (in_array($_SERVER['REMOTE_ADDR'], $aDeveloperIps)) {
+    define('OPEN_SHOP', true);
+} else {
+    define('OPEN_SHOP', true);
+}
+
+
 
 
 function reserveCheck()
